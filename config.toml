@@ -32,8 +32,10 @@ theme = "hello-friend-ng"
     readOtherPosts = "Read other posts"
 
     [languages.en.params.logo]
-      logoText = "echo \"Hello, World\""
+      logoText1 = "echo"
+      logoText2 = "Hello World"
       logoHomeLink = "/"
+      logoText1Color = "#A9DC76"
       logoColor = "#fe9051"
     # or
     #
