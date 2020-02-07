@@ -3,6 +3,26 @@ languageCode = "en-us"
 title = "Nahua Kang"
 theme = "hello-friend-ng"
 
+copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
+
+
+rssLimit = 10 # Maximum number of items in the RSS feed
+
+buildFuture  = false
+canonifyURLs = true
+
+enableRobotsTXT = true
+enableGitInfo   = true
+enableEmoji     = true
+enableMissingTranslationPlaceholders = false
+disableRSS     = false
+disableSitemap = false
+disable404     = false
+disableHugoGeneratorInject = false
+
+[permalinks]
+  posts = "/posts/:year/:month/:title/"
+
 [author]
   name = "Nahua Kang"
   firstname = "Nahua"
@@ -40,7 +60,6 @@ theme = "hello-friend-ng"
   homeTitle = "Nahua Kang"
   homeSubtitle = "Programmer // Writer"
 
-  copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
   readOtherPosts = "Read other posts"
 
   [params.logo]
@@ -73,8 +92,18 @@ theme = "hello-friend-ng"
 
 
 [menu]
+
+  [[menu.main]]
+    identifier = "about"
+    name       = "About"
+    url        = "/about/"
+
   [[menu.main]]
     identifier = "blog"
     name       = "Blog"
-    url        = "/posts"
+    url        = "/posts/"
 
+  [[menu.main]]
+    identifier = "projects"
+    name       = "Projects"
+    url        = "/projects/"
