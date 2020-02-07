@@ -1,7 +1,20 @@
 baseURL = "/"
 languageCode = "en-us"
-title = "Nahua's Blog"
+title = "Nahua Kang"
 theme = "hello-friend-ng"
+
+[author]
+  name = "Nahua Kang"
+  firstname = "Nahua"
+  lastname = "Kang"
+  location = "Berlin, DE"
+  email = "kangnahua [at] gmail dot com"
+
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
 
 [params]
   dateform        = "Jan 2, 2006"
@@ -13,9 +26,10 @@ theme = "hello-friend-ng"
   disableReadOtherPosts = false
 
   # Metadata mostly used in document's head
-  description = "Homepage and blog by Djordje Atlialp"
-  keywords = "homepage, blog, science, informatics, development, programming"
+  description = "Nahua's blog about programming"
+  keywords = "blog, software development, programming, web development"
   images = [""]
+
 
   # Directory name of your blog content (default is `content/posts`)
   contentTypeName = "posts"
@@ -23,32 +37,44 @@ theme = "hello-friend-ng"
   # Default theme "light" or "dark"
   defaultTheme = "light"
 
-[languages]
-  [languages.en]
-    title = "Hello Friend NG"
-    subtitle = "A simple theme for Hugo"
-    keywords = ""
-    copyright = ""
-    readOtherPosts = "Read other posts"
+  homeTitle = "Nahua Kang"
+  homeSubtitle = "Programmer // Writer"
 
-    [languages.en.params.logo]
-      logoText1 = "echo"
-      logoText2 = "Hello World"
-      logoHomeLink = "/"
-      logoText1Color = "#A9DC76"
-      logoColor = "#fe9051"
-    # or
-    #
-    # path = "/img/your-example-logo.svg"
-    # alt = "Your example logo alt text"
+  copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
+  readOtherPosts = "Read other posts"
 
-  # And you can even create generic menu
+  [params.logo]
+    logoText1 = "echo"
+    logoText2 = "Hello World"
+    logoHomeLink = "/"
+    logoText1Color = "#A9DC76"
+    logoColor = "#fe9051"
+
+  [[params.social]]
+    name = "twitter"
+    url = "https://twitter.com/nahuakang"
+
+  [[params.social]]
+    name = "email"
+    url = "mailto:kangnahua@gmail.com"
+
+  [[params.social]]
+    name = "github"
+    url = "https://github.com/nahuakang"
+
+  [[params.social]]
+    name = "linkedin"
+    url = "https://www.linkedin.com/in/nahuakang/"
+
+  [[params.social]]
+    name = "keybase"
+    url = "https://keybase.io/nahua"
+
+
+
+[menu]
   [[menu.main]]
     identifier = "blog"
     name       = "Blog"
     url        = "/posts"
-
-[taxonomies]
-  tag = "tags"
-  category = "categories"
 
