@@ -2,7 +2,11 @@
 title: "About"
 date: 2020-02-08T10:29:09+01:00
 draft: false
+author: Nahua Kang
 ---
+
+{{< image src="/nahua.png" alt="Nahua Kang" position="center" style="height:250px;">}}
+
 ## This blog
 My personal hero, Richard Feynman, knew that knowing the name of
 something is different from knowing that thing. This blog is the
