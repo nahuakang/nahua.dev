@@ -38,11 +38,11 @@ Who am I I was born and raised in China but have the privilege of choosing where
     </item>
     
     <item>
-      <title>My First Post</title>
-      <link>/posts/2020/02/my-first-post/</link>
+      <title>Hello World</title>
+      <link>/posts/2020/02/hello-world/</link>
       <pubDate>Fri, 07 Feb 2020 14:59:00 +0100</pubDate>
       <author>kangnahua [at] gmail dot com (Nahua Kang)</author>
-      <guid>/posts/2020/02/my-first-post/</guid>
+      <guid>/posts/2020/02/hello-world/</guid>
       <description>This is a blog post placeholder until I have real content.
 For now, let me say to you in Python:
 print(&amp;#34;Hello World!&amp;#34;) In Ruby:
