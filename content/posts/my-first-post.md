@@ -1,6 +1,7 @@
 ---
-title: "My First Post"
+title: "Hello World"
 date: 2020-02-07T14:59:00+01:00
+slug: "hello world"
 draft: false
 toc: false
 images:
