@@ -1,0 +1,48 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Posts on Nahua Kang</title>
+        <link>/posts/</link>
+        <description>Recent content in Posts on Nahua Kang</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <managingEditor>kangnahua [at] gmail dot com (Nahua Kang)</managingEditor>
+        <webMaster>kangnahua [at] gmail dot com (Nahua Kang)</webMaster>
+        <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+        <lastBuildDate>Fri, 07 Feb 2020 14:59:00 +0100</lastBuildDate>
+        <atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>My First Post</title>
+            <link>/posts/2020/02/my-first-post/</link>
+            <pubDate>Fri, 07 Feb 2020 14:59:00 +0100</pubDate>
+            <author>kangnahua [at] gmail dot com (Nahua Kang)</author>
+            <guid>/posts/2020/02/my-first-post/</guid>
+            <description>This is a blog post placeholder until I have real content.
+For now, let me say to you in Python:
+print(&amp;#34;Hello World!&amp;#34;) In Ruby:
+puts &amp;#34;Hello World!&amp;#34; In Javascript:
+console.log(&amp;#34;Hello World!&amp;#34;) In Go:
+package main import &amp;#34;fmt&amp;#34; func main() { fmt.Println(&amp;#34;Hello World!&amp;#34;) } And in Clojure:
+(println &amp;#34;Hello World&amp;#34;) </description>
+            <content type="html"><![CDATA[<p>This is a blog post placeholder until I have real content.</p>
+<p>For now, let me say to you in Python:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">print</span>(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Hello World!</span><span style="color:#e6db74">&#34;</span>)
+</code></pre></div><p>In Ruby:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">puts <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Hello World!</span><span style="color:#e6db74">&#34;</span>
+</code></pre></div><p>In Javascript:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Hello World!&#34;</span>)
+</code></pre></div><p>In Go:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+  <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Hello World!&#34;</span>)
+}
+</code></pre></div><p>And in Clojure:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">(println <span style="color:#e6db74">&#34;Hello World&#34;</span>)
+</code></pre></div>]]></content>
+        </item>
+        
+    </channel>
+</rss>

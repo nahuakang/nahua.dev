@@ -9,9 +9,58 @@
     <managingEditor>kangnahua [at] gmail dot com (Nahua Kang)</managingEditor>
     <webMaster>kangnahua [at] gmail dot com (Nahua Kang)</webMaster>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Sat, 08 Feb 2020 11:19:44 +0100</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Projects</title>
+      <link>/projects/</link>
+      <pubDate>Sat, 08 Feb 2020 11:19:44 +0100</pubDate>
+      <author>kangnahua [at] gmail dot com (Nahua Kang)</author>
+      <guid>/projects/</guid>
+      <description>I am currently in learning mode.
+Languages I speak Some of my current focuses include:
+ Python (mother tongue) and Django Ruby and Ruby on Rails Javascript and React JS MacVim  Just for fun and hobby:
+ Golang and Hugo Clojure (purely for fun)  Ambition on projects I intend to be able to:
+ Dig deeper into Python and Ruby Contribute to an open source project in either languages Complete CS50W course  Deep Learning Previously, I have completed Udacity&amp;rsquo;s Nanodegree Foundation in Deep Learning.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>/about/</link>
+      <pubDate>Sat, 08 Feb 2020 10:29:09 +0100</pubDate>
+      <author>kangnahua [at] gmail dot com (Nahua Kang)</author>
+      <guid>/about/</guid>
+      <description>This blog My personal hero, Richard Feynman, knew that knowing the name of something is different from knowing that thing. This blog is the documentation of my personal struggle in learning new programming languages and tools so that I, and perhaps you, will understand it and explain it to a 6-year-old with ease.
+Who am I I was born and raised in China but have the privilege of choosing where in the world I want to live and what kind of values I want to identify with.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>/about/</link>
+      <pubDate>Sat, 08 Feb 2020 10:29:09 +0100</pubDate>
+      <author>kangnahua [at] gmail dot com (Nahua Kang)</author>
+      <guid>/about/</guid>
+      <description>This blog My personal hero, Richard Feynman, knew that knowing the name of something is different from knowing that thing. This blog is the documentation of my personal struggle in learning new programming languages and tools so that I, and perhaps you, will understand it and explain it to a 6-year-old with ease.
+Who am I I was born and raised in China but have the privilege of choosing where in the world I want to live and what kind of values I want to identify with.</description>
+    </item>
+    
+    <item>
+      <title>My First Post</title>
+      <link>/posts/2020/02/my-first-post/</link>
+      <pubDate>Fri, 07 Feb 2020 14:59:00 +0100</pubDate>
+      <author>kangnahua [at] gmail dot com (Nahua Kang)</author>
+      <guid>/posts/2020/02/my-first-post/</guid>
+      <description>This is a blog post placeholder until I have real content.
+For now, let me say to you in Python:
+print(&amp;#34;Hello World!&amp;#34;) In Ruby:
+puts &amp;#34;Hello World!&amp;#34; In Javascript:
+console.log(&amp;#34;Hello World!&amp;#34;) In Go:
+package main import &amp;#34;fmt&amp;#34; func main() { fmt.Println(&amp;#34;Hello World!&amp;#34;) } And in Clojure:
+(println &amp;#34;Hello World&amp;#34;) </description>
+    </item>
     
   </channel>
 </rss>
