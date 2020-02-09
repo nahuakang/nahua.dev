@@ -15,11 +15,47 @@
     
     
     <item>
-      <title>python, ruby, javascript, golang, clojure</title>
-      <link>/tags/python-ruby-javascript-golang-clojure/</link>
+      <title>clojure</title>
+      <link>/tags/clojure/</link>
       <pubDate>Fri, 07 Feb 2020 14:59:00 +0100</pubDate>
       <author>kangnahua [at] gmail dot com (Nahua Kang)</author>
-      <guid>/tags/python-ruby-javascript-golang-clojure/</guid>
+      <guid>/tags/clojure/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>golang</title>
+      <link>/tags/golang/</link>
+      <pubDate>Fri, 07 Feb 2020 14:59:00 +0100</pubDate>
+      <author>kangnahua [at] gmail dot com (Nahua Kang)</author>
+      <guid>/tags/golang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>javascript</title>
+      <link>/tags/javascript/</link>
+      <pubDate>Fri, 07 Feb 2020 14:59:00 +0100</pubDate>
+      <author>kangnahua [at] gmail dot com (Nahua Kang)</author>
+      <guid>/tags/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>/tags/python/</link>
+      <pubDate>Fri, 07 Feb 2020 14:59:00 +0100</pubDate>
+      <author>kangnahua [at] gmail dot com (Nahua Kang)</author>
+      <guid>/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ruby</title>
+      <link>/tags/ruby/</link>
+      <pubDate>Fri, 07 Feb 2020 14:59:00 +0100</pubDate>
+      <author>kangnahua [at] gmail dot com (Nahua Kang)</author>
+      <guid>/tags/ruby/</guid>
       <description></description>
     </item>
     

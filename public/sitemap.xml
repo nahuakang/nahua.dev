@@ -4,7 +4,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2020-02-08T18:11:23+01:00</lastmod>
+    <lastmod>2020-02-09T12:20:50+01:00</lastmod>
   </url>
   
   <url>
@@ -18,23 +18,43 @@
   </url>
   
   <url>
+    <loc>/tags/clojure/</loc>
+    <lastmod>2020-02-09T12:20:50+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/golang/</loc>
+    <lastmod>2020-02-09T12:20:50+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/posts/2020/02/hello-world/</loc>
-    <lastmod>2020-02-08T18:11:23+01:00</lastmod>
+    <lastmod>2020-02-09T12:20:50+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/javascript/</loc>
+    <lastmod>2020-02-09T12:20:50+01:00</lastmod>
   </url>
   
   <url>
     <loc>/posts/</loc>
-    <lastmod>2020-02-08T18:11:23+01:00</lastmod>
+    <lastmod>2020-02-09T12:20:50+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/python-ruby-javascript-golang-clojure/</loc>
-    <lastmod>2020-02-08T18:11:23+01:00</lastmod>
+    <loc>/tags/python/</loc>
+    <lastmod>2020-02-09T12:20:50+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/ruby/</loc>
+    <lastmod>2020-02-09T12:20:50+01:00</lastmod>
   </url>
   
   <url>
     <loc>/tags/</loc>
-    <lastmod>2020-02-08T18:11:23+01:00</lastmod>
+    <lastmod>2020-02-09T12:20:50+01:00</lastmod>
   </url>
   
   <url>
