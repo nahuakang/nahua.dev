@@ -5,8 +5,7 @@ slug: "hello world"
 draft: false
 toc: false
 images:
-tags:
-  - python, ruby, javascript, golang, clojure
+tags: [python, ruby, javascript, golang, clojure]
 ---
 
 This is a blog post placeholder until I have real content.
