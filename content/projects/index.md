@@ -9,7 +9,7 @@ I am currently in learning mode.
 ## Languages I speak
 Some of my current focuses include:
 
-- Python (*my first language*) and Django
+- Python and Django
 - Ruby and Ruby on Rails
 - Javascript and React JS
 - MacVim
