@@ -4,12 +4,43 @@ date: 2020-02-22T11:05:25+01:00
 draft: false
 toc: false
 images:
-tags:
-  - untagged
+tags: [python, immutability, mutability, javascript]
 ---
 
+If you know a bit of Python, you probably have heard of *immutable* and *mutable* objects (see [data model](https://docs.python.org/3.8/reference/datamodel.html)). Objects can either be mutable or immutable, depending on which type they are.
 
-## Immutables in Python
+### Mutable Objects
+Mutable ones can be changed after they are created. For Python, collections like `list`, `dict`, and `set` are mutable objects. If we create a list, we can change its elements.
+
+```python
+>>> lst = ["list",  "objects",  "are", "immutable"]
+>>> lst
+["list",  "objects",  "are", "immutable"]
+>>> lst[-1] = "mutable"
+>>> lst
+["list",  "objects",  "are", "mutable"]
+```
+
+### Immutable Objects
+Immutable objects cannot be changed after creation. `bool`, `int`, `float`, `str`, `frozenset`, and `tuple` are immutable. So we will get an error if we attempt to reassign a tuple:
+
+```python
+>>> t = (1, 2)
+>>> type(t)
+<class 'tuple'>
+>>> t[1]
+2
+>>> t[1] = 3
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'tuple' object does not support item assignment
+```
+
+Try create a variable that references to a string object, such as `string = 'hello'`. If you attempted to reassign one element of the string (`string[1] = 'h'`), Python console would throw the same `TypeError`.
+
+### Are Immutables Always Immutable?
+If `tuple` is immutable and `list` is mutable, what about a tuple of lists then? Is a tuple like `([1, 2], [3, 4])` mutable or immutable?
+
 ### Everything in Python is an Object
 In Python, everything is an object. So when you see an integer `1` or a string `'hello'`, they are objects, too. Just try typing `type(0)` or `type('a')`:
 ```python
