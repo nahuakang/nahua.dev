@@ -9,6 +9,9 @@ tags: [python, immutability, mutability, javascript]
 
 If you know a bit of Python, you probably have heard of *immutable* and *mutable* objects (see [data model](https://docs.python.org/3.8/reference/datamodel.html)). Objects can either be mutable or immutable, depending on which type they are.
 
+## Immutables and Mutables: Basics
+First, let's review the basics of immutables and mutables that we all know.
+
 ### Mutable Objects
 Mutable ones can be changed after they are created. For Python, collections like `list`, `dict`, and `set` are mutable objects. If we create a list, we can change its elements.
 
@@ -38,8 +41,27 @@ TypeError: 'tuple' object does not support item assignment
 
 Try create a variable that references to a string object, such as `string = 'hello'`. If you attempted to reassign one element of the string (`string[1] = 'h'`), Python console would throw the same `TypeError`.
 
-### Are Immutables Always Immutable?
+### Slightly Trickier Objects
 If `tuple` is immutable and `list` is mutable, what about a tuple of lists then? Is a tuple like `([1, 2], [3, 4])` mutable or immutable?
+
+```python
+>>> tulip = ([1, 2], [3, 4])    # Create a tuple of two lists
+>>> tulip
+([1, 2], [3, 4])
+>>> tulip[0] = [5, 6]           # Attempt to change the element results in error
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'tuple' object does not support item assignment
+>>> tulip[0][0] = 0             # Changing element of the list itself works
+>>> tulip
+([0, 2], [3, 4])
+```
+
+
+## Immutables and Mutables: Dive Deeper
+As you can see, the story is a little bit more complicated. On the one hand, we cannot reassign an element of the tuple because tuples are immutable. On the other hand, we can reassign an element of a list inside a tuple, because lists are mutable.
+
+To understand this topic better, we can go deeper into the knitty gritties of Python.
 
 ### Everything in Python is an Object
 In Python, everything is an object. So when you see an integer `1` or a string `'hello'`, they are objects, too. Just try typing `type(0)` or `type('a')`:
