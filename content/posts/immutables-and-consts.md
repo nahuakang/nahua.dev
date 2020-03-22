@@ -7,6 +7,8 @@ images:
 tags: [python, immutability, mutability, javascript]
 ---
 
+This post is still in WORK IN PROGRESS.
+
 If you know a bit of Python, you probably have heard of *immutable* and *mutable* objects (see [data model](https://docs.python.org/3.8/reference/datamodel.html)). Objects can either be mutable or immutable, depending on which type they are.
 
 ## Immutables and Mutables: Basics
