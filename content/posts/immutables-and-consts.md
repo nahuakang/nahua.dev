@@ -18,12 +18,12 @@ First, let's review the basics of immutables and mutables that we all know.
 Mutable ones can be changed after they are created. For Python, collections like `list`, `dict`, and `set` are mutable objects. If we create a list, we can change its elements.
 
 ```python
->>> lst = ["list",  "objects",  "are", "immutable"]
+>>> lst = ["list",  "objects",  "are", "immutable?"]
 >>> lst
-["list",  "objects",  "are", "immutable"]
->>> lst[-1] = "mutable"
+["list",  "objects",  "are", "immutable?"]
+>>> lst[-1] = "mutable!"
 >>> lst
-["list",  "objects",  "are", "mutable"]
+["list",  "objects",  "are", "mutable!"]
 ```
 
 ### Immutable Objects
@@ -75,6 +75,54 @@ In Python, everything is an object. So when you see an integer `1` or a string `
 ```
 They are instances of the class integer and the class string.
 
+### Refining Our Definition of Object Mutability
+For an object in memory, it might contain information such as its object type and some data. In the realm of Python, changing the data inside an object is called modifying the ***internal state*** of this object. If we change the data inside an object and the object's memory address has not changed, the object is ***mutated***.
+
+So now we can refine our definition of Python objects' mutability:
+
+- An object whose internal state can be changed is a ***mutable***.
+- An object whose internal state cannot be changed is an ***immutable***.
+
+As we discussed, numbers (`int`, `float`, `booleans`, etc.), strings, and tuples are immutables. An integer object, could contain the information of the type `class 'int'` and a value of `1`.
+```python
+>>> type(1)
+<class 'int'>
+```
+
+Let's create a class in Python called `Person`:
+```python
+class Person:
+    def __init__(self, first_name, last_name, age):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.age = age
+```
+
+A `Person` object could contain the type `class '__main__.Person'`with additional data such as `first_name`, `last_name`, and `age`.
+```python
+>>> nahua = Person("Nahua", "Kang", 29)
+>>> type(nahua)
+<class '__main__.Person'>
+>>> isinstance(nahua, Person)
+True
+>>> nahua.first_name
+'Nahua'
+>>> nahua.last_name
+'Kang'
+>>> nahua.age
+29
+```
+
+We can go so far as to check up the address that the object `nahua` resides on in memory and see if we can alter the data inside the object:
+```python
+>>> id(nahua)
+4374562064
+>>> nahua.first_name = "nashua"
+>>> id(nahua)
+4374562064
+```
+
+
 ### What Variable Assignment Really Is
 Going a step further, when we declare a variable `a = 1`, the variable itself does not really hold the value `1`. Instead, the variable is a *reference* to a value that is an integer object `1`, which is an instance of the integer class.
 
@@ -96,7 +144,7 @@ As you can see, the integer `1` has its own address (the exact address will most
 When we then declared another variable `b` to the variable `a`, we are literally telling Python to let the variable `b` be a reference to the same value that `a` is pointing to, which is the integer object `1`.
 
 ### Variable Reassignments
-Let's dig deeper. If we perform the operation `a = a + 1`, we do not increase the integer value at the address, which in this case is `4362298512`. Instead, we are pointing the variable `a` to a new value `2`.
+Let's dig deeper. If we perform the operation `a = a + 1`, we do not change the value of this integer object at the memory address of `4362298512`. Instead, Python creates another integer object with value `2`, to which we now point the variable `a`.
 
 ```python
 >>> a = a + 1 # What happens if we add 1 to the variable 'a'?
