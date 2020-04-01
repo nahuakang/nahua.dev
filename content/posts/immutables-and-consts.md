@@ -165,5 +165,3 @@ We can go so far as to check up the address that the object `nahua` resides on i
 ```
 
 
-## Const in Javascript
-
