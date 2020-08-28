@@ -15,6 +15,29 @@
     
     
     <item>
+      <title>Go Template: Using Execute vs. ExecuteTemplate</title>
+      <link>/posts/2020/08/golang-template-execute-vs-executetemplate/</link>
+      <pubDate>Fri, 28 Aug 2020 21:59:26 +0200</pubDate>
+      <author>kangnahua [at] gmail dot com (Nahua Kang)</author>
+      <guid>/posts/2020/08/golang-template-execute-vs-executetemplate/</guid>
+      <description>Rendering the correct template is an important step in building a web application. If you are new to web programming in Go, chances are you might have come across two methods in the html/template package: func (*Template) Execute and func (*Template) ExecuteTemplate.
+You might have also wondered: What are the differences between these two methods? The quick answer is to look up the official documentation:
+ func (t *Template) Execute(wr io.</description>
+    </item>
+    
+    <item>
+      <title>Immutables Are Not Always Immutable</title>
+      <link>/posts/2020/03/immutables-are-not-always-immutable/</link>
+      <pubDate>Sun, 22 Mar 2020 11:05:25 +0100</pubDate>
+      <author>kangnahua [at] gmail dot com (Nahua Kang)</author>
+      <guid>/posts/2020/03/immutables-are-not-always-immutable/</guid>
+      <description>This post is still in WORK IN PROGRESS.
+If you know a bit of Python, you probably have heard of immutable and mutable objects (see data model). Objects can either be mutable or immutable, depending on which type they are.
+Immutables and Mutables: Basics First, let&amp;rsquo;s review the basics of immutables and mutables that we all know.
+Mutable Objects Mutable ones can be changed after they are created. For Python, collections like list, dict, and set are mutable objects.</description>
+    </item>
+    
+    <item>
       <title>Projects</title>
       <link>/projects/</link>
       <pubDate>Sat, 08 Feb 2020 11:19:44 +0100</pubDate>
@@ -22,7 +45,7 @@
       <guid>/projects/</guid>
       <description>I am currently in learning mode.
 Languages I speak Some of my current focuses include:
- Python (mother tongue) and Django Ruby and Ruby on Rails Javascript and React JS MacVim  Just for fun and hobby:
+ Python and Django Ruby and Ruby on Rails Javascript and React JS MacVim  Just for fun and hobby:
  Golang and Hugo Clojure (purely for fun)  Ambition on projects I intend to be able to:
  Dig deeper into Python and Ruby Contribute to an open source project in either languages Complete CS50W course  Deep Learning Previously, I have completed Udacity&amp;rsquo;s Nanodegree Foundation in Deep Learning.</description>
     </item>

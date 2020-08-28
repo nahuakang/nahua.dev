@@ -94,20 +94,12 @@ disableHugoGeneratorInject = false
     url = "https://www.python.org/"
 
   [[params.skill]]
-    name = "ruby"
-    url = "https://www.ruby-lang.org/en/"
-
-  [[params.skill]]
     name = "golang"
     url = "https://golang.org/"
 
   [[params.skill]]
     name = "javascript"
     url = "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
-
-  [[params.skill]]
-    name = "clojure"
-    url = "https://clojure.org/"
 
 [menu]
 
