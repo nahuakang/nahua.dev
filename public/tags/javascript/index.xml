@@ -26,20 +26,5 @@ Immutables and Mutables: Basics First, let&amp;rsquo;s review the basics of immu
 Mutable Objects Mutable ones can be changed after they are created. For Python, collections like list, dict, and set are mutable objects.</description>
     </item>
     
-    <item>
-      <title>Hello World</title>
-      <link>/posts/2020/02/hello-world/</link>
-      <pubDate>Fri, 07 Feb 2020 14:59:00 +0100</pubDate>
-      <author>kangnahua [at] gmail dot com (Nahua Kang)</author>
-      <guid>/posts/2020/02/hello-world/</guid>
-      <description>This is a blog post placeholder until I have real content.
-For now, let me say to you in Python:
-print(&amp;#34;Hello World!&amp;#34;) In Ruby:
-puts &amp;#34;Hello World!&amp;#34; In Javascript:
-console.log(&amp;#34;Hello World!&amp;#34;) In Go:
-package main import &amp;#34;fmt&amp;#34; func main() { fmt.Println(&amp;#34;Hello World!&amp;#34;) } And in Clojure:
-(println &amp;#34;Hello World&amp;#34;) </description>
-    </item>
-    
   </channel>
 </rss>

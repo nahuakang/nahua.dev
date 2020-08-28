@@ -43,11 +43,8 @@ Mutable Objects Mutable ones can be changed after they are created. For Python, 
       <pubDate>Sat, 08 Feb 2020 11:19:44 +0100</pubDate>
       <author>kangnahua [at] gmail dot com (Nahua Kang)</author>
       <guid>/projects/</guid>
-      <description>I am currently in learning mode.
-Languages I speak Some of my current focuses include:
- Python and Django Ruby and Ruby on Rails Javascript and React JS MacVim  Just for fun and hobby:
- Golang and Hugo Clojure (purely for fun)  Ambition on projects I intend to be able to:
- Dig deeper into Python and Ruby Contribute to an open source project in either languages Complete CS50W course  Deep Learning Previously, I have completed Udacity&amp;rsquo;s Nanodegree Foundation in Deep Learning.</description>
+      <description>Professional Work Currently I work professionally as a software engineer for Twenty Billion Neurons. My day-to-day role is using Python to implement the &amp;ldquo;logical functionality&amp;rdquo; of the brain of a deep-learning-powered virtual fitness trainer Ally. Download the app in App Store, it&amp;rsquo;s amazing!
+Open Source Projects I am a firm believer in open source software. As of now, I devote my spare time to contribute to OpenMined, the privacy-preserving AI project that aims to unlock the power of deep learning and data while respecting the privacy for each individual.</description>
     </item>
     
     <item>
@@ -57,22 +54,8 @@ Languages I speak Some of my current focuses include:
       <author>kangnahua [at] gmail dot com (Nahua Kang)</author>
       <guid>/about/</guid>
       <description>This blog My personal hero, Richard Feynman, knew that knowing the name of something is different from knowing that thing. This blog is the documentation of my personal struggle in learning new programming languages and tools so that I, and perhaps you, will understand it and explain it to a 6-year-old with ease.
-Who am I I was born and raised in China but have the privilege of choosing where in the world I want to live and what kind of values I want to identify with.</description>
-    </item>
-    
-    <item>
-      <title>Hello World</title>
-      <link>/posts/2020/02/hello-world/</link>
-      <pubDate>Fri, 07 Feb 2020 14:59:00 +0100</pubDate>
-      <author>kangnahua [at] gmail dot com (Nahua Kang)</author>
-      <guid>/posts/2020/02/hello-world/</guid>
-      <description>This is a blog post placeholder until I have real content.
-For now, let me say to you in Python:
-print(&amp;#34;Hello World!&amp;#34;) In Ruby:
-puts &amp;#34;Hello World!&amp;#34; In Javascript:
-console.log(&amp;#34;Hello World!&amp;#34;) In Go:
-package main import &amp;#34;fmt&amp;#34; func main() { fmt.Println(&amp;#34;Hello World!&amp;#34;) } And in Clojure:
-(println &amp;#34;Hello World&amp;#34;) </description>
+Skills I am proficient in Python and have good working knowledge of Javascript and Go.
+In terms of libraries, I am familiar with PyTorch, Keras, Numpy, Flask, and some Go web programming packages.</description>
     </item>
     
   </channel>

@@ -77,23 +77,5 @@
       <description></description>
     </item>
     
-    <item>
-      <title>clojure</title>
-      <link>/tags/clojure/</link>
-      <pubDate>Fri, 07 Feb 2020 14:59:00 +0100</pubDate>
-      <author>kangnahua [at] gmail dot com (Nahua Kang)</author>
-      <guid>/tags/clojure/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ruby</title>
-      <link>/tags/ruby/</link>
-      <pubDate>Fri, 07 Feb 2020 14:59:00 +0100</pubDate>
-      <author>kangnahua [at] gmail dot com (Nahua Kang)</author>
-      <guid>/tags/ruby/</guid>
-      <description></description>
-    </item>
-    
   </channel>
 </rss>

@@ -14,6 +14,13 @@ documentation of my personal struggle in learning new programming
 languages and tools so that I, and perhaps you, will understand it and
 explain it to a 6-year-old with ease.
 
+## Skills
+I am proficient in `Python` and have good working knowledge of `Javascript` and `Go`. 
+
+In terms of libraries, I am familiar with `PyTorch`, `Keras`, `Numpy`, `Flask`, and some Go web programming packages. Previously I dabbed into `Django` and `Rails` but do not use them at the moment.
+
+Tools-wise, I have a decent command of `Git` and `Docker`.
+
 ## Who am I
 I was born and raised in China but have the privilege of choosing where
 in the world I want to live and what kind of values I want to
