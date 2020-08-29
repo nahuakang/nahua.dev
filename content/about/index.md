@@ -40,9 +40,16 @@ already learned programming one way or another, so I felt stupid and was
 scared out of ever touching a DOS again.
 
 About 10 years later, over a coffee in a mountaineous town in
-Switzerland, a kind and friendly value investor recommended me
-to learn Python for machine learning. Though reluctant, I bit my teeth
-and gave it a try.
+Switzerland, a kind and friendly value investor softly rejected my 
+proposal to do an internship at his investment fund. Instead, he recommended me
+to learn Python for machine learning.
+
+I was shocked. Never did I imagine that my life would have gone a full circle
+to come back to a subject that haunted me a decade ago. I went to sleep feeling
+defeated.
+
+The next morning, having woken up and foundd an online tutorial for Python,
+I bit my teeth and gave it a try.
 
 The rest is history.
 
