@@ -12,13 +12,131 @@
         <atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
         
         <item>
-            <title>My Programming Story</title>
-            <link>/posts/2020/08/my-programming-story/</link>
+            <title>Remake Our Self: My Path into Engineering from the Humanities</title>
+            <link>/posts/2020/08/remake-our-self-my-path-into-engineering-from-the-humanities/</link>
             <pubDate>Sun, 30 Aug 2020 19:01:38 +0200</pubDate>
             <author>kangnahua [at] gmail dot com (Nahua Kang)</author>
-            <guid>/posts/2020/08/my-programming-story/</guid>
-            <description></description>
-            <content type="html"><![CDATA[]]></content>
+            <guid>/posts/2020/08/remake-our-self-my-path-into-engineering-from-the-humanities/</guid>
+            <description>This is a long, honest and detailed post. Feel free to read the TL;DR and skip to the last section on 5 takeaways for remaking your career.
+TL;DR Having briefly encountered programming when I was 16, I was scared of it and swore not to touch it ever again. 10 years later, I had to learn programming out of desperation and this time I conquered my fear. Over the span of almost 5 years, with many failures and rejections behind my back and a persistent desire to seek fulfilmment in work and life, I successfully made the career switch into software engineering.</description>
+            <content type="html"><![CDATA[<p>This is a long, honest and detailed post. Feel free to read the <em>TL;DR</em> and skip to the last section on 5 takeaways for remaking your career.</p>
+<h2 id="tldr">TL;DR</h2>
+<p>Having briefly encountered <strong>programming</strong> when I was 16, I was scared of it and swore not to touch it ever again. 10 years later, I had to learn programming out of desperation and this time I conquered my fear. Over the span of almost 5 years, with many <strong>failures and rejections</strong> behind my back and a persistent desire to seek fulfilmment in work and life, I successfully made the <strong>career switch</strong> into software engineering. Not only did programming liberate me in my career development, but it also re-kindled my curiosity and helped me form my habit of <strong>continuous learning</strong>. Regardless of which career path we want to pivot to, our ability to <strong>remake our <em>self</em></strong> is an essential skill to humans in the 21st century. To continue honing this ability to remake ourselves, we must keep a <strong>curiosity</strong> for knowledge, know how we learn and <strong>learn how to learn</strong>, and try to <strong>be gracious</strong> of all the failures and rejections that crossed our paths.</p>
+<hr>
+<p>More and more people are pondering software development as a career. There are many great blogs about how to make the transition to software, but I want to offer a sincere, candid account of all the failures that went into my path to software.</p>
+<p>However, while learning programming can be a enlightening experience, software engineering isn&rsquo;t a career suitable for everyone. Therefore, instead of focusing on making it into software, I wish my story reveals some concepts about how to <strong>remake our <em>self</em></strong> in this fast-changing age.</p>
+<p>After all, being able to remake ourselves is the ultimate skill that would help us get closer to happiness and fulfillment in our life and work. I hope this blog post offers you some inspiration in taking some calculated risks to change your life, your career path, and your state of mind.</p>
+<h2 id="back-to-the-origin">Back to the Origin</h2>
+<p>In the fall of 2006, I entered one of the most prestigious high schools in Fujian, China with flying marks. I ranked as the top student in my middle school and among the top 30 best students in my city&rsquo;s annual high school entrance exam. My blood was pumped with confidence and I felt I was a smart cookie destined for greatness.</p>
+
+    <figure class="center" >
+        <img src="/img/my_programming_story/hackers_and_painters.jpg"   style="width: 25vw;"  />
+
+        
+            <figcaption class="center" >Hackers and Painters book cover</figcaption>
+        
+    </figure>
+
+
+<p>Around this time, I developed an admiration for <strong>hackers</strong> after reading the Chinese translation of Eric S. Raymond&rsquo;s blog post, <a href="http://www.catb.org/esr/faqs/hacker-howto.html">How to Become a Hacker</a> and a few poorly translated chapters of Paul Graham&rsquo;s <a href="http://www.paulgraham.com/hp.html">Hackers and Painters</a>. The kind of personality and character revealed by Raymond and Graham&rsquo;s writings as well as the meritocratic community of the hacker community deeply resonated with the yet-to-be-developed values of mine. (<em>Note: Steven Levy&rsquo;s Hackers: Heroes of the Computer Revolution is a great book that I only encountered over a decade later.</em>)</p>
+<p>With encouragement from my high school best friend who knew programming already, I signed up for a weekend Pascal crash course offered by my high school. As I entered a room full of blue DOS screens on a fateful, humid Saturday morning, I was frightened.</p>
+<p>Having grown up in a family that did not allow much time to play on a computer, I could not even type properly with five fingers at that time, not to mention using a DOS and writing <code>if-else</code> statements or <code>for-loops</code> in a dreadful language called <strong>Turbo Pascal</strong>! What&rsquo;s worse was that <em>everyone except me</em> seemed to be able to follow the pace of the crash course!</p>
+
+    <figure class="center" >
+        <img src="/img/my_programming_story/turbo_pascal.png"   style="width: 40vw;"  />
+
+        
+            <figcaption class="center" >Turbo Pascal DOS Interface</figcaption>
+        
+    </figure>
+
+
+<p>By lunch break, I sneaked out of the classroom and went home. I felt awfully stupid among some of the best students in my city. I swore to never touch programming again because it painfully reminded me of that awkward, humiliating morning and my fragile ego could not allow the acknoledgement that I was not as smart as I thought.</p>
+<h2 id="how-i-started-learning-python">How I Started Learning Python</h2>
+<p>Fast forward to a decade later in 2016, I had completed a BA in history from Texas A&amp;M and was pursuing studies in a prestigious business school in St. Gallen, Switzerland. While my classmates were scoring interviews with the likes of UBS, Goldman Sachs, and McKinsey, I could not get a business internship either in Switzerland or Germany. In fact, from the numerous applications I sent out, I got only one interview and they took the other candidate.</p>
+<p>Nowhere. Stuck. Having been a star at Texas A&amp;M, I felt like a complete loser in Switzerland. It was the most trying two years of my life to date.</p>
+<p>Out of sheer luck, I got in touch with a Frankfurt-based value investor, an alumnus who was kind enough to offer me some time to <em>chat</em>. We had a pleasant conversation over coffee in St. Gallen&rsquo;s Altstadt, during which, however, he quickly determined that I lacked all the necessary financial and accounting knowledge to work as an intern for his fund.</p>
+<p>Sensing his acute judgement, I asked out of desperation: &ldquo;<em>What kind of skills should I learn that would be valuable to your fund?</em>&rdquo;</p>
+<p>He replied: &ldquo;<em>You could consider learning</em> <strong>Python</strong> <em>and</em> <strong>programming</strong> <em>for machine learning. Technology is coming into value investing as well now.</em>&rdquo;</p>
+<p>Words could not describe my frustration and disappointment as I walked home. I called my girlfriend at the time with tears in my eyes, whining to her that the one thing in the world I did not want to do is learning how to program, yet this investor literally just told me I should learn Python for programming. Beaten and defeated, I went to bed early that day but could not fall asleep.</p>
+
+    <figure class="center" >
+        <img src="/img/my_programming_story/roggwiller.jpg"   style="width: 40vw;"  />
+
+        
+            <figcaption class="center" >Cafe Roggwiller: Where I took the advice to learn Python</figcaption>
+        
+    </figure>
+
+
+<p>The next morning, still with cloud in my mind, I bit my teeth and searched for online courses that would teach me Python. That was the true story to how I started programming.</p>
+<h2 id="a-brief-tour-into-deep-learning">A Brief Tour into Deep Learning</h2>
+<p>Python turned out to be easy and fun to learn and helped me get out of my fear for programming. After learning Python with <a href="https://learnpythonthehardway.org/python3/">Learn Python the Hard Way</a> and Coursera&rsquo;s <a href="https://www.coursera.org/specializations/python">Python for Everybody</a>, I switched my operating system from Windows to <a href="https://ubuntu.com/">Ubuntu</a>, a popular distro of Linux. For a student who felt stuck in his career development, programming was liberating. So I learned more and more, such as how to dual boot Ubuntu and Windows, how to use the terminal and commandline, and how to write a small script to <a href="https://github.com/nahuakang/python-mini-projects/blob/master/youtube-downloader.py">scrap search results from YouTube and download YouTube videos</a>.</p>
+<p>By the fall of 2016, I made a calculated move of not completing my studies in St. Gallen but instead began my master&rsquo;s studies in Stockholm School of Economics, on the one hand to close a long-distance relationship, on the other hand out of hoping that Scandinavia might offer opportunities to my stagnated career development. I considered doing a more engineering-focused program at Royal Institute of Technology (KTH), but could not find a suitable program that allowed a history major to apply to.</p>
+<p>Being the only student in my program who could <em>script</em> in a general-purpose programming language, I went deeper and deeper into it. Soon, I discovered Udacity&rsquo;s new program on <strong>Deep Learning</strong>. Having no clue what deep learning is, I signed up for the course because it sounded cool (nowadays you can learn with free resources like <a href="https://www.fast.ai/">fast.ai</a>). I learned about back propagation, convolutional neural networks, image classification, Long Short-Term Memory (LSTM), and Generative Adversarial Networks (GAN). None of that was easy and I definitely did not manage to do everything on my own.</p>
+<p>I felt often dumbfounded but I persisted because the subject was fascinating and because I thought I had no other competitive advantages.</p>
+<h2 id="failures-after-failures-until-luck-struck">Failures After Failures, Until Luck Struck</h2>
+<p>To digest my learnings better, I started to write blogs. I was honored that the two pieces I wrote on the basics of deep learning (<a href="https://towardsdatascience.com/introducing-deep-learning-and-neural-networks-deep-learning-for-rookies-1-bd68f9cf5883">post #1</a> and <a href="https://towardsdatascience.com/multi-layer-neural-networks-with-sigmoid-function-deep-learning-for-rookies-2-bf464f09eb7f">post #2</a>) invited over <strong>240K views</strong> in total. (<em>Note: I never found the time nor energy to complete the third blog on backpropagation, yet here&rsquo;s an amazing <a href="https://colah.github.io/posts/2015-08-Backprop/">post on backpropagation</a></em>).</p>
+<p>These little successes boosted my confidence and I decided to look for interesting AI startups to apply for <strong>product, marketing, and bizdev</strong> internships in Berlin. I thought about applying for engineering internships after reading <a href="https://www.roguelynn.com/words/my-path-into-engineering/">Lynn Root&rsquo;s story of her transition into engineering</a>, but I chickened out. Anyways, I reached out to all the startups I could find at the time.</p>
+<p>And I was either rejected or ignored.</p>
+<p>I remember one startup that I applied to wrote back saying that they did not have a position suitable for me, yet I found out a month later that they hired another person from St. Gallen for a role that I was interested in. No one should take these things personally, but it hurt at the moment.</p>
+<p>Yet again Lady Fortuna befell on me. In my moments of frustration, I reached out to Moritz, who at the time was the product owner of a deep learning startup, <a href="https://20bn.com/">TwentyBN</a>. By then, I had almost given up on finding an internship in Berlin and reached out only because Moritz&rsquo;s profile resembled mine and I thought I could seek some advice to my career path. I clicked the button on his LinkedIn profile and sent a short message.</p>
+
+    <figure class="center" >
+        <img src="/img/my_programming_story/linkedin_message.png"   style="width: 30vw;"  />
+
+        
+            <figcaption class="center" >A simple LinkedIn message changed my life</figcaption>
+        
+    </figure>
+
+
+<p>Little did I know that this message landed me an internship and a full-time job that eventually allowed and encouraged me to transit into software development. (<em>Note: In October 2017, before my internship with TwentyBN started, I briefly contributed to an open source project <a href="https://www.openmined.org/">OpenMined</a> in an attempt to gain more experience in software. I paused it until April, 2020 when I became a software intern at TwentyBN.</em>)</p>
+<h2 id="finally-software-engineering">Finally, Software Engineering</h2>
+<p>Two years into my role as a product marketer, I had an existential crisis because of personal reasons, my career, and the Coronavirus. The company I work for is great. My colleagues are wonderful. I wrote many <a href="https://medium.com/twentybn">blogs at TwentyBN</a> and managed our company newsletter <a href="http://www.embodiedai.co/">Embodied AI</a>. Yet I never felt fulfilled in my role. There was always a part of me that urged to do more programming and, on some free evenings, I read more on different programming languages out of curiosity.</p>
+<p>In 2018, I had wanted to ask TwentyBN for an internship as a deep learning engineering intern but I lacked the confidence to make the cut. And by the end of 2019, I heard enough success stories from acquaintances who landed jobs after bootcamps that my desire to explore software engineering as a career re-kindled.</p>
+
+    <figure class="center" >
+        <img src="/img/my_programming_story/twentybn.jpg"   style="width: 40vw;"  />
+
+        
+            <figcaption class="center" >TwentyBN and its amazing people</figcaption>
+        
+    </figure>
+
+
+<p>During my Christmas vacation back in China, I spent all the 3 weeks learning web development with Harvard&rsquo;s famous <a href="https://cs50.harvard.edu/web/2020/">CS50W</a>, coding from 8AM in the morning until 1 or 2AM in the night. I wanted to test myself with this intensive experience to see if I had it in me to be a programmer or if it were just a phase. The learning curve was steep and the great firewall prevented me from easy access to Google and StackOverflow. But I managed 2 buggy projects and learned some <code>Flask</code>, <code>Django</code>, <code>Javascript</code> and <code>WebSocket</code>.</p>
+<p>I worked so hard during those weeks that I did not hear about the Coronavirus until I returned from China to Berlin.</p>
+<p>Back to work, I managed to convince my boss Moritz, my Python teamleads, as well as my CTO Ingo to give me a three-month internship with pay reduction. Again, there were sleepless nights and numerous moments of head-banging. The paycut was manageable, but my nervousness of not making the cut added a lot of pressure on my mind. But by now, thanks to programming, I have also learned <strong>what my learning patterns are</strong> and have become more patient with myself. Eventually, the internship turned into a new, full-time position.</p>
+<h2 id="remake-our-self">Remake Our &ldquo;Self&rdquo;</h2>
+<p>Having a family and good friends that unconditionally supported me helped. Having parents who value education and generously supported me in my worst moments helped. Having received a stranger&rsquo;s advice helped. Having learned programming and deep learning helped. Having been a history major with good writing skills helped. And having been on the same wavelength with my company&rsquo;s management and colleagues helped. All of that help was necessary.</p>
+<p>But equally or perhaps more importantly, I also must thank luck for making me into <strong>a person who has the drive to learn new, seemingly daunting skills to re-make oneself</strong>.</p>
+<p>Because, as you might tell, my learning journey as a software Padawan has only just begun. Software engineering is a dynamic and energetic field with many talented people and brilliant ideas. I am still learning how to write good software and how to work across multiple teams.</p>
+<p>I have restarted to contribute to open source projects such as <a href="https://www.openmined.org/">OpenMined</a> to give myself more exposure to other programming languages and different types of projects. It has not been easy but the OpenMined community is an amazing bunch.</p>
+<p>Additionally, there are knowledge gaps that I have to make up for, such as architecture design, pattern design, as well as well-known algorithms and data structures.</p>
+<p>My journey into software engineering is a humbling experience and I&rsquo;m confident and hopeful that this journey will be full of fun and excitement with all the wonderful people that have helped me and worked with me.</p>
+<h1 id="5-takeaways-for-remaking-your-self">5 Takeaways for Remaking Your &ldquo;Self&rdquo;</h1>
+<p>Here are some takeaways that I hope might inspire some thinking, discussion, and debate from my readers.</p>
+<ul>
+<li>
+<p><strong>Keep a child&rsquo;s curiosity and continue learning.</strong> Too many people stop being curious about the world as they grow older. As humans, we naturally develop rules of thumbs and build a system of understanding for our lines of work as well as the world over time. Yet in a fast-changing world, some rules of thumbs are fragile and some skills might be replaced. The only sure ticket to career satisfaction and fulfillment is continuous learning. Ask good questions. Develop a habit to learn. With a curious mind that craves knowledge, we keep ourselves updated with in-demand knowledge and give ourselves a leg-up in career pivots, i.e. the process of remaking ourselves.</p>
+</li>
+<li>
+<p><strong>Learn how to learn and know your learning patterns.</strong> Remember my story when I first learned programming in high school and gave up after a morning? I did not set my expectations correctly. Anything worth learning might be challenging to those of us who are mere mundane humans. But the most crucial aspect of mastering new skills is not your IQ but your ability to learn how you learn knowledge. Take myself as an example, I tend to learn things slowly and have to revisit the same chapter in a book or the same blog post many times over a span between 1-3 months before I get a concrete understanding. Be patient with yourself and give yourself the time to digest difficult concepts. Never be ashamed of googling and askking others for help.</p>
+</li>
+<li>
+<p><strong>Learn to be a more knowledgeable version of yourself and don&rsquo;t compare with others.</strong> Also, it turns out that except for a few exceptionally smart students, most of the students in that crash course at high school had already learned how to program because they had the platform to do so in middle school. I was unfairly comparing myself with people who were more experienced in writing programs. Learn for the sake of satisfying your curiosity, expanding your knowledge, and improving your skills. Don&rsquo;t compare your speed to mastery of a skill with others. We all learn at our own pace, what matters is if we have the perseverance to eventually master it.</p>
+</li>
+<li>
+<p><strong>Know your strengths and weaknesses, and learn to evaluate and take advice.</strong> An important aspect of taking calculated and wise risks is knowing how our own brain, emotion, and psychology work. For instance, I knew I was not happy with my role as a product marketer and I knew I have the tendency of finding distraction when I&rsquo;m not happy with something, so I gave myself an opportunity to try programming for an intensive 3-week period. After that, I was more confident that my desire for career switch has a solid foundation. Once we know our strengths and weaknesses, we can also better evaluate good-intentioned advice from others and take advice wisely. I am grateful to that value investor who adviced me to learn Python, and luckily I was self-conscious enough and open-minded enough to pursue that advice.</p>
+</li>
+<li>
+<p><strong>Be gracious and grateful even in the worst moments of your life.</strong> When we look at other people&rsquo;s CVs or LinkedIn profiles, we often see success stories and forget that behind most people&rsquo;s successes lay a graveyard of failures and rejections. To embrace failures and rejections is the hardest thing for each of us to do because it means giving up our ego and accepting that we aren&rsquo;t perfect. Yet life will continue to throw failures and rejections in our way. Being able to accept them, embrace them, and outgrow them helps to make us calmer in difficult situations, thereby making more educated decisions and choices that will eventually benefit us.</p>
+</li>
+</ul>
+<h2 id="la-fin">La Fin</h2>
+<p>I hope this long post might resonate with or inspire some of my readers. Most of us are destined to encounter career deadlocks at one or another point in my life.</p>
+]]></content>
         </item>
         
         <item>

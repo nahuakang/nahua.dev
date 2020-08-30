@@ -15,11 +15,29 @@
     
     
     <item>
-      <title>untagged</title>
-      <link>/tags/untagged/</link>
+      <title>career</title>
+      <link>/tags/career/</link>
       <pubDate>Sun, 30 Aug 2020 19:01:38 +0200</pubDate>
       <author>kangnahua [at] gmail dot com (Nahua Kang)</author>
-      <guid>/tags/untagged/</guid>
+      <guid>/tags/career/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hacking</title>
+      <link>/tags/hacking/</link>
+      <pubDate>Sun, 30 Aug 2020 19:01:38 +0200</pubDate>
+      <author>kangnahua [at] gmail dot com (Nahua Kang)</author>
+      <guid>/tags/hacking/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>programming</title>
+      <link>/tags/programming/</link>
+      <pubDate>Sun, 30 Aug 2020 19:01:38 +0200</pubDate>
+      <author>kangnahua [at] gmail dot com (Nahua Kang)</author>
+      <guid>/tags/programming/</guid>
       <description></description>
     </item>
     
