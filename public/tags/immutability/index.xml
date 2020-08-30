@@ -15,13 +15,12 @@
     
     
     <item>
-      <title>Immutables Are Not Always Immutable</title>
-      <link>/posts/2020/03/immutables-are-not-always-immutable/</link>
+      <title>Python: Immutables Are Not Always Immutable</title>
+      <link>/posts/2020/03/python-immutables-are-not-always-immutable/</link>
       <pubDate>Sun, 22 Mar 2020 11:05:25 +0100</pubDate>
       <author>kangnahua [at] gmail dot com (Nahua Kang)</author>
-      <guid>/posts/2020/03/immutables-are-not-always-immutable/</guid>
-      <description>This post is still in WORK IN PROGRESS.
-If you know a bit of Python, you probably have heard of immutable and mutable objects (see data model). Objects can either be mutable or immutable, depending on which type they are.
+      <guid>/posts/2020/03/python-immutables-are-not-always-immutable/</guid>
+      <description>If you know a bit of Python, you probably have heard of immutable and mutable objects (see data model). Objects can either be mutable or immutable, depending on which type they are.
 Immutables and Mutables: Basics First, let&amp;rsquo;s review the basics of immutables and mutables that we all know.
 Mutable Objects Mutable ones can be changed after they are created. For Python, collections like list, dict, and set are mutable objects.</description>
     </item>

@@ -1,13 +1,11 @@
 ---
-title: "Immutables Are Not Always Immutable"
+title: "Python: Immutables Are Not Always Immutable"
 date: 2020-03-22T11:05:25+01:00
 draft: false
 toc: false
 images:
-tags: [python, immutability, mutability, javascript]
+tags: [python, oop, immutability, mutability]
 ---
-
-This post is still in WORK IN PROGRESS.
 
 If you know a bit of Python, you probably have heard of *immutable* and *mutable* objects (see [data model](https://docs.python.org/3.8/reference/datamodel.html)). Objects can either be mutable or immutable, depending on which type they are.
 
@@ -164,4 +162,45 @@ We can go so far as to check up the address that the object `nahua` resides on i
 4374562064
 ```
 
+## Immutable of Mutables
 
+Coming back to our original, tricky example:
+```python
+>>> tulip = ([1, 2], [3, 4])    # Create a tuple of two lists
+>>> tulip
+([1, 2], [3, 4])
+>>> id(tulip)
+140313768890112
+>>> id(tulip[0])
+140313769534800
+>>> id(tulip[1])
+140313768720576
+```
+
+Notice that a `tuple` is immutable. So we have assigned the variable `tulip` to a tuple whose internal state contains two `lists`, each with a specific ID address. 
+
+```python
+>>> tulip[0] = [5, 6]           # Cannot re-assign one element of an immutable to a new object
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'tuple' object does not support item assignment
+```
+
+If we try to re-assign the first list of our tuple `tulip` to another list object, which has a different ID address, that would not work. This is because the tuple is **immutable**, as in we cannot change the ID addresses of the elements in its internal state.
+
+
+```python
+>>> tulip[0][0] = 5   # But that element, which is mutable, can change its elements
+>>> tulip
+([5, 2], [3, 4])
+>>> id(tulip[0])      # The first list object's ID is not changed
+140313769534800       # which means we did not modify the internal state of an immutable
+```
+
+However, each of its two list objects is **mutable**, which means that we can modify their internal states legally. This is why we could modify the mutable inside an immutable.
+
+## The End
+
+While in most cases, Python immutables are immutable and mutables are mutable. But in some cases we'd run into immutables that contain mutable elements and it would be important to know when these cases occur. The rule of thumb is to understand the relationship between the ID of an object and the IDs of its elements in relationship to the object's type and mutability/immutability.
+
+Hopefully this post helps you a bit. Happy programming in Python :)
