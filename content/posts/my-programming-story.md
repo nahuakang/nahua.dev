@@ -16,16 +16,16 @@ Having briefly encountered **programming** when I was 16, I was scared of it and
 
 More and more people are pondering software development as a career. There are many great blogs about how to make the transition to software, but I want to offer a sincere, candid account of all the failures that went into my path to software.
 
-However, while learning programming can be a enlightening experience, software engineering isn't a career suitable for everyone. Therefore, instead of focusing on making it into software, I wish my story reveals some concepts about how to **remake our _self_** in this fast-changing age.
+However, while learning programming can be a enlightening experience, software engineering isn't a career suitable for everyone. Therefore, instead of focusing on making it into software, I wish my story reveals some universal concepts on how to **remake our _self_** in this fast-changing age.
 
-After all, being able to remake ourselves is the ultimate skill that would help us get closer to happiness and fulfillment in our life and work. I hope this blog post offers you some inspiration in taking some calculated risks to change your life, your career path, and your state of mind. 
+After all, being able to remake ourselves is the ultimate skill that would help us get closer to happiness and fulfillment in our life and work. I hope this blog post offers you some inspiration in taking calculated risks to change your life, your career path, and your state of mind. 
 
 ## Back to the Origin
 In the fall of 2006, I entered one of the most prestigious high schools in Fujian, China with flying marks. I ranked as the top student in my middle school and among the top 30 best students in my city's annual high school entrance exam. My blood was pumped with confidence and I felt I was a smart cookie destined for greatness.
 
 {{< figure src="/img/my_programming_story/hackers_and_painters.jpg" caption="Hackers & Painters" position="center" style="height: 50vw; margin: 0 auto;" >}}
 
-Around this time, I developed an admiration for **hackers** after reading the Chinese translation of Eric S. Raymond's blog post, [How to Become a Hacker](http://www.catb.org/esr/faqs/hacker-howto.html) and a few poorly translated chapters of Paul Graham's [Hackers and Painters](http://www.paulgraham.com/hp.html). The kind of personality and character revealed by Raymond and Graham's writings as well as the meritocratic community of the hacker community deeply resonated with the yet-to-be-developed values of mine. (_Note: Steven Levy's Hackers: Heroes of the Computer Revolution is a great book that I only encountered over a decade later._)
+Around this time, I developed an admiration for **hackers** after reading the Chinese translation of Eric S. Raymond's blog post, [How to Become a Hacker](http://www.catb.org/esr/faqs/hacker-howto.html) and a few poorly translated chapters of Paul Graham's [Hackers and Painters](http://www.paulgraham.com/hp.html). The kind of personality and character revealed by Raymond and Graham's writings as well as the meritocratic community of the hacker community deeply resonated with the yet-to-be-developed values of mine. (_Note: Steven Levy's Hackers: Heroes of the Computer Revolution is a great book that I only encountered over a decade later._).
 
 With encouragement from my high school best friend who knew programming already, I signed up for a weekend Pascal crash course offered by my high school. As I entered a room full of blue DOS screens on a fateful, humid Saturday morning, I was frightened.
 
@@ -36,21 +36,25 @@ Having grown up in a family that did not allow much time to play on a computer, 
 By lunch break, I sneaked out of the classroom and went home. I felt awfully stupid among some of the best students in my city. I swore to never touch programming again because it painfully reminded me of that awkward, humiliating morning and my fragile ego could not allow the acknowledgement that I was not as smart as I thought.
 
 ## How I Started Learning Python
-Fast forward to a decade later in 2016, I had completed a BA in history from Texas A&M and was pursuing studies in a prestigious business school in St. Gallen, Switzerland. While my classmates were scoring interviews with the likes of UBS, Goldman Sachs, and McKinsey, I could not get a business internship either in Switzerland or Germany. In fact, from the numerous applications I sent out, I got only one interview and they took the other candidate.
+Fast forward to a decade later in 2016, I had completed a BA in history from Texas A&M with _magna cum laude_ and _Phi Beta Kappa_ under my belt. Having no idea what to do with my life, I went on to pursue bachelor's studies in a prestigious business school in St. Gallen, Switzerland.
+
+While my classmates were scoring interviews with the likes of UBS, Goldman Sachs, and McKinsey, I could not get a business internship either in Switzerland or Germany. In fact, from the numerous applications I sent out, I got only one interview and the company took the other candidate.
 
 Nowhere. Stuck. Having been a star at Texas A&M, I felt like a complete loser in Switzerland. It was the most trying two years of my life to date.
 
 Out of sheer luck, I got in touch with a Frankfurt-based value investor, an alumnus who was kind enough to offer me some time to _chat_. We had a pleasant conversation over coffee in St. Gallen's Altstadt, during which, however, he quickly determined that I lacked all the necessary financial and accounting knowledge to work as an intern for his fund.
 
-Sensing his acute judgement, I asked out of desperation: "_What kind of skills should I learn that would be valuable to your fund?_" 
+Sensing his acute yet accurate judgement, I asked out of desperation: "_What kind of skills should I learn that would be valuable to your fund?_" 
 
 He replied: "_You could consider learning_ **Python** _and_ **programming** _for machine learning. Technology is coming into value investing as well now._"
 
-Words could not describe my frustration and disappointment as I walked home. I called my girlfriend at the time with tears in my eyes, whining to her that the one thing in the world I did not want to do is learning how to program, yet this investor literally just told me I should learn Python for programming. Beaten and defeated, I went to bed early that day but could not fall asleep.
+I felt a knot in my stomach tying up instantly. Words could not describe my frustration and disappointment as I walked home. I called my girlfriend at the time with tears in my eyes, whining to her that the last thing in the world I would want to do is learning how to program again and this investor literally just told me I should learn Python for programming. Beaten and defeated, I went to bed early that day but could not fall asleep.
 
 {{< figure src="/img/my_programming_story/roggwiller.jpg" caption="In Cafe Roggwiller, I sat with a kind investor in the middle lounge in the back of this photo when he told me to learn programming. I remember vividly how fear arose in me as I heard his advice." position="center" style="width: 80vw; margin: 0 auto;" >}}
 
-The next morning, still with cloud in my mind, I bit my teeth and searched for online courses that would teach me Python. That was the true story to how I started programming.
+The next morning, still with cloud in my mind, I bit my teeth and searched for online courses that would teach me Python.
+
+That was the true story to how I started programming.
 
 ## A Brief Tour into Deep Learning
 Python turned out to be easy and fun to learn and helped me get out of my fear for programming. After learning Python with [Learn Python the Hard Way](https://learnpythonthehardway.org/python3/) and Coursera's [Python for Everybody](https://www.coursera.org/specializations/python), I switched my operating system from Windows to [Ubuntu](https://ubuntu.com/), a popular distro of Linux. For a student who felt stuck in his career development, programming was liberating. So I learned more and more, such as how to dual boot Ubuntu and Windows, how to use the terminal and commandline, and how to write a small script to [scrap search results from YouTube and download YouTube videos](https://github.com/nahuakang/python-mini-projects/blob/master/youtube-downloader.py).
@@ -78,9 +82,9 @@ Yet again Lady Fortuna befell on me. In my moments of frustration, I reached out
 Little did I know that this message landed me an internship and a full-time job that eventually allowed and encouraged me to transit into software development. (_Note: In October 2017, before my internship with TwentyBN started, I briefly contributed to an open source project [OpenMined](https://www.openmined.org/) in an attempt to gain more experience in software. That experience also scared me because I did not understand Git and Github well enough. I paused it in the excuse of work until April, 2020 when I became a software intern at TwentyBN._)
 
 ## Finally, Software Engineering
-Two years into my role as a product marketer, I had an existential crisis because of personal reasons, my career, and the Coronavirus. The company I work for is great. My colleagues are wonderful. I wrote many [blogs at TwentyBN](https://medium.com/twentybn) and managed our company newsletter [Embodied AI](http://www.embodiedai.co/). Yet I never felt fulfilled in my role. There was always a part of me that urged to do more programming and, on some free evenings, I read more on different programming languages out of curiosity.
+Two years into my role as a product marketer, I had an existential crisis due to personal reasons, my career, and the Coronavirus. The company I work for is great. My colleagues are wonderful. I wrote many [blogs at TwentyBN](https://medium.com/twentybn) and managed our company newsletter [Embodied AI](http://www.embodiedai.co/). Yet I never felt fulfilled in my role. There was always a part of me that urged to do more programming and, on some free evenings, I read more on different programming languages out of curiosity.
 
-In 2018, I had wanted to ask TwentyBN for an internship as a deep learning engineering intern but I lacked the confidence to make the cut. And by the end of 2019, I heard enough success stories from acquaintances who landed jobs after bootcamps that my desire to explore software engineering as a career re-kindled.
+Already in 2018, I had wanted to ask TwentyBN for an internship as a deep learning engineering intern but I lacked the confidence to make the cut. And by the end of 2019, I heard enough success stories from acquaintances who landed software jobs after bootcamps that my desire to explore software engineering as a career re-kindled.
 
 {{< figure src="/img/my_programming_story/twentybn.jpg" caption="TwentyBN and its amazing people" position="center" style="width: 50vw; margin: 0 auto;" >}}
 
@@ -93,9 +97,9 @@ Back to work, I managed to convince my boss Moritz, my Python teamleads, as well
 ## Remake Our "Self"
 Having a family and good friends that unconditionally supported me helped. Having parents who value education and generously supported me in my worst moments helped. Having received a stranger's advice helped. Having learned programming and deep learning helped. Having been a history major with good writing skills helped. And having been on the same wavelength with my company's management and colleagues helped. All of that help was necessary.
 
-But equally or perhaps more importantly, I also must thank luck for making me into **a person who has the drive to learn new, seemingly daunting skills to re-make oneself**.
+But equally important, I also must thank Lady Fortuna for making me into **a person who has the drive to learn new, seemingly daunting skills to re-make oneself**.  Without this habit of continuous learning, I could not have achieved what I want.
 
-Because, as you might tell, my learning journey as a software Padawan has only just begun. Software engineering is a dynamic and energetic field with many talented people and brilliant ideas. I am still learning how to write good software and how to work across multiple teams. 
+As you might tell, my learning journey as a software Padawan has only just begun. Software engineering is a dynamic and energetic field with many talented people and brilliant ideas. I am still learning how to write good software and how to work across multiple teams.
 
 I have restarted to contribute to open source projects such as [OpenMined](https://www.openmined.org/) to give myself more exposure to other programming languages and different types of projects. It has not been easy but the OpenMined community is an amazing bunch.
 
@@ -122,18 +126,18 @@ Most of us are destined to encounter career deadlocks at one or another point in
 
 For me, that included almost a decade of switching majors and wondering what line of work I would be passionate about.
 
-It involved moving from China to Texas, from Texas to Switzerland, from Switzerland to Sweden and London, and finally settling in Berlin. Almost each stop of the journey filled with setbacks and rejections.
+It involved moving from China to Texas, from Texas to Switzerland, from Switzerland to Sweden and London, and finally settling in Berlin. Almost each stop of the journey filled with setbacks, rejections, and lost connections.
 
-Once a bright student who scored prestigious scholarships and an induction into the Phi Beta Kappa, I sunk to the pit bottom of my emotional limit in Switzerland. Feeling out of place in a new environment, I failed my major in business administrations and flunked two exams for the first time in my life.
+Once a bright student who scored prestigious scholarships, I sunk to the pit bottom of my emotional limit and academic standing in Switzerland. Out of place in a new environment, I failed my major in business administrations and flunked two exams for the first time in my life.
 
-Until 2015, everywhere I applied for a part-time job or an internship, I was rejected. I could not even teach Chinese as a tutor while in Switzerland because each Kanton has a quota on the limit of working permits for foreigners. Rejections kept coming in the 2 years afterwards.
+Until 2015, everywhere I applied for a part-time job or an internship, I was rejected. I could not even teach Chinese as a tutor while in Switzerland because the Kanton of this job position had a quota on the limit of working permits for foreigners. More rejections came my way in the ensuing 2 years.
 
-But like Dickens wrote, it was the worst of times, but it was also the best of times. Thanks to all the people who are or had been in my life, I survived. Failures challenged my understanding of my strengths and weaknesses, but none of them destroyed me.
+But like Dickens wrote, **it was the worst of times, but it was also the best of times**. Thanks to all the people who are or had been in my life, I survived. Failures challenged my understanding of my strengths and weaknesses, but none of them destroyed me.
 
 Each time I was struck down, I cried a bit, rose up, and found consolation in learning new knowledge and acquiring new skills. There was no giving up.
 
 Here I am today. A new journey just began and I am excited about all the exciting things I will learn along the journey. I am very confident that failures and rejections of all kinds will continue coming my way. I am sure I will have moments of weaknesses and feel defeated. But I have gone through plenty to know that I am strong enough to withstand all of them and continue remaking myself and my life.
 
-I hid most of these failures from others in the past years. A part of me is still ashamed of them. But I decided to write them down because I know someone out there, perhaps one or two of my readers, are going through similar experiences.
+I hid most of these failures from others in the past years. A part of me is still ashamed of them. But I decided to write them down because I know someone out there is going through similar experiences. Perhaps these words will help.
 
-This story is for you and I hope, despite its length, my history resonate with or inspire you so that you can eventually also remake your life.
+So here you go. This story is for you and I hope, despite its length, my history resonate with or inspire you so that you can eventually also remake your life. Good luck and never give up.
