@@ -33,7 +33,7 @@ Having grown up in a family that did not allow much time to play on a computer, 
 
 {{< figure src="/img/my_programming_story/turbo_pascal.png" caption="Turbo Pascal DOS Interface" position="center" style="width: 50vw; margin: 10px;" >}}
 
-By lunch break, I sneaked out of the classroom and went home. I felt awfully stupid among some of the best students in my city. I swore to never touch programming again because it painfully reminded me of that awkward, humiliating morning and my fragile ego could not allow the acknoledgement that I was not as smart as I thought.
+By lunch break, I sneaked out of the classroom and went home. I felt awfully stupid among some of the best students in my city. I swore to never touch programming again because it painfully reminded me of that awkward, humiliating morning and my fragile ego could not allow the acknowledgement that I was not as smart as I thought.
 
 ## How I Started Learning Python
 Fast forward to a decade later in 2016, I had completed a BA in history from Texas A&M and was pursuing studies in a prestigious business school in St. Gallen, Switzerland. While my classmates were scoring interviews with the likes of UBS, Goldman Sachs, and McKinsey, I could not get a business internship either in Switzerland or Germany. In fact, from the numerous applications I sent out, I got only one interview and they took the other candidate.
@@ -48,7 +48,7 @@ He replied: "_You could consider learning_ **Python** _and_ **programming** _for
 
 Words could not describe my frustration and disappointment as I walked home. I called my girlfriend at the time with tears in my eyes, whining to her that the one thing in the world I did not want to do is learning how to program, yet this investor literally just told me I should learn Python for programming. Beaten and defeated, I went to bed early that day but could not fall asleep.
 
-{{< figure src="/img/my_programming_story/roggwiller.jpg" caption="In this cafe I took the advice to learn Python" position="center" style="width: 80vw; margin: 0 auto;" >}}
+{{< figure src="/img/my_programming_story/roggwiller.jpg" caption="In Cafe Roggwiller, I took the advice to learn Python" position="center" style="width: 80vw; margin: 0 auto;" >}}
 
 The next morning, still with cloud in my mind, I bit my teeth and searched for online courses that would teach me Python. That was the true story to how I started programming.
 
