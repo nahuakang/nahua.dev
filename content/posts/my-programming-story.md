@@ -7,10 +7,10 @@ images:
 tags: [programming, career, hacking]
 ---
 
-This is a long, detailed, and brutally honest post in which I recount a lot of failures that I had been ashamed of and a few successes that I am grateful for in my life. Feel free to read the _TL;DR_ and skip to the last section on 5 takeaways for remaking your career.
+This is a long, detailed, and brutally honest post in which I recount the failures that challenged me and the successes that I am grateful for in life. Feel free to read the _TL;DR_ and skip to the last section on 5 takeaways for remaking your career.
 
 ## TL;DR
-Having briefly encountered **programming** when I was 16, I was scared of it and swore not to touch it ever again. 10 years later, I had to learn programming out of desperation and this time I conquered my fear. Over the span of almost 5 years, with many **failures and rejections** behind my back and a persistent desire to seek fulfilmment in work and life, I successfully made the **career switch** into software engineering. Not only did programming liberate me in my career development, but it also re-kindled my curiosity and helped me form my habit of **continuous learning**. Regardless of which career path we want to pivot to, our ability to **remake our _self_** is an essential skill to humans in the 21st century. To continue honing this ability to remake ourselves, we must keep a **curiosity** for knowledge, know how we learn and **learn how to learn**, and try to **be gracious** of all the failures and rejections that crossed our paths.
+Having briefly encountered **programming** when I was 16, I was scared of it and swore not to touch it ever again. 10 years later, I had to learn programming out of desperation and this time I conquered my fear. Over the span of almost 5 years, with many **failures and rejections** behind my back and a persistent desire to seek fulfilmment in work and life, I successfully made the **career switch** into software engineering. Not only did programming liberate me in my career development, but it also re-kindled my curiosity and helped me form my habit of **continuous learning**. Regardless of which career path we want to pivot to, our ability to **remake our _self_** is an essential skill to humans in the 21st century. In order to hone this ability of remaking ourselves in necessary points of our lives, we must keep a **curiosity** for knowledge, know how we learn and **learn how to learn**, and try to **be gracious** of all the failures and rejections that crossed our paths.
 
 * * * * *
 
