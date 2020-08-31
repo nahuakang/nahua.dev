@@ -30,10 +30,10 @@ TL;DR Having briefly encountered programming when I was 16, I was scared of it a
 <p>In the fall of 2006, I entered one of the most prestigious high schools in Fujian, China with flying marks. I ranked as the top student in my middle school and among the top 30 best students in my city&rsquo;s annual high school entrance exam. My blood was pumped with confidence and I felt I was a smart cookie destined for greatness.</p>
 
     <figure class="center" >
-        <img src="/img/my_programming_story/hackers_and_painters.jpg"   style="width: 25vw;"  />
+        <img src="/img/my_programming_story/hackers_and_painters.jpg"   style="height: 50vw; margin: 10px;"  />
 
         
-            <figcaption class="center" >Hackers and Painters book cover</figcaption>
+            <figcaption class="center" >Hackers &amp; Painters</figcaption>
         
     </figure>
 
@@ -43,7 +43,7 @@ TL;DR Having briefly encountered programming when I was 16, I was scared of it a
 <p>Having grown up in a family that did not allow much time to play on a computer, I could not even type properly with five fingers at that time, not to mention using a DOS and writing <code>if-else</code> statements or <code>for-loops</code> in a dreadful language called <strong>Turbo Pascal</strong>! What&rsquo;s worse was that <em>everyone except me</em> seemed to be able to follow the pace of the crash course!</p>
 
     <figure class="center" >
-        <img src="/img/my_programming_story/turbo_pascal.png"   style="width: 40vw;"  />
+        <img src="/img/my_programming_story/turbo_pascal.png"   style="width: 50vw; margin: 10px;"  />
 
         
             <figcaption class="center" >Turbo Pascal DOS Interface</figcaption>
@@ -61,10 +61,10 @@ TL;DR Having briefly encountered programming when I was 16, I was scared of it a
 <p>Words could not describe my frustration and disappointment as I walked home. I called my girlfriend at the time with tears in my eyes, whining to her that the one thing in the world I did not want to do is learning how to program, yet this investor literally just told me I should learn Python for programming. Beaten and defeated, I went to bed early that day but could not fall asleep.</p>
 
     <figure class="center" >
-        <img src="/img/my_programming_story/roggwiller.jpg"   style="width: 40vw;"  />
+        <img src="/img/my_programming_story/roggwiller.jpg"   style="width: 80vw; margin: 0 auto;"  />
 
         
-            <figcaption class="center" >Cafe Roggwiller: Where I took the advice to learn Python</figcaption>
+            <figcaption class="center" >In this cafe I took the advice to learn Python</figcaption>
         
     </figure>
 
@@ -83,7 +83,7 @@ TL;DR Having briefly encountered programming when I was 16, I was scared of it a
 <p>Yet again Lady Fortuna befell on me. In my moments of frustration, I reached out to Moritz, who at the time was the product owner of a deep learning startup, <a href="https://20bn.com/">TwentyBN</a>. By then, I had almost given up on finding an internship in Berlin and reached out only because Moritz&rsquo;s profile resembled mine and I thought I could seek some advice to my career path. I clicked the button on his LinkedIn profile and sent a short message.</p>
 
     <figure class="center" >
-        <img src="/img/my_programming_story/linkedin_message.png"   style="width: 30vw;"  />
+        <img src="/img/my_programming_story/linkedin_message.png"   style="width: 40vw; margin: 0 auto;"  />
 
         
             <figcaption class="center" >A simple LinkedIn message changed my life</figcaption>
@@ -97,7 +97,7 @@ TL;DR Having briefly encountered programming when I was 16, I was scared of it a
 <p>In 2018, I had wanted to ask TwentyBN for an internship as a deep learning engineering intern but I lacked the confidence to make the cut. And by the end of 2019, I heard enough success stories from acquaintances who landed jobs after bootcamps that my desire to explore software engineering as a career re-kindled.</p>
 
     <figure class="center" >
-        <img src="/img/my_programming_story/twentybn.jpg"   style="width: 40vw;"  />
+        <img src="/img/my_programming_story/twentybn.jpg"   style="width: 50vw; margin: 0 auto;"  />
 
         
             <figcaption class="center" >TwentyBN and its amazing people</figcaption>

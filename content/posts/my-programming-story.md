@@ -23,7 +23,7 @@ After all, being able to remake ourselves is the ultimate skill that would help 
 ## Back to the Origin
 In the fall of 2006, I entered one of the most prestigious high schools in Fujian, China with flying marks. I ranked as the top student in my middle school and among the top 30 best students in my city's annual high school entrance exam. My blood was pumped with confidence and I felt I was a smart cookie destined for greatness.
 
-{{< figure src="/img/my_programming_story/hackers_and_painters.jpg" caption="Hackers and Painters book cover" position="center" style="width: 25vw;" >}}
+{{< figure src="/img/my_programming_story/hackers_and_painters.jpg" caption="Hackers & Painters" position="center" style="height: 50vw; margin: 10px;" >}}
 
 Around this time, I developed an admiration for **hackers** after reading the Chinese translation of Eric S. Raymond's blog post, [How to Become a Hacker](http://www.catb.org/esr/faqs/hacker-howto.html) and a few poorly translated chapters of Paul Graham's [Hackers and Painters](http://www.paulgraham.com/hp.html). The kind of personality and character revealed by Raymond and Graham's writings as well as the meritocratic community of the hacker community deeply resonated with the yet-to-be-developed values of mine. (_Note: Steven Levy's Hackers: Heroes of the Computer Revolution is a great book that I only encountered over a decade later._)
 
@@ -31,7 +31,7 @@ With encouragement from my high school best friend who knew programming already,
 
 Having grown up in a family that did not allow much time to play on a computer, I could not even type properly with five fingers at that time, not to mention using a DOS and writing `if-else` statements or `for-loops` in a dreadful language called **Turbo Pascal**! What's worse was that _everyone except me_ seemed to be able to follow the pace of the crash course!
 
-{{< figure src="/img/my_programming_story/turbo_pascal.png" caption="Turbo Pascal DOS Interface" position="center" style="width: 40vw;" >}}
+{{< figure src="/img/my_programming_story/turbo_pascal.png" caption="Turbo Pascal DOS Interface" position="center" style="width: 50vw; margin: 10px;" >}}
 
 By lunch break, I sneaked out of the classroom and went home. I felt awfully stupid among some of the best students in my city. I swore to never touch programming again because it painfully reminded me of that awkward, humiliating morning and my fragile ego could not allow the acknoledgement that I was not as smart as I thought.
 
@@ -48,7 +48,7 @@ He replied: "_You could consider learning_ **Python** _and_ **programming** _for
 
 Words could not describe my frustration and disappointment as I walked home. I called my girlfriend at the time with tears in my eyes, whining to her that the one thing in the world I did not want to do is learning how to program, yet this investor literally just told me I should learn Python for programming. Beaten and defeated, I went to bed early that day but could not fall asleep.
 
-{{< figure src="/img/my_programming_story/roggwiller.jpg" caption="Cafe Roggwiller: Where I took the advice to learn Python" position="center" style="width: 40vw;" >}}
+{{< figure src="/img/my_programming_story/roggwiller.jpg" caption="In this cafe I took the advice to learn Python" position="center" style="width: 80vw; margin: 0 auto;" >}}
 
 The next morning, still with cloud in my mind, I bit my teeth and searched for online courses that would teach me Python. That was the true story to how I started programming.
 
@@ -72,7 +72,7 @@ I remember one startup that I applied to wrote back saying that they did not hav
 
 Yet again Lady Fortuna befell on me. In my moments of frustration, I reached out to Moritz, who at the time was the product owner of a deep learning startup, [TwentyBN](https://20bn.com/). By then, I had almost given up on finding an internship in Berlin and reached out only because Moritz's profile resembled mine and I thought I could seek some advice to my career path. I clicked the button on his LinkedIn profile and sent a short message.
 
-{{< figure src="/img/my_programming_story/linkedin_message.png" caption="A simple LinkedIn message changed my life" position="center" style="width: 30vw;" >}}
+{{< figure src="/img/my_programming_story/linkedin_message.png" caption="A simple LinkedIn message changed my life" position="center" style="width: 40vw; margin: 0 auto;" >}}
 
 
 Little did I know that this message landed me an internship and a full-time job that eventually allowed and encouraged me to transit into software development. (_Note: In October 2017, before my internship with TwentyBN started, I briefly contributed to an open source project [OpenMined](https://www.openmined.org/) in an attempt to gain more experience in software. I paused it until April, 2020 when I became a software intern at TwentyBN._)
@@ -82,7 +82,7 @@ Two years into my role as a product marketer, I had an existential crisis becaus
 
 In 2018, I had wanted to ask TwentyBN for an internship as a deep learning engineering intern but I lacked the confidence to make the cut. And by the end of 2019, I heard enough success stories from acquaintances who landed jobs after bootcamps that my desire to explore software engineering as a career re-kindled.
 
-{{< figure src="/img/my_programming_story/twentybn.jpg" caption="TwentyBN and its amazing people" position="center" style="width: 40vw;" >}}
+{{< figure src="/img/my_programming_story/twentybn.jpg" caption="TwentyBN and its amazing people" position="center" style="width: 50vw; margin: 0 auto;" >}}
 
 During my Christmas vacation back in China, I spent all the 3 weeks learning web development with Harvard's famous [CS50W](https://cs50.harvard.edu/web/2020/), coding from 8AM in the morning until 1 or 2AM in the night. I wanted to test myself with this intensive experience to see if I had it in me to be a programmer or if it were just a phase. The learning curve was steep and the great firewall prevented me from easy access to Google and StackOverflow. But I managed 2 buggy projects and learned some `Flask`, `Django`, `Javascript` and `WebSocket`.
 
