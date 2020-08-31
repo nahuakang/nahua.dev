@@ -7,7 +7,7 @@ images:
 tags: [programming, career, hacking]
 ---
 
-This is a long, honest and detailed post. Feel free to read the _TL;DR_ and skip to the last section on 5 takeaways for remaking your career.
+This is a long, detailed, and brutally honest post in which I recount a lot of failures that I had been ashamed of and a few successes that I am grateful for in my life. Feel free to read the _TL;DR_ and skip to the last section on 5 takeaways for remaking your career.
 
 ## TL;DR
 Having briefly encountered **programming** when I was 16, I was scared of it and swore not to touch it ever again. 10 years later, I had to learn programming out of desperation and this time I conquered my fear. Over the span of almost 5 years, with many **failures and rejections** behind my back and a persistent desire to seek fulfilmment in work and life, I successfully made the **career switch** into software engineering. Not only did programming liberate me in my career development, but it also re-kindled my curiosity and helped me form my habit of **continuous learning**. Regardless of which career path we want to pivot to, our ability to **remake our _self_** is an essential skill to humans in the 21st century. To continue honing this ability to remake ourselves, we must keep a **curiosity** for knowledge, know how we learn and **learn how to learn**, and try to **be gracious** of all the failures and rejections that crossed our paths.
@@ -48,7 +48,7 @@ He replied: "_You could consider learning_ **Python** _and_ **programming** _for
 
 Words could not describe my frustration and disappointment as I walked home. I called my girlfriend at the time with tears in my eyes, whining to her that the one thing in the world I did not want to do is learning how to program, yet this investor literally just told me I should learn Python for programming. Beaten and defeated, I went to bed early that day but could not fall asleep.
 
-{{< figure src="/img/my_programming_story/roggwiller.jpg" caption="In Cafe Roggwiller, I took the advice to learn Python" position="center" style="width: 80vw; margin: 0 auto;" >}}
+{{< figure src="/img/my_programming_story/roggwiller.jpg" caption="In Cafe Roggwiller, I sat with a kind investor in the middle lounge in the back of this photo when he told me to learn programming. I remember vividly how fear arose in me as I heard his advice." position="center" style="width: 80vw; margin: 0 auto;" >}}
 
 The next morning, still with cloud in my mind, I bit my teeth and searched for online courses that would teach me Python. That was the true story to how I started programming.
 
@@ -118,4 +118,22 @@ Here are some takeaways that I hope might inspire some thinking, discussion, and
 
 ## La Fin
 
-I hope this long post might resonate with or inspire some of my readers. Most of us are destined to encounter career deadlocks at one or another point in my life.
+Most of us are destined to encounter career deadlocks at one or another point in our lives.
+
+For me, that included almost a decade of switching majors and wondering what line of work I would be passionate about.
+
+It involved moving from China to Texas, from Texas to Switzerland, from Switzerland to Sweden and London, and finally settling in Berlin. Almost each stop of the journey filled with setbacks and rejections.
+
+Once a bright student who scored prestigious scholarships and an induction into the Phi Beta Kappa, I sunk to the pit bottom of my emotional limit in Switzerland. Feeling out of place in a new environment, I failed my major in business administrations and flunked two exams for the first time in my life.
+
+Until 2015, everywhere I applied for a part-time job or an internship, I was rejected. I could not even teach Chinese as a tutor while in Switzerland because each Kanton has a quota on the limit of working permits for foreigners. Rejections kept coming in the 2 years afterwards.
+
+But like Dickens wrote, it was the worst of times, but it was also the best of times. Thanks to all the people who are or had been in my life, I survived. Failures challenged my understanding of my strengths and weaknesses, but none of them destroyed me.
+
+Each time I was struck down, I cried a bit, rose up, and found consolation in learning new knowledge and acquiring new skills. There was no giving up.
+
+Here I am today. A new journey just began and I am excited about all the exciting things I will learn along the journey. I am very confident that failures and rejections of all kinds will continue coming my way. I am sure I will have moments of weaknesses and feel defeated. But I have gone through enough to know that I am strong enough to withstand all of them and continue remaking myself and my life.
+
+I hid most of these failures from others because a part of me is still ashamed of them. But I decided to write them down because I know someone out there, perhaps one or two of my readers, are going through similar experiences.
+
+This post is for you and I hope this long post might resonate with or inspire you so that you can eventually also remake your life. 
