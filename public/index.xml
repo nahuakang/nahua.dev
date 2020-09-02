@@ -43,7 +43,7 @@ You might have also wondered: What are the differences between these two methods
       <guid>/posts/2020/03/python-immutables-are-not-always-immutable/</guid>
       <description>If you know a bit of Python, you probably have heard of immutable and mutable objects (see data model). Objects can either be mutable or immutable, depending on which type they are.
 Immutables and Mutables: Basics First, let&amp;rsquo;s review the basics of immutables and mutables that we all know.
-Mutable Objects Mutable ones can be changed after they are created. For Python, collections like list, dict, and set are mutable objects.</description>
+Types of Mutable Objects Mutable ones can be changed after they are created. For Python, collections like list, dict, and set are mutable objects.</description>
     </item>
     
     <item>

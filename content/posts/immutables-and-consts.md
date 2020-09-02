@@ -12,7 +12,7 @@ If you know a bit of Python, you probably have heard of *immutable* and *mutable
 ## Immutables and Mutables: Basics
 First, let's review the basics of immutables and mutables that we all know.
 
-### Mutable Objects
+### Types of Mutable Objects
 Mutable ones can be changed after they are created. For Python, collections like `list`, `dict`, and `set` are mutable objects. If we create a list, we can change its elements.
 
 ```python
@@ -24,7 +24,7 @@ Mutable ones can be changed after they are created. For Python, collections like
 ["list",  "objects",  "are", "mutable!"]
 ```
 
-### Immutable Objects
+### Types of Immutable Objects
 Immutable objects cannot be changed after creation. `bool`, `int`, `float`, `str`, `frozenset`, and `tuple` are immutable. So we will get an error if we attempt to reassign a tuple:
 
 ```python
@@ -41,7 +41,7 @@ TypeError: 'tuple' object does not support item assignment
 
 Try create a variable that references to a string object, such as `string = 'hello'`. If you attempted to reassign one element of the string (`string[1] = 'h'`), Python console would throw the same `TypeError`.
 
-### Slightly Trickier Objects
+### Example of a Tricky Object
 If `tuple` is immutable and `list` is mutable, what about a tuple of lists then? Is a tuple like `([1, 2], [3, 4])` mutable or immutable?
 
 ```python
@@ -58,7 +58,7 @@ TypeError: 'tuple' object does not support item assignment
 ```
 
 
-## Immutables and Mutables: Dive Deeper
+## Immutables and Mutables: Definitions
 As you can see, the story is a little bit more complicated. On the one hand, we cannot reassign an element of the tuple because tuples are immutable. On the other hand, we can reassign an element of a list inside a tuple, because lists are mutable.
 
 To understand this topic better, we can go deeper into the knitty gritties of Python.
@@ -73,7 +73,7 @@ In Python, everything is an object. So when you see an integer `1` or a string `
 ```
 They are instances of the class integer and the class string.
 
-### Refining Our Definition of Object Mutability
+### Internal State and Mutability
 For an object in memory, it might contain information such as its object type and some data. In the realm of Python, changing the data inside an object is called modifying the ***internal state*** of this object. If we change the data inside an object and the object's memory address has not changed, the object is ***mutated***.
 
 So now we can refine our definition of Python objects' mutability:
