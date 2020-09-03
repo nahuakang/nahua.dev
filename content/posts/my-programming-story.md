@@ -75,7 +75,7 @@ I felt a knot in my stomach tying up instantly. Words could not describe my frus
 The next morning, still with cloud in my mind, I bit my teeth and searched for online courses that would teach me `Python`. I found a few free resources, managed to install `Python` on my Windows laptop, and started programming. 
 
 Immediately, I realized that something was different: I did not feel dumbfounded like I felt with `Pascal`, `C` or `C++`. There was no mysterious, magical, scret code flying around the text editor. It was simple. My hello world program (in `Python2` syntax) was 1 line:
-```python2
+```python
 print "Hello, world."
 ```
 
@@ -96,7 +96,11 @@ By the fall of 2016, I made a calculated move of not completing my studies in St
 
 Being the only student in my program who could _script_ in a general-purpose programming language, I went deeper and deeper into it. While my classmates were studying consulting cases, I hacked in my text editor and terminal to render a Hangman Game while learning how to modularize my code. While my classmates were partying and socializing in the evenings, I sat in a basement and continued learning with online math and programming courses. It brought me pride to be the only person who knew something about the magic in a computer among a bunch of business students.
 
-Soon, I discovered Udacity's new program on **Deep Learning**. Having no clue what deep learning is, I signed up for the course because it sounded cool (nowadays you can learn with free resources like [fast.ai](https://www.fast.ai/)). I learned about back propagation, convolutional neural networks, image classification, Long Short-Term Memory (LSTM), and Generative Adversarial Networks (GAN). None of that was easy and I definitely did not manage to do everything on my own. And wow! I could train a "neural network" to recognize digits in images!
+{{< figure src="/img/my_programming_story/malan.jpg" caption="David Malan teaches the world's best made online course, CS50, an introduction to computer science. (Photo credit: New Yorker)." position="center" style="width: 50vw; margin: 0 auto;" >}}
+
+Around this time, I completed [MIT's 6.00.1x and 6.00.2x](https://courses.edx.org/courses/course-v1:MITx+6.00.1x+2T2017_2/course/) and started doing [Harvard's CS50 course](https://cs50.harvard.edu/web/2020/), of which I eventually completed 70% of the homework. I love CS50 and its people. To this day, it is still the single best online course of any kind and I recommended it to all my close friends who wished to learn programming.
+
+Soon after, I also discovered Udacity's new program on **Deep Learning**. Having no clue what deep learning is, I signed up for the course because it sounded cool (nowadays you can learn with free resources like [fast.ai](https://www.fast.ai/)). I learned about back propagation, convolutional neural networks, image classification, Long Short-Term Memory (LSTM), and Generative Adversarial Networks (GAN). None of that was easy and I definitely did not manage to do everything on my own. And wow! I could train a "neural network" to recognize digits in images!
 
 Quite similar to my earliest experience with programming, I felt often dumbfounded with deep learning but I persisted because the subject was fascinating and because I thought I had no other competitive advantages.
 
@@ -142,7 +146,7 @@ Again, this voice in my mind suggested software.
 
 Already in 2018, I had wanted to ask TwentyBN for an internship as a deep learning engineering intern but I lacked the confidence to make the cut. And by the end of 2019, I heard enough success stories from acquaintances who landed software jobs after bootcamps that my desire to explore software engineering as a career re-kindled.
 
-During my Christmas vacation back in China, I spent all the 3 weeks learning web development with Harvard's famous [CS50W](https://cs50.harvard.edu/web/2020/), coding from 8AM in the morning until 1 or 2AM in the night. I wanted to test myself with this intensive experience to see if I had it in me to be a programmer or if it were just a phase. The learning curve was steep and the great firewall prevented me from easy access to Google and StackOverflow. But I managed 2 buggy projects and learned some `Flask`, `Django`, `Javascript` and `WebSocket`.
+During my Christmas vacation back in China, I spent all the 3 weeks learning web development with [Harvard's CS50W](https://cs50.harvard.edu/web/2020/), coding from 8AM in the morning until 1 or 2AM in the night. I wanted to test myself with this intensive experience to see if I had it in me to be a programmer or if it were just a phase. The learning curve was steep and the great firewall prevented me from easy access to Google and StackOverflow. But I managed 2 buggy projects and learned some `Flask`, `Django`, `Javascript` and `WebSocket`.
 
 {{< figure src="/img/my_programming_story/programming_age.png" caption="This story persuaded me that I am not too old to make the career switch into software." position="center" style="width: 50vw; margin: 0 auto;" >}}
 
@@ -173,7 +177,7 @@ Additionally, there are knowledge gaps that I have to make up for, such as archi
 
 ## La Fin
 
-Most of us are destined to encounter career deadlocks at one or another point in our lives, otherwise known as the midlife crisis or the burnout.
+Most of us will not have a straightforward career that soars like the rocket. Most of us are destined to encounter career deadlocks at one or another point in our lives. And most of us have the power to do something about it.
 
 For me, that included almost a decade of switching majors and wondering what line of work I would be passionate about.
 
