@@ -13,10 +13,10 @@
         
         <item>
             <title>Remake Our Self: My Path into Engineering from the Humanities</title>
-            <link>/posts/2020/08/remake-our-self-my-path-into-engineering-from-the-humanities/</link>
+            <link>/posts/2020/08/my-path-into-engineering/</link>
             <pubDate>Sun, 30 Aug 2020 19:01:38 +0200</pubDate>
             <author>kangnahua [at] gmail dot com (Nahua Kang)</author>
-            <guid>/posts/2020/08/remake-our-self-my-path-into-engineering-from-the-humanities/</guid>
+            <guid>/posts/2020/08/my-path-into-engineering/</guid>
             <description>This is a long, detailed, and brutally honest post in which I recount the failures that challenged me and the right choices I made that I am grateful for. It is written in self-reflection as well as self-meditation for a small circle of friends and acquaintances. Should you, a dear stranger, find any inspiration or consolation in my writing, I would feel a great sense of joy and achievement.
  I am writing this not for the eyes of the many, but for yours alone: for each of us is audience enough for the other.</description>
             <content type="html"><![CDATA[<p>This is a long, detailed, and brutally honest post in which I recount the failures that challenged me and the right choices I made that I am grateful for. It is written in self-reflection as well as self-meditation for a small circle of friends and acquaintances. Should you, a dear stranger, find any inspiration or consolation in my writing, I would feel a great sense of joy and achievement.</p>
@@ -24,6 +24,8 @@
 <p>I am writing this not for the eyes of the many, but for yours alone: for each of us is audience enough for the other.</p>
 <p>&ndash; Epicurus</p>
 </blockquote>
+<h2 id="tldr">TL;DR</h2>
+<p>It is challenging to start a career in software engineering without a background in a related university degree. It is certainly a rewarding path but, like my story suggests, we must have the conviction to work extremely hard, learn every day, set the right expectations, and continue re-making ourselves so that we could capture an opportunity when luck befalls on us. No matter what kind of career pivots we want to make, the key to success is to find the sweet spot between our passion and market demands through continuous learning and a lot of trials and errors.</p>
 <hr>
 <p>Thanks to Silicon Valley, software engineering is one of the most (excessively) glorified lines of work in the 21st century. More and more people every day are curious about entering software from other fields.</p>
 <p>I started programming in April, 2016. I began my software internship in April 2020. In July, 2020, I officially became a junior software engineer and joined the ranks of life-long learners who play and toil in one of the most dynamic, ever-changing fields.</p>
@@ -461,10 +463,10 @@ ExecuteTemplate applies the template associated with t that has the given name t
         
         <item>
             <title>Python: Immutables Are Not Always Immutable</title>
-            <link>/posts/2020/03/python-immutables-are-not-always-immutable/</link>
+            <link>/posts/2020/03/python-immutable-and-mutable-objects/</link>
             <pubDate>Sun, 22 Mar 2020 11:05:25 +0100</pubDate>
             <author>kangnahua [at] gmail dot com (Nahua Kang)</author>
-            <guid>/posts/2020/03/python-immutables-are-not-always-immutable/</guid>
+            <guid>/posts/2020/03/python-immutable-and-mutable-objects/</guid>
             <description>If you know a bit of Python, you probably have heard of immutable and mutable objects (see data model). Objects can either be mutable or immutable, depending on which type they are.
 Immutables and Mutables: Basics First, let&amp;rsquo;s review the basics of immutables and mutables that we all know.
 Types of Mutable Objects Mutable ones can be changed after they are created. For Python, collections like list, dict, and set are mutable objects.</description>

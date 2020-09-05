@@ -1,6 +1,7 @@
 ---
 title: "Remake Our Self: My Path into Engineering from the Humanities"
 date: 2020-08-30T19:01:38+02:00
+slug: "my-path-into-engineering"
 draft: false
 toc: false
 images:
@@ -12,6 +13,9 @@ This is a long, detailed, and brutally honest post in which I recount the failur
 > I am writing this not for the eyes of the many, but for yours alone: for each of us is audience enough for the other.
 > 
 > -- Epicurus
+
+## TL;DR
+It is challenging to start a career in software engineering without a background in a related university degree. It is certainly a rewarding path but, like my story suggests, we must have the conviction to work extremely hard, learn every day, set the right expectations, and continue re-making ourselves so that we could capture an opportunity when luck befalls on us. No matter what kind of career pivots we want to make, the key to success is to find the sweet spot between our passion and market demands through continuous learning and a lot of trials and errors.
 
 * * * * *
 

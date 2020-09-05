@@ -1,6 +1,7 @@
 ---
 title: "Python: Immutables Are Not Always Immutable"
 date: 2020-03-22T11:05:25+01:00
+slug: "python-immutable-and-mutable-objects"
 draft: false
 toc: false
 images:
