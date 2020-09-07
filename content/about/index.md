@@ -58,4 +58,4 @@ If you are in Berlin and share similar interests in programming,
 history, politics, leadership, or classical music, feel free to [reach
 out to me][1]; I will try and respond within a few days.
 
-[1]: mailto:kangnahua@gmail.com
+[1]: mailto:kangnahua[at]gmail.com
