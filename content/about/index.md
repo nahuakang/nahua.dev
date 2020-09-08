@@ -48,7 +48,7 @@ I was shocked. Never did I imagine that my life would have gone a full circle
 to come back to a subject that haunted me a decade ago. I went to sleep feeling
 defeated.
 
-The next morning, having woken up and foundd an online tutorial for Python,
+The next morning, having woken up and found an online tutorial for Python,
 I bit my teeth and gave it a try.
 
 The rest is history.
