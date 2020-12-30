@@ -1,7 +1,7 @@
 ---
 title: "About"
 date: 2020-02-08T10:29:09+01:00
-draft: true
+draft: false
 author: Nahua Kang
 ---
 

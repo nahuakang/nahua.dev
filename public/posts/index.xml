@@ -37,23 +37,25 @@ anagrams.insert(possibility.to_string());
         </item>
         
         <item>
-            <title>Rust for Loop and Iterators</title>
-            <link>/posts/2020/09/rust-for-loop-and-iterators/</link>
+            <title>Rust: For-Loop over Iterators</title>
+            <link>/posts/2020/09/rust-for-loop-over-iterators/</link>
             <pubDate>Sun, 13 Sep 2020 11:16:41 +0200</pubDate>
             <author>kangnahua [at] gmail dot com (Nahua Kang)</author>
-            <guid>/posts/2020/09/rust-for-loop-and-iterators/</guid>
-            <description>Table of Content:  go to deref go to bottom  Introduction One of the most essential feature of any programming language is its for loop. As a programmer, we use for loops almost on a daily basis. However, a beginner in Rust might be confused by the variety of ways one could loop. Besides the infinite loop keyword and the common while-loop, Rust comes with 3 options for you to do a for-loop on : into_iter, iter and iter_mut.</description>
+            <guid>/posts/2020/09/rust-for-loop-over-iterators/</guid>
+            <description>Table of Content:  Introduction For-Loops in Other Languages  Introduction One of the most essential feature of any programming language is its for loop. As a programmer, we use for loops almost on a daily basis. However, a beginner in Rust might be confused by the variety of ways one could loop. Besides the infinite loop keyword and the common while-loop, Rust comes with 3 options for you to do a for-loop on : into_iter, iter and iter_mut.</description>
             <content type="html"><![CDATA[<h2 id="table-of-content">Table of Content:</h2>
 <ul>
-<li><a href="#deref">go to deref</a></li>
-<li><a href="#bottom">go to bottom</a></li>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#other-languages">For-Loops in Other Languages</a></li>
 </ul>
 <h2 id="introduction">Introduction</h2>
 <p>One of the most essential feature of any programming language is its <code>for loop</code>. As a programmer, we use <code>for loops</code> almost on a daily basis. However, a beginner in Rust might be confused by the variety of ways one could loop. Besides the <a href="https://doc.rust-lang.org/stable/rust-by-example/flow_control/loop.html">infinite loop keyword</a> and the common <a href="https://doc.rust-lang.org/1.2.0/book/while-loops.html">while-loop</a>, Rust comes with 3 options for you to do a <code>for-loop</code> on : <a href="https://doc.rust-lang.org/std/iter/trait.IntoIterator.html#tymethod.into_iter"><code>into_iter</code></a>, <a href="https://doc.rust-lang.org/std/vec/struct.Vec.html#method.iter"><code>iter</code></a> and <a href="https://doc.rust-lang.org/std/vec/struct.Vec.html#method.iter_mut"><code>iter_mut</code></a>.</p>
 <p>All three approaches use the <code>for in</code> construct to convert a <code>collection</code> into an <code>Iterator</code> for looping purposes. However, they convert <code>collections</code> into <code>iterators</code> in slightly different ways.</p>
-<h2 id="how-other-languages-handle-for-loops-and-for-ranges">How other languages handle for-loops and for-ranges</h2>
-<p>In <strong>Python</strong>, a for-loop or a for-range is as simple as the following, human-readable example:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">arr <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>]
+<h2 id="other-languages">For-Loops &amp; For-Ranges in Other Languages</h2>
+<p>While it is not necessary, it helps to compare Rust&rsquo;s approach to for-loops with some other popular languages, such as Python, Javascript and Go.</p>
+<p>In <strong>Python</strong>, a for-loop or a for-range is as simple as the following, human-readable example. More complicated loops, such as looping over a <code>list</code> with index as well, requires built-in functions such as <a href="https://book.pythontips.com/en/latest/enumerate.html"><code>enumerate</code></a>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># PYTHON EXAMPLES</span>
+arr <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>]
 <span style="color:#66d9ef">for</span> item <span style="color:#f92672">in</span> arr:
   <span style="color:#66d9ef">print</span>(item)
 <span style="color:#75715e"># Output: 1, 2, 3 on new lines</span>
@@ -61,8 +63,9 @@ anagrams.insert(possibility.to_string());
 <span style="color:#66d9ef">for</span> item <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">4</span>):
   <span style="color:#66d9ef">print</span>(item)
 <span style="color:#75715e"># Output: 1, 2, 3 on new lines</span>
-</code></pre></div><p><strong>Javascript</strong>, similarly, has several approaches (examples from <a href="https://stackoverflow.com/questions/29285897/what-is-the-difference-between-for-in-and-for-of-statements-in-jav">here</a>):</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">arr</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>];
+</code></pre></div><p><strong>Javascript</strong>, similarly, has several approaches, including <code>for...in</code>, <code>for...of</code>, or an object&rsquo;s prototype method <code>forEach</code> (examples are modified from <a href="https://stackoverflow.com/questions/29285897/what-is-the-difference-between-for-in-and-for-of-statements-in-jav">StackOverflow</a>):</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// JAVASCRIPT EXAMPLES
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">arr</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>];
 <span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">foo</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;bar&#34;</span>; <span style="color:#75715e">// =&gt; [1, 2, 3, foo: &#34;bar&#34;]
 </span><span style="color:#75715e"></span>
 <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">arr</span>) {
@@ -74,8 +77,9 @@ anagrams.insert(possibility.to_string());
 </span><span style="color:#75715e"></span>}
 
 <span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">forEach</span>( (<span style="color:#a6e22e">i</span>) =&gt; <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">i</span>) ) <span style="color:#75715e">// Output: &#34;1&#34;, &#34;2&#34;, &#34;3&#34;
-</span></code></pre></div><p><strong>Go</strong> has a very convenient for-range construct for handling looping over arrays and maps, besides the classic C-like for loop:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">arr</span> <span style="color:#f92672">:=</span> []<span style="color:#66d9ef">int</span>{<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>}
+</span></code></pre></div><p>In contrast, the lightweight and simple <strong>Go</strong> has a very convenient for-range construct for handling looping over arrays and maps, besides the classic C-like for loop:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#75715e">// GO EXAMPLES
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">arr</span> <span style="color:#f92672">:=</span> []<span style="color:#66d9ef">int</span>{<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>}
 <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">v</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">arr</span> {
   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">v</span>)
 }
@@ -83,6 +87,57 @@ anagrams.insert(possibility.to_string());
 <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> &lt; len(<span style="color:#a6e22e">arr</span>); <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span> {
     <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">i</span>])
 }
+</code></pre></div><h2 id="rusts-forin-and-into_iter">Rust&rsquo;s For&hellip;In and into_iter</h2>
+<p>Very similar to Javascript&rsquo;s syntax, we can use <code>for...in</code> to loop over a <a href="https://doc.rust-lang.org/std/vec/struct.Vec.html"><code>vector</code></a> in <strong>Rust</strong>. In the following example, suppose we want to find out what the largest number in the vector <code>number_list</code> is, we could assign the first number in the vector as the <code>largest</code>, loop over the vector and compare each subsequent number with <code>largest</code>, reassigning <code>largest</code> to the next number if it is larger than the previous one:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#66d9ef">let</span> number_list <span style="color:#f92672">=</span> vec<span style="color:#f92672">!</span>[<span style="color:#ae81ff">34</span>, <span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">25</span>, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">65</span>];
+
+<span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> largest <span style="color:#f92672">=</span> number_list[<span style="color:#ae81ff">0</span>];
+
+<span style="color:#66d9ef">for</span> item <span style="color:#66d9ef">in</span> number_list {
+    <span style="color:#66d9ef">if</span> item <span style="color:#f92672">&gt;</span> largest {
+        largest <span style="color:#f92672">=</span> item;
+    }
+}
+
+println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;largest is {}&#34;</span>, largest);
+<span style="color:#75715e">// Run the following line results in compiler error
+</span><span style="color:#75715e"></span>println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?}&#34;</span>, number_list);
+</code></pre></div><p>Everything should work fine. But if for some reason you&rsquo;d want to re-examine the vector <code>number_list</code> again by running the <code>println!</code> macro, your Rust compiler will throw you an error:</p>
+<pre><code>    |
+2   |     let number_list = vec![34, 50, 25, 100, 65];
+    |         ----------- move occurs because `number_list` has type `std::vec::Vec&lt;i32&gt;`, which does not implement the `Copy` trait
+...
+6   |     for item in number_list {
+    |                 -----------
+    |                 |
+    |                 `number_list` moved due to this implicit call to `.into_iter()`
+    |                 help: consider borrowing to avoid moving into the for loop: `&amp;number_list`
+...
+14  |     println!(&quot;{:?}&quot;, number_list); 
+    |                      ^^^^^^^^^^^ value borrowed here after move
+    |
+note: this function consumes the receiver `self` by taking ownership of it, which moves `number_list`
+</code></pre><p>Behind the scene, we are <a href="https://doc.rust-lang.org/std/iter/index.html#for-loops-and-intoiterator">converting the vector</a> into an <a href="https://doc.rust-lang.org/std/iter/trait.IntoIterator.html"><code>IntoIterator</code></a>.</p>
+<p>In the official documentation, it is stated that there are <a href="https://doc.rust-lang.org/std/iter/index.html#the-three-forms-of-iteration">three common methods</a> which can create iterators from a collection:</p>
+<p>iter(), which iterates over &amp;T.
+iter_mut(), which iterates over &amp;mut T.
+into_iter(), which iterates over T.</p>
+<p>It&rsquo;s literally the same as:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+    <span style="color:#66d9ef">let</span> number_list <span style="color:#f92672">=</span> vec<span style="color:#f92672">!</span>[<span style="color:#ae81ff">34</span>, <span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">25</span>, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">65</span>];
+
+    <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> largest <span style="color:#f92672">=</span> number_list[<span style="color:#ae81ff">0</span>];
+    
+    <span style="color:#66d9ef">for</span> item <span style="color:#66d9ef">in</span> number_list.into_iter() {
+        <span style="color:#66d9ef">if</span> item <span style="color:#f92672">&gt;</span> largest {
+            largest <span style="color:#f92672">=</span> item;
+        }
+    }
+    
+    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;largest is {}&#34;</span>, largest);
+    <span style="color:#75715e">// If for some reason you want to examine the original vec, Rust panicks
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// println!(&#34;{:?}&#34;, number_list); 
+</span><span style="color:#75715e"></span>}
 </code></pre></div><h2 id="safe-for-loop">Safe for-loop</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#75715e">// Iterator over the 
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
@@ -99,53 +154,6 @@ anagrams.insert(possibility.to_string());
     println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;largest is {}&#34;</span>, largest);
     println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?}&#34;</span>, number_list);
 }
-</code></pre></div><h2 id="the-most-direct-for-loop">The most direct for-loop</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
-    <span style="color:#66d9ef">let</span> number_list <span style="color:#f92672">=</span> vec<span style="color:#f92672">!</span>[<span style="color:#ae81ff">34</span>, <span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">25</span>, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">65</span>];
-
-    <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> largest <span style="color:#f92672">=</span> number_list[<span style="color:#ae81ff">0</span>];
-    
-    <span style="color:#66d9ef">for</span> item <span style="color:#66d9ef">in</span> number_list {
-        <span style="color:#66d9ef">if</span> item <span style="color:#f92672">&gt;</span> largest {
-            largest <span style="color:#f92672">=</span> item;
-        }
-    }
-    
-    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;largest is {}&#34;</span>, largest);
-    <span style="color:#75715e">// If for some reason you want to examine the original vec, Rust panicks
-</span><span style="color:#75715e"></span>    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?}&#34;</span>, number_list); 
-}
-</code></pre></div><p>And the error is shown as:</p>
-<pre><code>    |
-2   |     let number_list = vec![34, 50, 25, 100, 65];
-    |         ----------- move occurs because `number_list` has type `std::vec::Vec&lt;i32&gt;`, which does not implement the `Copy` trait
-...
-6   |     for item in number_list {
-    |                 -----------
-    |                 |
-    |                 `number_list` moved due to this implicit call to `.into_iter()`
-    |                 help: consider borrowing to avoid moving into the for loop: `&amp;number_list`
-...
-14  |     println!(&quot;{:?}&quot;, number_list); 
-    |                      ^^^^^^^^^^^ value borrowed here after move
-    |
-note: this function consumes the receiver `self` by taking ownership of it, which moves `number_list`
-</code></pre><p>It&rsquo;s literally the same as:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
-    <span style="color:#66d9ef">let</span> number_list <span style="color:#f92672">=</span> vec<span style="color:#f92672">!</span>[<span style="color:#ae81ff">34</span>, <span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">25</span>, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">65</span>];
-
-    <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> largest <span style="color:#f92672">=</span> number_list[<span style="color:#ae81ff">0</span>];
-    
-    <span style="color:#66d9ef">for</span> item <span style="color:#66d9ef">in</span> number_list.into_iter() {
-        <span style="color:#66d9ef">if</span> item <span style="color:#f92672">&gt;</span> largest {
-            largest <span style="color:#f92672">=</span> item;
-        }
-    }
-    
-    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;largest is {}&#34;</span>, largest);
-    <span style="color:#75715e">// If for some reason you want to examine the original vec, Rust panicks
-</span><span style="color:#75715e"></span>    <span style="color:#75715e">// println!(&#34;{:?}&#34;, number_list); 
-</span><span style="color:#75715e"></span>}
 </code></pre></div><h2 id="bottom">Finally, iter_mut</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
     <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> number_list <span style="color:#f92672">=</span> vec<span style="color:#f92672">!</span>[<span style="color:#ae81ff">34</span>, <span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">25</span>, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">65</span>];

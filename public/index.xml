@@ -26,12 +26,12 @@ As for lifetimes&amp;hellip;a HashSet of str references is being returned. They 
     </item>
     
     <item>
-      <title>Rust for Loop and Iterators</title>
-      <link>/posts/2020/09/rust-for-loop-and-iterators/</link>
+      <title>Rust: For-Loop over Iterators</title>
+      <link>/posts/2020/09/rust-for-loop-over-iterators/</link>
       <pubDate>Sun, 13 Sep 2020 11:16:41 +0200</pubDate>
       <author>kangnahua [at] gmail dot com (Nahua Kang)</author>
-      <guid>/posts/2020/09/rust-for-loop-and-iterators/</guid>
-      <description>Table of Content:  go to deref go to bottom  Introduction One of the most essential feature of any programming language is its for loop. As a programmer, we use for loops almost on a daily basis. However, a beginner in Rust might be confused by the variety of ways one could loop. Besides the infinite loop keyword and the common while-loop, Rust comes with 3 options for you to do a for-loop on : into_iter, iter and iter_mut.</description>
+      <guid>/posts/2020/09/rust-for-loop-over-iterators/</guid>
+      <description>Table of Content:  Introduction For-Loops in Other Languages  Introduction One of the most essential feature of any programming language is its for loop. As a programmer, we use for loops almost on a daily basis. However, a beginner in Rust might be confused by the variety of ways one could loop. Besides the infinite loop keyword and the common while-loop, Rust comes with 3 options for you to do a for-loop on : into_iter, iter and iter_mut.</description>
     </item>
     
     <item>
