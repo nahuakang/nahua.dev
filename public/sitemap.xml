@@ -3,6 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/posts/</loc>
+    <lastmod>2020-09-13T13:48:37+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2020/09/rust-what-is-lifetime/</loc>
+    <lastmod>2020-09-13T13:48:37+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2020-09-13T13:48:37+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/untagged/</loc>
+    <lastmod>2020-09-13T13:48:37+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2020/09/rust-for-loop-and-iterators/</loc>
+    <lastmod>2020-09-13T11:16:41+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/tags/career/</loc>
     <lastmod>2020-09-05T15:17:16+02:00</lastmod>
   </url>
@@ -13,22 +38,12 @@
   </url>
   
   <url>
-    <loc>/posts/</loc>
-    <lastmod>2020-09-05T15:17:16+02:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/tags/programming/</loc>
     <lastmod>2020-09-05T15:17:16+02:00</lastmod>
   </url>
   
   <url>
     <loc>/posts/2020/08/my-path-into-engineering/</loc>
-    <lastmod>2020-09-05T15:17:16+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
     <lastmod>2020-09-05T15:17:16+02:00</lastmod>
   </url>
   
@@ -79,7 +94,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2020-09-07T17:43:45+02:00</lastmod>
+    <lastmod>2020-09-08T18:16:08+02:00</lastmod>
   </url>
   
   <url>
@@ -89,7 +104,7 @@
   
   <url>
     <loc>/about/</loc>
-    <lastmod>2020-09-07T17:43:45+02:00</lastmod>
+    <lastmod>2020-09-08T18:16:08+02:00</lastmod>
   </url>
   
   <url>

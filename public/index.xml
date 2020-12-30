@@ -15,6 +15,26 @@
     
     
     <item>
+      <title>Rust What Is Lifetime</title>
+      <link>/posts/2020/09/rust-what-is-lifetime/</link>
+      <pubDate>Sun, 13 Sep 2020 13:48:37 +0200</pubDate>
+      <author>kangnahua [at] gmail dot com (Nahua Kang)</author>
+      <guid>/posts/2020/09/rust-what-is-lifetime/</guid>
+      <description>@bobahop on Exercism:
+You&amp;rsquo;re very welcome!
+As for lifetimes&amp;hellip;a HashSet of str references is being returned. They can&amp;rsquo;t be references to str values created in anagrams_for, since those values would go out of scope and be destroyed at the end of the anagrams_for function. So they need to reference something being passed in. The HashSet is populated by references to the values in possible_anagrams, so we have to specify to the compiler that we are sure that the lifetime of the values referenced in the return HashSet is as long as for the values referenced in possible_anagrams.</description>
+    </item>
+    
+    <item>
+      <title>Rust for Loop and Iterators</title>
+      <link>/posts/2020/09/rust-for-loop-and-iterators/</link>
+      <pubDate>Sun, 13 Sep 2020 11:16:41 +0200</pubDate>
+      <author>kangnahua [at] gmail dot com (Nahua Kang)</author>
+      <guid>/posts/2020/09/rust-for-loop-and-iterators/</guid>
+      <description>Table of Content:  go to deref go to bottom  Introduction One of the most essential feature of any programming language is its for loop. As a programmer, we use for loops almost on a daily basis. However, a beginner in Rust might be confused by the variety of ways one could loop. Besides the infinite loop keyword and the common while-loop, Rust comes with 3 options for you to do a for-loop on : into_iter, iter and iter_mut.</description>
+    </item>
+    
+    <item>
       <title>Remake Our Self: My Path into Engineering from the Humanities</title>
       <link>/posts/2020/08/my-path-into-engineering/</link>
       <pubDate>Sun, 30 Aug 2020 19:01:38 +0200</pubDate>

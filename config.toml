@@ -1,7 +1,7 @@
-baseURL = "/"
+baseURL      = "/"
 languageCode = "en-us"
-title = "Nahua Kang"
-theme = "hello-friend-ng"
+title        = "Nahua Kang"
+theme        = "hello-friend-ng"
 
 copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
 
@@ -11,109 +11,97 @@ rssLimit = 10 # Maximum number of items in the RSS feed
 buildFuture  = false
 canonifyURLs = true
 
-enableRobotsTXT = true
-enableGitInfo   = true
-enableEmoji     = true
+enableRobotsTXT                      = true
+enableGitInfo                        = true
+enableEmoji                          = true
 enableMissingTranslationPlaceholders = false
-disableRSS     = false
-disableSitemap = false
-disable404     = false
-disableHugoGeneratorInject = false
+disableRSS                           = false
+disableSitemap                       = false
+disable404                           = false
+disableHugoGeneratorInject           = false
 
 [permalinks]
-  posts = "/posts/:year/:month/:slug/"
+posts = "/posts/:year/:month/:slug/"
 
 [author]
-  name = "Nahua Kang"
-  firstname = "Nahua"
-  lastname = "Kang"
-  location = "Berlin, DE"
-  email = "kangnahua [at] gmail dot com"
+name      = "Nahua Kang"
+firstname = "Nahua"
+lastname  = "Kang"
+location  = "Berlin, DE"
+email     = "kangnahua [at] gmail dot com"
 
 
 [taxonomies]
-  tag = "tags"
-  category = "categories"
+tag      = "tags"
+category = "categories"
 
 
 [params]
-  dateform        = "Jan 2, 2006"
-  dateformShort   = "Jan 2"
-  dateformNum     = "2006-01-02"
-  dateformNumTime = "2006-01-02 15:04 -0700"
+dateform        = "Jan 2, 2006"
+dateformShort   = "Jan 2"
+dateformNum     = "2006-01-02"
+dateformNumTime = "2006-01-02 15:04 -0700"
 
-  # Set disableReadOtherPosts to true in order to hide the links to other posts.
-  disableReadOtherPosts = false
+# Set disableReadOtherPosts to true in order to hide the links to other posts.
+disableReadOtherPosts = false
 
-  # Metadata mostly used in document's head
-  description = "Nahua's blog about programming"
-  keywords = "blog, software development, programming, web development"
-  images = [""]
+# Metadata mostly used in document's head
+description = "Nahua's blog about programming"
+keywords    = "blog, software development, programming, web development"
+images      = [""]
 
 
-  # Directory name of your blog content (default is `content/posts`)
-  contentTypeName = "posts"
+# Directory name of your blog content (default is `content/posts`)
+contentTypeName = "posts"
 
-  # Default theme "light" or "dark"
-  defaultTheme = "light"
+# Default theme "light" or "dark"
+defaultTheme = "light"
 
-  homeTitle = "Nahua Kang"
-  homeSubtitle = "Programmer // Writer"
+homeTitle    = "Nahua Kang"
+homeSubtitle = "Programmer // Writer"
 
-  readOtherPosts = "Read other posts"
+readOtherPosts = "Read other posts"
 
-  [params.logo]
-    logoText1 = "echo"
-    logoText2 = "Hello World"
-    logoHomeLink = "/"
-    logoText1Color = "#A9DC76"
-    logoColor = "#fe9051"
+[params.logo]
+logoText1      = "echo"
+logoText2      = "Hello World"
+logoHomeLink   = "/"
+logoText1Color = "#A9DC76"
+logoColor      = "#fe9051"
 
-  [[params.social]]
-    name = "twitter"
-    url = "https://twitter.com/nahuakang"
+[[params.social]]
+name = "twitter"
+url  = "https://twitter.com/nahuakang"
 
-  [[params.social]]
-    name = "email"
-    url = "mailto:kangnahua[at]gmail.com"
+[[params.social]]
+name = "email"
+url  = "mailto:kangnahua[at]gmail.com"
 
-  [[params.social]]
-    name = "github"
-    url = "https://github.com/nahuakang"
+[[params.social]]
+name = "github"
+url  = "https://github.com/nahuakang"
 
-  [[params.social]]
-    name = "linkedin"
-    url = "https://www.linkedin.com/in/nahuakang/"
+[[params.social]]
+name = "linkedin"
+url  = "https://www.linkedin.com/in/nahuakang/"
 
-  [[params.social]]
-    name = "keybase"
-    url = "https://keybase.io/nahua"
-
-  [[params.skill]]
-    name = "python"
-    url = "https://www.python.org/"
-
-  [[params.skill]]
-    name = "golang"
-    url = "https://golang.org/"
-
-  [[params.skill]]
-    name = "javascript"
-    url = "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+[[params.social]]
+name = "keybase"
+url  = "https://keybase.io/nahua"
 
 [menu]
 
-  [[menu.main]]
-    identifier = "about"
-    name       = "About"
-    url        = "/about/"
+[[menu.main]]
+identifier = "about"
+name       = "About"
+url        = "/about/"
 
-  [[menu.main]]
-    identifier = "blog"
-    name       = "Blog"
-    url        = "/posts/"
+[[menu.main]]
+identifier = "blog"
+name       = "Blog"
+url        = "/posts/"
 
-  [[menu.main]]
-    identifier = "projects"
-    name       = "Projects"
-    url        = "/projects/"
+[[menu.main]]
+identifier = "projects"
+name       = "Projects"
+url        = "/projects/"
