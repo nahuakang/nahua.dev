@@ -8,33 +8,42 @@ author: Nahua Kang
 {{< image src="/nahua.png" alt="Nahua Kang" position="center" style="height:250px;" >}}
 
 ## This blog
-My personal hero, Richard Feynman, knew that knowing the name of
-something is different from knowing that thing. This blog is the
-documentation of my personal struggle in learning new programming
-languages and tools so that I, and perhaps you, will understand it and
-explain it to a 6-year-old with ease.
-
-## Skills
-I am proficient in `Python` and have good working knowledge of `Javascript` and `Go`. 
-
-In terms of libraries, I am familiar with `PyTorch`, `Keras`, `Numpy`, `Flask`, and some Go web programming packages. Previously I dabbed into `Django` and `Rails` but do not use them at the moment.
-
-Tools-wise, I have a decent command of `Git` and `Docker`.
+I write this blog in an attempt to understand the concepts and things I learn
+every day:
+> See that bird? It’s a brown-throated thrush, but in Germany it’s called a halzenfugel, and in Chinese they call it a chung ling and even if you know all those names for it, you still know nothing about the bird. You only know something about people; what they call the bird. Now that thrush sings, and teaches its young to fly, and flies so many miles away during the summer across the country, and nobody knows how it finds its way.
+> - Richard P. Feynman, *"What Do You Care What Other People Think?"*
 
 ## Who am I
-I was born and raised in China but have the privilege of choosing where
-in the world I want to live and what kind of values I want to
-identify with.
+I am a software engineer and open source enthusiast living in Berlin.
+My formal education included a B.A. in history and a M.Sc. in management.
+I developed a passion for all things programming in 2016 and have been
+tinkering ever since.
 
-I speak fluent English and Mandarin Chinese. My German is currently at
-level C1 and I work on improving my spoken German further.
+I strongly believe in the tremendous potential for growth in each human.
+However, while programmers are gifted with the *magical* power to
+empower others to realize their potential, our industry has deviated from
+this noble cause and unleashed *dark magic* that glued people's fingers
+and faces to screens while polaorizing people's opinions of reality.
 
-## Formal education
-My formal education constituted a bachelor's degree in history from
-Texas A&M University and a master's degree in international business from Stockholm School of Economics.
+This is why I am passionate about privacy-preserving AI, a cleaner Internet,
+and software applications that solve real problems and empower each and
+every individual to become a better version of themselves.
+
+## Skills
+I am constantly aquiring new skills. Below are some of the languages, frameworks, and tools
+that I have used or tinkered with.
+
+**Programming Languages**:
+`Python`, `Rust`, `Go`, `Javascript`, `Swift`, and `SQL`.
+
+**Libraries and Frameworks**:
+`Flask`, `Django`, `PostgreSQL`, `PyTorch`, `TensorFlow`, `gorilla/mux`, `pandas`, `NumPy`. 
+
+**Development Tools**:
+`Git`, `Bash/Zsh`, `Docker`, `Emacs`, `Vim`.
 
 ## Programming story
-When I was 16, I tried Turbo Pascal in a crash course session at my high
+When I was 16, I tried `Turbo Pascal` in a crash course session at my high
 school. I did not know that most other students in the session had
 already learned programming one way or another, so I felt stupid and was
 scared out of ever touching a DOS again.
@@ -54,8 +63,6 @@ I bit my teeth and gave it a try.
 The rest is history.
 
 ## Contact
-If you are in Berlin and share similar interests in programming,
-history, politics, leadership, or classical music, feel free to [reach
-out to me][1]; I will try and respond within a few days.
+You can [reach me][1] via email.
 
 [1]: mailto:kangnahua[at]gmail.com
