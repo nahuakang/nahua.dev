@@ -15,26 +15,6 @@
     
     
     <item>
-      <title>Rust What Is Lifetime</title>
-      <link>/posts/2020/09/rust-what-is-lifetime/</link>
-      <pubDate>Sun, 13 Sep 2020 13:48:37 +0200</pubDate>
-      <author>kangnahua [at] gmail dot com (Nahua Kang)</author>
-      <guid>/posts/2020/09/rust-what-is-lifetime/</guid>
-      <description>@bobahop on Exercism:
-You&amp;rsquo;re very welcome!
-As for lifetimes&amp;hellip;a HashSet of str references is being returned. They can&amp;rsquo;t be references to str values created in anagrams_for, since those values would go out of scope and be destroyed at the end of the anagrams_for function. So they need to reference something being passed in. The HashSet is populated by references to the values in possible_anagrams, so we have to specify to the compiler that we are sure that the lifetime of the values referenced in the return HashSet is as long as for the values referenced in possible_anagrams.</description>
-    </item>
-    
-    <item>
-      <title>Rust: For-Loop over Iterators</title>
-      <link>/posts/2020/09/rust-for-loop-over-iterators/</link>
-      <pubDate>Sun, 13 Sep 2020 11:16:41 +0200</pubDate>
-      <author>kangnahua [at] gmail dot com (Nahua Kang)</author>
-      <guid>/posts/2020/09/rust-for-loop-over-iterators/</guid>
-      <description>Table of Content:  Introduction For-Loops in Other Languages  Introduction One of the most essential feature of any programming language is its for loop. As a programmer, we use for loops almost on a daily basis. However, a beginner in Rust might be confused by the variety of ways one could loop. Besides the infinite loop keyword and the common while-loop, Rust comes with 3 options for you to do a for-loop on : into_iter, iter and iter_mut.</description>
-    </item>
-    
-    <item>
       <title>Remake Our Self: My Path into Engineering from the Humanities</title>
       <link>/posts/2020/08/my-path-into-engineering/</link>
       <pubDate>Sun, 30 Aug 2020 19:01:38 +0200</pubDate>
@@ -72,8 +52,8 @@ Types of Mutable Objects Mutable ones can be changed after they are created. For
       <pubDate>Sat, 08 Feb 2020 11:19:44 +0100</pubDate>
       <author>kangnahua [at] gmail dot com (Nahua Kang)</author>
       <guid>/projects/</guid>
-      <description>Professional Work Currently I work professionally as a software engineer for Twenty Billion Neurons. My day-to-day role is using Python to implement the &amp;ldquo;logical functionality&amp;rdquo; of the brain of a deep-learning-powered virtual fitness trainer Ally. Download the app in App Store, it&amp;rsquo;s amazing!
-Open Source Projects I am a firm believer in open source software. As of now, I devote my spare time to contribute to OpenMined, the privacy-preserving AI project that aims to unlock the power of deep learning and data while respecting the privacy for each individual.</description>
+      <description>Professional Work Currently I work as a software engineer for Twenty Billion Neurons. My day-to-day role is using Python to implement the &amp;ldquo;logical functionality&amp;rdquo; of the brain of a deep-learning-powered virtual fitness trainer Ally. Download the app in App Store, it&amp;rsquo;s amazing and I use it 3-4 times every week!
+Open Source Projects OpenMined I am a firm believer in open source software. As of now, I devote my spare time to contribute to OpenMined, the privacy-preserving AI project that aims to unlock the power of deep learning and data while respecting the privacy for each individual.</description>
     </item>
     
     <item>
@@ -82,9 +62,8 @@ Open Source Projects I am a firm believer in open source software. As of now, I 
       <pubDate>Sat, 08 Feb 2020 10:29:09 +0100</pubDate>
       <author>kangnahua [at] gmail dot com (Nahua Kang)</author>
       <guid>/about/</guid>
-      <description>This blog My personal hero, Richard Feynman, knew that knowing the name of something is different from knowing that thing. This blog is the documentation of my personal struggle in learning new programming languages and tools so that I, and perhaps you, will understand it and explain it to a 6-year-old with ease.
-Skills I am proficient in Python and have good working knowledge of Javascript and Go.
-In terms of libraries, I am familiar with PyTorch, Keras, Numpy, Flask, and some Go web programming packages.</description>
+      <description>This blog I write this blog in an attempt to understand the concepts and things I learn every day:
+ See that bird? It’s a brown-throated thrush, but in Germany it’s called a halzenfugel, and in Chinese they call it a chung ling and even if you know all those names for it, you still know nothing about the bird. You only know something about people; what they call the bird.</description>
     </item>
     
   </channel>
