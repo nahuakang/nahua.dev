@@ -1,107 +1,40 @@
-baseURL      = "/"
-languageCode = "en-us"
-title        = "Nahua Kang"
-theme        = "hello-friend-ng"
+# The URL the site will be built for
+base_url = "https://nahua.dev"
+title = "Nahua Kang"
+description = "A Roman tinkerer among Greeks"
+default_language = "en"
+compile_sass = true
 
-copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+highlight_code = true
+highlight_theme = "gruvbox-dark"
 
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = true
 
-rssLimit = 10 # Maximum number of items in the RSS feed
+generate_feed = true
+ignored_content = []
 
-buildFuture  = false
-canonifyURLs = true
+taxonomies = [
+  {name = "tags", lang = "en", rss = true},
+]
 
-enableRobotsTXT                      = true
-enableGitInfo                        = true
-enableEmoji                          = true
-enableMissingTranslationPlaceholders = false
-disableRSS                           = false
-disableSitemap                       = false
-disable404                           = false
-disableHugoGeneratorInject           = false
+[search]
+# Whether to include the title of the page/section in the index
+include_title = true
+# Whether to include the description of the page/section in the index
+include_description = false
+# Whether to include the rendered content of the page/section in the index
+include_content = true
 
-[permalinks]
-posts = "/posts/:year/:month/:slug/"
-
-[author]
-name      = "Nahua Kang"
-firstname = "Nahua"
-lastname  = "Kang"
-location  = "Berlin, DE"
-email     = "kangnahua [at] gmail dot com"
-
-
-[taxonomies]
-tag      = "tags"
-category = "categories"
-
-
-[params]
-dateform        = "Jan 2, 2006"
-dateformShort   = "Jan 2"
-dateformNum     = "2006-01-02"
-dateformNumTime = "2006-01-02 15:04 -0700"
-
-# Set disableReadOtherPosts to true in order to hide the links to other posts.
-disableReadOtherPosts = false
-
-# Metadata mostly used in document's head
-description = "Nahua's blog about programming"
-keywords    = "blog, software development, programming, web development"
-images      = [""]
-
-
-# Directory name of your blog content (default is `content/posts`)
-contentTypeName = "posts"
-
-# Default theme "light" or "dark"
-defaultTheme = "light"
-
-homeTitle    = "Nahua Kang"
-homeSubtitle = "Programmer // Writer"
-
-readOtherPosts = "Read other posts"
-
-[params.logo]
-logoText1      = "echo"
-logoText2      = "Hello World"
-logoHomeLink   = "/"
-logoText1Color = "#A9DC76"
-logoColor      = "#fe9051"
-
-[[params.social]]
-name = "twitter"
-url  = "https://twitter.com/nahuakang"
-
-[[params.social]]
-name = "email"
-url  = "mailto:kangnahua[at]gmail.com"
-
-[[params.social]]
-name = "github"
-url  = "https://github.com/nahuakang"
-
-[[params.social]]
-name = "linkedin"
-url  = "https://www.linkedin.com/in/nahuakang/"
-
-[[params.social]]
-name = "keybase"
-url  = "https://keybase.io/nahua"
-
-[menu]
-
-[[menu.main]]
-identifier = "about"
-name       = "About"
-url        = "/about/"
-
-[[menu.main]]
-identifier = "blog"
-name       = "Blog"
-url        = "/posts/"
-
-[[menu.main]]
-identifier = "projects"
-name       = "Projects"
-url        = "/projects/"
+[extra]
+# Put all your custom variables here
+author = "Nahua"
+nav_links = [
+    { url = "$BASE_URL/", name = "Home" },
+    { url = "$BASE_URL/posts/", name = "Blog" },
+    { url = "$BASE_URL/tags/", name = "Tags" },
+    { url = "$BASE_URL/projects/", name = "Projects" },
+    { url = "$BASE_URL/about/", name = "About" },
+]

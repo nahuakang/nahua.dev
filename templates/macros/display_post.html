@@ -1,0 +1,19 @@
+{% import "macros/page_metadata.html" as page_metadata %}
+
+{% macro display_post(post, format) %}
+  <li class="postcard">
+    <div class="postcard__matter">
+      <h3 class="postcard__title">
+        <a href="{{ post.permalink | safe }}">{{ post.title }}</a>
+      </h3>
+      {{ page_metadata::page_metadata(page=post) }}
+      <div class="postcard__summary">
+        {% if post.summary %}
+          {{ post.summary | striptags }}
+        {% else %}
+          No summary available.
+        {% endif %}
+      </div>
+    </div>
+  </li>
+{% endmacro display_post %}

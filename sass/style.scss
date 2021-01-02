@@ -1,0 +1,410 @@
+/* ===== CUSTOM FONT ===== */
+/* INTER FONT */
+@import url("https://rsms.me/inter/inter.css");
+html {
+  font-family: "Inter", sans-serif;
+}
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: "Inter var", sans-serif;
+  }
+}
+
+/* IOVESKA SPARKLE */
+@font-face {
+  font-family: "Iosevka Sparkle";
+  font-weight: 400;
+  font-style: normal;
+  src: url("/fonts/iosevka-sparkle-regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Iosevka Sparkle";
+  font-weight: bold;
+  src: url("/fonts/iosevka-sparkle-bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Iosevka Sparkle";
+  font-weight: 400;
+  font-style: italic;
+  src: url("/fonts/iosevka-sparkle-italic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Iosevka";
+  font-weight: 400;
+  font-style: normal;
+  src: url("/fonts/iosevka-regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Iosevka";
+  font-weight: bold;
+  src: url("/fonts/iosevka-bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Iosevka";
+  font-weight: 400;
+  font-style: italic;
+  src: url("/fonts/iosevka-italic.ttf") format("truetype");
+}
+
+/* ===== COLOR VARIABLES ===== */
+$base-color: white;
+$default-font-color: black;
+$theme-color-dark: #a04120;
+$theme-color-light: #ffd1ac;
+$theme-color-ultra-light: #fff0e4;
+$medium-font-color: #3b3b3b;
+$page-metadata-color: #666;
+$blockquote-border-color: #e5e5e5;
+$blockquote-background-color: #fbfbfb;
+$postcard-background-color: #f8f8f8;
+
+/* ===== OVERALL HTML & BODY ===== */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  /* This ensures the root font size is 10px */
+}
+
+body {
+  font-size: 2rem;
+  line-height: 1.5;
+  color: $default-font-color;
+  height: 100vh;
+  align-items: center;
+  background-color: $base-color;
+}
+
+/* ===== ANCHOR ===== */
+a {
+  line-height: 1em;
+  color: $default-font-color;
+  text-decoration: none;
+  border-bottom: solid 2px $theme-color-dark;
+  padding: 0;
+}
+
+a:visited {
+  color: $default-font-color;
+}
+
+a:hover,
+a:active {
+  color: $theme-color-dark;
+}
+
+/* ===== INLINE CODE DECORATION ===== */
+p {
+  code {
+    font-family: "Iosevka Sparkle", serif;
+    background-color: $theme-color-ultra-light;
+    border-radius: 0.2rem;
+    padding: 0.2rem 0.2rem;
+    margin: 0 0.1rem;
+    font-size: 1.6rem;
+    color: $theme-color-dark;
+  }
+}
+
+/* ===== FIGURES & IMAGES ===== */
+figure {
+  figcaption {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: $medium-font-color;
+    font-size: 90%;
+  }
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+/* ===== HR SECTION BREAK ===== */
+hr {
+  overflow: visible; /* For IE */
+  padding: 0;
+  border: none;
+  border-top: medium double $theme-color-dark;
+  color: $theme-color-dark;
+  width: 40%;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 3rem;
+}
+
+hr:after {
+  content: "§";
+  display: inline-block;
+  position: relative;
+  top: -0.7em;
+  font-size: 1.5em;
+  padding: 0 0.25em;
+  background: $base-color;
+}
+
+/* ===== LISTS ===== */
+ul {
+  padding: 0 3rem;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+  width: 60%;
+  margin: 0 auto;
+
+  @media only screen and (max-width: 412px) {
+    font-size: 1.7rem;
+  }
+}
+
+/* ===== HEADER, NAVBAR AND FOOTER ===== */
+header {
+  padding-top: 2rem;
+  text-align: left;
+  color: $default-font-color;
+  margin-bottom: 3rem;
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  p {
+    font-size: 1.8rem;
+  }
+}
+
+footer,
+.navbar {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  margin-top: 0.5rem;
+  margin-bottom: 3rem;
+
+  &__btn {
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 3rem;
+  }
+
+  &__btn:first-child {
+    margin-left: 0;
+  }
+
+  &__btn-active {
+    margin-left: 3rem;
+    a {
+      font-weight: bold;
+      color: $theme-color-dark;
+      border-bottom: none;
+      text-decoration: none;
+    }
+  }
+
+  &__btn-active:first-child {
+    margin-left: 0;
+  }
+
+  @media only screen and (max-width: 412px) {
+    font-size: 1.5rem;
+  }
+}
+
+footer {
+  padding: 1vh 0;
+}
+
+/* ===== CONTENT ===== */
+.content {
+  display: flex;
+  flex-direction: column;
+
+  * {
+    margin-bottom: 2rem;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Inter var", serif;
+    font-weight: bold;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  blockquote {
+    font-family: "Iosevka Sparkle", serif;
+    display: inline-block;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    width: 80%;
+    color: $medium-font-color;
+    font-size: 90%;
+    border-left: 0.5rem solid $blockquote-border-color;
+    border-radius: 0 1rem 1rem 0;
+    background-color: $blockquote-background-color;
+  }
+
+  .page-metadata {
+    p,
+    a {
+      text-decoration: none;
+      color: $page-metadata-color;
+      font-size: 90%;
+    }
+
+    a {
+      border-bottom: 0.1rem solid $page-metadata-color;
+    }
+  }
+
+  .posts {
+    list-style-type: none;
+
+    &__year {
+      text-align: center;
+      color: $theme-color-dark;
+    }
+  }
+
+  .postcard {
+    &__matter {
+      padding: 2rem;
+      border-radius: 1rem;
+      background-color: $postcard-background-color;
+
+      @media only screen and (max-width: 412px) {
+        font-size: 1.5rem;
+      }
+    }
+
+    &__summary {
+      font-family: "Iosevka Sparkle";
+      font-size: 90%;
+    }
+  }
+}
+
+/* ===== CODE BLOCK ===== */
+pre {
+  font-weight: normal;
+  line-height: 1;
+  padding: 2rem 2rem;
+  display: block;
+  border-radius: 1rem;
+}
+
+/* Ensure code snippets have iosevka font */
+pre * {
+  font-family: "Iosevka", serif;
+  font-size: 90%;
+}
+
+/* ===== MEDIA QUERIES ===== */
+@media only screen and (max-width: 1024px) {
+  .body {
+    font-size: 2rem;
+  }
+
+  .container {
+    width: 80%;
+  }
+
+  .navbar {
+    flex: 1;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .body {
+    font-size: 1.6rem;
+  }
+
+  pre {
+    font-size: 2rem;
+    overflow: scroll;
+  }
+
+  .container {
+    width: 90%;
+  }
+
+  .content h1 {
+    font-size: 3rem;
+  }
+
+  .content h2 {
+    font-size: 2.5rem;
+  }
+
+  .navbar {
+    flex: 1;
+  }
+}
+
+@media only screen and (max-width: 412px) {
+  .body {
+    font-size: 1.2rem;
+  }
+
+  .container {
+    width: 95%;
+  }
+
+  .navbar {
+    flex: 1;
+  }
+}
+
+/* 
+This block could add title to code block, but Zola does not support
+this kind of operation yet.
+*/
+// .code-name {
+//   display: block;
+//   position: relative;
+//   margin: -1.2rem 85% 2rem -3rem;
+//   padding: 0.5rem 1rem;
+//   text-align: center;
+//   background-color: $theme-color-light;
+//   color: $theme-color-dark;
+//   font-weight: bold;
+//   border-radius: 0 0 0.8rem 0;
+// }
+/* 
+This block could add title to code block, but cannot conditionally 
+ignore 'fallback' options (a.k.a code without language specification).
+*/
+/* pre > code::before {
+  display: block;
+  content: attr(data-lang);
+  margin: -3rem 85% 2rem -3rem;
+  padding: 1rem;
+  text-align: center;
+  background-color: $theme-color-light;
+  color: #a0411a;
+  font-weight: bold;
+  border-radius: 0 0 0.8rem 0;
+} */

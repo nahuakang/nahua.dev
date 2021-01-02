@@ -1,0 +1,5 @@
+{% macro footer() %}
+  <footer>
+    <small>&copy; {{ config.title }} {{ now() | date(format="%Y") }}</small>
+  </footer>
+{% endmacro footer %}

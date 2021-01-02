@@ -1,0 +1,22 @@
+{% import "macros/display_post.html" as display_post %}
+
+{% extends "base.html" %}
+
+{% block content %}
+
+  {{ section.content | safe }}
+
+  <h2 style="margin-top: 2rem;">Most recent posts</h2>
+
+  <ul class="posts">
+    <!-- Grab posts section to display the most recent 5 posts -->
+    {% set section = get_section(path="posts/_index.md") %}
+    <!-- Already sorted as specified in posts _index.md -->
+    {% for post in section.pages | slice(end=5) %}
+
+      {{ display_post::display_post(post=post, format='%b %d') }}
+
+    {% endfor %}
+  </ul>
+
+{% endblock content %}
