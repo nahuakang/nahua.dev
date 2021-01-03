@@ -39,3 +39,12 @@ $ zola build && zola serve
 ```
 
 Enjoy.
+
+## Philosophy
+
+This attemp is mostly influenced by [Roman Zolotarev](https://www.romanzolotarev.com/), who said:
+
+> we are all a little bit tired of bloated web stacks and we're worrying about future of the web...too many things to learn. too many abstractions. short-living or breaking third-party apis and packages with security and performance issues. over-engineered tooling. outdated documentation.
+> start building with simple battle-tested technologies. start building your products with less code, fewer dependencies, with good-old web stack: vanilla javascript, html, css on the frontend, and node.js and sqlite for the backend, and maybe unix userland as your ide.
+
+While I choose deliberately not to go as simple as Roman suggests, using a SSG like Zola and hosting via Netlify significantly simplifies my blog. The end result is almost the same.
