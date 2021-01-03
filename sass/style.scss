@@ -202,27 +202,38 @@ footer,
     text-decoration: none;
     display: inline-block;
     margin-left: 3rem;
-  }
 
-  &__btn:first-child {
-    margin-left: 0;
-  }
+    &:first-child {
+      margin-left: 0;
+    }
 
-  &__btn-active {
-    margin-left: 3rem;
-    a {
-      font-weight: bold;
-      color: $theme-color-dark;
-      border-bottom: none;
-      text-decoration: none;
+    &-active {
+      margin-left: 3rem;
+
+      a {
+        font-weight: bold;
+        color: $theme-color-dark;
+        border-bottom: none;
+        text-decoration: none;
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      @media only screen and (max-width: 412px) {
+        margin-left: 0;
+      }
+    }
+
+    @media only screen and (max-width: 412px) {
+      margin-left: 0;
     }
   }
 
-  &__btn-active:first-child {
-    margin-left: 0;
-  }
-
   @media only screen and (max-width: 412px) {
+    flex-wrap: wrap;
+    justify-content: space-around;
     font-size: 1.5rem;
   }
 }
