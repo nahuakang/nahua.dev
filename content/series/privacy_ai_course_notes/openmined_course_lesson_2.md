@@ -1,7 +1,7 @@
 +++
 title = "OpenMined Course 1: Summary - Society Runs on Information Flows"
 date = 2021-01-03
-slug = "openmined-course-1-lesson-2-summary"
+slug = "course-1-lesson-2-summary"
 draft = false
 in_search_index = true
 [taxonomies]

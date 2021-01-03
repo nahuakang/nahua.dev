@@ -1,0 +1,19 @@
+{% import "macros/display_serie.html" as display_serie %}
+
+{% extends "base.html" %}
+
+{% block content %}
+
+  <h1>{{ section.title }}</h1>
+
+  {% for subsection in section.subsections %}
+    
+    {% set subsection = get_section(path=subsection) %}
+    
+    <ul class="posts">
+        {{ display_serie::display_serie(serie=subsection, format='%b %d') }}
+    </ul>
+
+  {% endfor %}
+
+{% endblock content %}

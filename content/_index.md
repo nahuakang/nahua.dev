@@ -2,7 +2,6 @@
 title = "Nahua's Blog"
 +++
 
-{{ image(src="/images/nahua.png", alt="Nahua Kang", height="250px") }}
 Howdy! I'm Nahua. Welcome to my blog. I write about how computers work
 and about my various interests in AI, privacy, software, classical music,
 and literature.
