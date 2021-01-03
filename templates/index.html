@@ -1,4 +1,5 @@
 {% import "macros/display_post.html" as display_post %}
+{% import "macros/display_serie.html" as display_serie %}
 
 {% extends "base.html" %}
 
@@ -10,13 +11,28 @@
 
   <ul class="posts">
     <!-- Grab posts section to display the most recent 5 posts -->
-    {% set section = get_section(path="posts/_index.md") %}
+    {% set blog_section = get_section(path="posts/_index.md") %}
     <!-- Already sorted as specified in posts _index.md -->
-    {% for post in section.pages | slice(end=5) %}
+    {% for post in blog_section.pages | slice(end=5) %}
 
       {{ display_post::display_post(post=post, format='%b %d') }}
 
     {% endfor %}
   </ul>
+
+  <h2 style="margin-top: 2rem;">My Series</h2>
+
+  <!-- Grab posts section to display the most recent 5 posts -->
+  {% set series_section = get_section(path="series/_index.md") %}
+  
+  {% for subsection in series_section.subsections %}
+    
+    {% set subsection = get_section(path=subsection) %}
+    
+    <ul class="posts">
+        {{ display_serie::display_serie(serie=subsection, format='%b %d') }}
+    </ul>
+
+  {% endfor %}
 
 {% endblock content %}
