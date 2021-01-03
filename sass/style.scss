@@ -299,6 +299,10 @@ footer {
       text-align: center;
       color: $theme-color-dark;
     }
+
+    @media only screen and (max-width: 412px) {
+      padding: 0;
+    }
   }
 
   .postcard {
@@ -360,7 +364,7 @@ pre * {
   }
 
   .container {
-    width: 90%;
+    width: 80%;
   }
 
   .content h1 {
@@ -382,7 +386,7 @@ pre * {
   }
 
   .container {
-    width: 95%;
+    width: 85%;
   }
 
   .navbar {
