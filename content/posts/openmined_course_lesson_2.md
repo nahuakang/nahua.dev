@@ -5,12 +5,12 @@ slug = "openmined-course-1-lesson-2-summary"
 draft = false
 in_search_index = true
 [taxonomies]
-tags = ["openmined", "privacy", "privacy preserving tech"]
+tags = ["openmined", "privacy", "privacy-preserving AI"]
 +++
 
 This post is a summary of Course 1, Lesson 2 of OpenMined's new private AI series, [Our Privacy Opportunity](https://courses.openmined.org/courses/our-privacy-opportunity). For a Google Doc version of the summary, [click here](https://docs.google.com/document/d/1A8efR94WzNcgE1XBjWI7zknCJc2oyxF--dGTzQwduQ4/edit?usp=sharing). Feel free to comment in the Gdoc to help improve the summary notes.
 
-<!--more-->
+<!-- more -->
 
 Towards the end of 2020, I was approached by the OpenMined team to help out on writing the new [private AI series courses](https://courses.openmined.org). Unfortunately, given professional and private reasons, I could not contribute to the course development. Therefore, I hope to write and collect notes from the courses and offer them as my minor contribution to this open source community that I love and believe in.
 
