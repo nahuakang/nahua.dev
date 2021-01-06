@@ -8,6 +8,12 @@ in_search_index = true
 tags = ["openmined", "privacy", "privacy-preserving AI"]
 +++
 
+This post is a summary of Course 1, Lesson 4 of OpenMined's new private AI series, [Our Privacy Opportunity](https://courses.openmined.org/courses/our-privacy-opportunity) and covers topics on structured transparency, including input/output privacy, input/output verification, and flow governance.
+
+<!-- more -->
+
+> For a Google Doc version of the summary, [click here](https://docs.google.com/document/d/1qez3zK_-BUz4iI1tM81Xd5nBwtFIkmljWr-6LlBfCxk/edit?usp=sharing). Feel free to comment in the Gdoc to help improve the summary notes.
+
 This lesson focuses on solutions.
 
 ## Introducing Structured Transparency
@@ -82,7 +88,7 @@ Imagine a bank allows you to store your money encrypted by HE. The bank would no
 
 **Additive Secret Sharing:** One of the most interesting SMPC algorithms. It allows multiple people to share ownership of a number and solves the copy problem.
 
-**Example:** Take a number 5 and split it randomly into -1 and 6 to give to Bob and Alice. The numbers add up to 5, but each number on its own does not reveal information about number 5. The relationship between the two numbers, however, stores the information of 5. Unless you have both shares, you will not know more about the number. The copy problem is solved because neither Bob nor Alice knows the number they store means 5. It requires 100% consensus among the shareholders to decrypt the information. It’s a shared control over number 5. But both Bob and Alice can perform meaningful computation on the numbers they hold on behalf of the actual number 5. Since everything can be boiled down to numbers, files, videos, and more can be encrypted in this approach.
+**Example:** Take a number `5` and split it randomly into `-1` and `6` to give to Bob and Alice. The numbers add up to `5`, but each number on its own does not reveal information about number `5`. The relationship between the two numbers, however, stores the information of `5`. Unless you have both shares, you will not know more about the number. The copy problem is solved because neither Bob nor Alice knows the number they store means `5`. It requires 100% consensus among the shareholders to decrypt the information. It’s a shared control over number `5`. But both Bob and Alice can perform meaningful computation on the numbers they hold on behalf of the actual number `5`. Since everything can be boiled down to numbers, files, videos, and more can be encrypted in this approach.
 
 **Nuances for HE and SMPC:** HE and SMPC excel in different contexts. SMPC puts a huge load on the network among shareholders but requires low computational resources for each computer. HE does not require high network computation but must do a lot of computational steps to keep the data secure. If you have low internet speed and a powerful computer, HE shines. If you have high internet bandwidth but less powerful computers, SMPC shines.
 
@@ -99,7 +105,7 @@ Output privacy ensures that certain attributes of the input information do not l
 **Example:**
 
 - Suppose Andrew wants to know about the average age of all students participating in Course 1. A privacy-intrusive way is to ask everyone to type in their age. Andrew does not need to know each person’s age to get the information.
-- Even if we use HE to provide input privacy, Andrew could still find ways to reverse engineer. Suppose Andrew learned that there are `1000` students in the course and the average age is `27`. Now, Andrew excludes you from the email and asks the other `999` students to re-submit their age. Assume the new average age of the other `999` students is `27.007`. Oh, now Andrew knows you are around `20` years old (`100027 - 99927.007 20`).
+- Even if we use HE to provide input privacy, Andrew could still find ways to reverse engineer. Suppose Andrew learned that there are `1000` students in the course and the average age is `27`. Now, Andrew excludes you from the email and asks the other `999` students to re-submit their age. Assume the new average age of the other `999` students is `27.007`. Oh, now Andrew knows you are around `20` years old `(1000 * 27 - 999 * 27.007 20)`.
 - Alternatively, Andrew could pretend to be the other 999 students and asks you to give him your encrypted age. The end result is the same: Andrew can reverse engineer and obtain information about you.
 - Now, with DP, what if you get to pick a random number from `-100` to `100` to add to your age first before encrypting it and sending it to Andrew? So say you are `30` and add `-50` before sending `-20` to Andrew. That makes no sense? But interestingly, if you have good randomness, then the average of the random numbers people choose will approach `0`. A few random numbers can be noisy, but infinite choices between `-100` and `100` cancels out the noise.
 - Andrew now can average over all the “ages” of the class to get close enough to the true average age of the class, but he has no way to reverse engineer anymore. So maybe Andrew knows you submitted `-4`, but...he learned nothing about your true age since you could have picked any numbers from `-100` to `100`.
@@ -112,8 +118,8 @@ Output privacy ensures that certain attributes of the input information do not l
 
 **Important:**
 
-- Privacy budget is a measure that ensures that all the results a researcher generates from the input data must, when taken together, represent less than `_X ε_` of information. `_X_` is a measure of your maximum tolerance for information reconstruction risk. If you are not too worried about someone trying to reconstruct your data, you could set `_X_` to `100`; but if you are really worried, you could set it to `1` or `0.1`. It does not matter what specific algorithms the researcher uses as long as it can be measured by `ε`, you get a formal guarantee that by the probability that a researcher can reconstruct your data from the statistical results.
-- We just mentioned that every researcher gets their own `ε`. Suppose there are `10` researchers and each of them receives `20 ε` of privacy budget, does that add up to `200 ε`? What if the researchers pool their results together? In theory, if they combine the results in the right way, they could achieve as much information leakage. If this is a concern, you should track a `**_global ε_**` against all researchers who work with your dataset. But if you are not worried about researchers pooling results together, then an individual basis for privacy budget should be fine.
+- Privacy budget is a measure that ensures that all the results a researcher generates from the input data must, when taken together, represent less than ` X ε` of information. `X` is a measure of your maximum tolerance for information reconstruction risk. If you are not too worried about someone trying to reconstruct your data, you could set `X` to `100`; but if you are really worried, you could set it to `1` or `0.1`. It does not matter what specific algorithms the researcher uses as long as it can be measured by `ε`, you get a formal guarantee that by the probability that a researcher can reconstruct your data from the statistical results.
+- We just mentioned that every researcher gets their own `ε`. Suppose there are `10` researchers and each of them receives `20 ε` of privacy budget, does that add up to `200 ε`? What if the researchers pool their results together? In theory, if they combine the results in the right way, they could achieve as much information leakage. If this is a concern, you should track a **`global ε`** against all researchers who work with your dataset. But if you are not worried about researchers pooling results together, then an individual basis for privacy budget should be fine.
 - Now, think from the perspective of a patient. How does `ε` apply to you? If you are a patient at `2` hospitals and both hospitals allow researchers to use data about you? If each hospital allocates `20` of information about you, then there could be `40` information about you leaked out! Just because your hospital doesn’t think they leak private information about you does not mean they don’t actually leak it.
 
 **Example:** Netflix used to run the biggest anonymized dataset for machine learning competition. They replaced movie titles and usernames with random numbers. So Netflix thought user privacy should not be a problem. Well...if only IMDb did not exist. IMDb also keeps a big list of movies and a list of users. Sometimes people post their ratings about a movie on IMDb while posting ratings about the same movies on Netflix. So Netflix released some `ε` of information about its anonymized users. IMDb leaks a lot of `ε` about some overlapping users. So much `ε` is in the public that some researchers could successfully launch a **_deanonymization attack_**.
@@ -181,3 +187,31 @@ First, some of them might already be entities, such as well-known hospitals, tha
 A second person came along and saw your review and they tried, leaving a review. Then the third came along, and the fourth. They all signed that this dataset, which we cannot see, is good.
 
 **_[Note: this bit is a bit hard to take notes on]_** All that you had to go on is a bunch of anonymous reviews on a secret dataset. **_Since you cannot invent trust out of nowhere._** You can take a tiny bit of trust, try it, review it, and scale this trust to the whole community.
+
+## Output Verification
+
+**Definition:** The guarantee that output from a hidden information flow (with hidden input transformation) contains the properties that we want. It is one of the most important components of structured transparency because it enables us to verify that an algorithm is desirable.
+
+**Examples:**
+DL models might be biased or unfair because of the intrinsic bias built into the datasets they are trained on. There are ethical concerns about these models. Therefore, we should develop techniques to assess the model outputs for bias or unfairness.
+
+**Question:** _If all the decisions in the world are made by humans by hand, do we know whether any particular decision is made in a fair way?_
+
+If there’s a procedure being followed, we could evaluate the procedure. But if the person made it based on gut feelings, then we enter a slippery slope. To truly know the mind of a person who made a decision is close to impossible.
+
+A Formal Set of Procedures: So it is quite clear to us that human brains, similar to ML models, are blackboxes. We have procedures for what people can or cannot do and use procedures to ensure that their decisions are fair and just. This brings the decision and the decision-making process out in the open.
+
+**Takeaway:** Law is a formal set of procedures. An algorithm is a formal set of procedures. Algorithms, with the right output verification technique, can become vastly more transparent than human brains. Algorithms might not be ready for all cases, but they present a long-term potential to help society to become more transparent. It is, after all, easier to audit an algorithm than the human mind.
+
+## Flow Governance
+
+**Question:** _If an information flow that achieves input privacy is set up, who has the ability to turn the input privacy guarantee off? Same for output privacy, input/output verification._
+
+**Definition:** Without proper flow governance, the integrity of the other 4 guarantees can be entirely at risk.
+
+**Examples:**
+
+- **Public key:** If Andrew sends Nahua a message, Andrew would use Nahua’s public key to encrypt the message. The content of this message is now governed by Nahua, who holds the secret key to decrypt the message. Other people can steal or store the message but the content of the message can only be used by Nahua. This is **unilateral governance**. One key holder, one person that controls the data.
+- **Homomorphic Encryption:** If someone hands you a bit of information encrypted with their public key, you have some governance over the data: You can compute over the encrypted information and transform it. You cannot act on it in the real world but you still have some more power than if it were encrypted by public keys. The decryption still belongs to the person holding the private key. Governance to act on a piece of information in the real world lies with the one entity that holds the private key.
+- In Secure Multi-Party Computation, we have **consensus governance:** Only when all parties agree on some computation, would the computation be allowed. Each shareholder has veto power to stop an information flow from happening.
+- What about a governance of democratic majority? This is called **_threshold schemes_**. You can set an arbitrary percentage so if enough shareholders agree, they have enough cryptographic permission to perform some computation. Groups of people, given checks and balances, are possible to work together towards a shared goal.
