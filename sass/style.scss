@@ -12,6 +12,14 @@ html {
   }
 }
 
+/* FIRA CODE */
+@font-face {
+  font-family: "Fira Code";
+  font-weight: 400;
+  font-style: normal;
+  src: url("/fonts/FiraCode-Regular.ttf") format("truetype");
+}
+
 /* IOVESKA SPARKLE */
 @font-face {
   font-family: "Iosevka Sparkle";
@@ -341,16 +349,11 @@ pre {
   display: block;
   border-radius: 1rem;
   overflow: scroll;
-  // white-space: pre-wrap; //css3
-  // white-space: moz-pre-wrap; //firefox
-  // white-space: -pre-wrap; //opera 4-6
-  // white-space: -o-pre-wrap; //opera 7
-  // word-wrap: break-word; //internet explorer
 }
 
 /* Ensure code snippets have iosevka font */
 pre * {
-  font-family: "Iosevka", serif;
+  font-family: "Fira Code", serif;
   font-size: 90%;
 }
 
