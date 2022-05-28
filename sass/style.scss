@@ -1,9 +1,11 @@
 /* ===== CUSTOM FONT ===== */
 /* INTER FONT */
 @import url("https://rsms.me/inter/inter.css");
+
 html {
   font-family: "Inter", sans-serif;
 }
+
 @supports (font-variation-settings: normal) {
   html {
     font-family: "Inter var", sans-serif;
@@ -17,11 +19,13 @@ html {
   font-style: normal;
   src: url("/fonts/iosevka-sparkle-regular.ttf") format("truetype");
 }
+
 @font-face {
   font-family: "Iosevka Sparkle";
   font-weight: bold;
   src: url("/fonts/iosevka-sparkle-bold.ttf") format("truetype");
 }
+
 @font-face {
   font-family: "Iosevka Sparkle";
   font-weight: 400;
@@ -35,11 +39,13 @@ html {
   font-style: normal;
   src: url("/fonts/iosevka-regular.ttf") format("truetype");
 }
+
 @font-face {
   font-family: "Iosevka";
   font-weight: bold;
   src: url("/fonts/iosevka-bold.ttf") format("truetype");
 }
+
 @font-face {
   font-family: "Iosevka";
   font-weight: 400;
@@ -134,7 +140,8 @@ img {
 
 /* ===== HR SECTION BREAK ===== */
 hr {
-  overflow: visible; /* For IE */
+  overflow: visible;
+  /* For IE */
   padding: 0;
   border: none;
   border-top: medium double $theme-color-dark;
@@ -282,6 +289,7 @@ footer {
   }
 
   .page-metadata {
+
     p,
     a {
       text-decoration: none;
@@ -332,6 +340,12 @@ pre {
   padding: 2rem 2rem;
   display: block;
   border-radius: 1rem;
+  overflow: scroll;
+  // white-space: pre-wrap; //css3
+  // white-space: moz-pre-wrap; //firefox
+  // white-space: -pre-wrap; //opera 4-6
+  // white-space: -o-pre-wrap; //opera 7
+  // word-wrap: break-word; //internet explorer
 }
 
 /* Ensure code snippets have iosevka font */
