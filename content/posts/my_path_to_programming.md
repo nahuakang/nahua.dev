@@ -54,7 +54,7 @@ For some reason, staring at that blue screen, I could not understand how a compu
 program Hello;
 begin
   writeln ('Hello, world.');
-end.
+end
 ```
 
 I felt nervous, my head sweating. The teacher asked us to solve some more basic problems, but my brain felt like a overcooked pot of porridge. I sat there, stupified and petrified, while all the other students coded away, sharing their excitement with each other.

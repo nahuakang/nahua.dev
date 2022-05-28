@@ -24,12 +24,9 @@ Then, download the repository and get into the directory:
 
 ```
 # SSH version
-$ git clone git@github.com:nahuakang/zola-blog.git
+$ git clone git@github.com:nahuakang/nahua.dev.git
 
-# HTTP version
-$ git clone https://github.com/nahuakang/zola-blog.git
-
-$ cd zola-blog
+$ cd nahua.dev
 ```
 
 Once inside the directory, do:

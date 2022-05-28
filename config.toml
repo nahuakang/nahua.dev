@@ -1,6 +1,6 @@
 base_url = "https://nahua.dev"
 title = "Nahua Kang"
-description = "A Roman tinkerer among Greeks"
+description = "Tinkering Rust"
 default_language = "en"
 compile_sass = true
 

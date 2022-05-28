@@ -8,6 +8,10 @@ in_search_index = true
 tags = ["programming", "opensource", "rust", "sql"]
 +++
 
+In this blog post, I'll walk you through an open source PR I submitted to SeaORM with Rust.
+
+<!-- more -->
+
 This is a transparent and honest story that serves as a walk-through of my first open source issue after a long break from the open source world. The aim of this blog post is to demystify the process of contributing to open source projects and help the readers realize that open source contribution is (often) challenging but rewarding and fun.
 
 While I use a contribution to Rust’s [`SeaORM`](https://github.com/SeaQL/sea-orm) as an example, you do not need any knowledge in Rust to follow this post’s thought process and procedure to take away lessons that might help you start your open source journey in any language or ecosystem.
