@@ -285,19 +285,19 @@ impl ActiveModelBehavior for ActiveModel {}
 When I’m done with my feature, I’d be able to specify a `--date-time-crate` flag with a value so that the values in the `time_tests` model would be the following for `chrono` crate:
 
 ```rust
-    pub id: i32,
-    pub created_at: DateTimeWithTimeZone,
-    pub created_date: Date,
-    pub created_time: Time,
+pub id: i32,
+pub created_at: DateTimeWithTimeZone,
+pub created_date: Date,
+pub created_time: Time,
 ```
 
 and the following for `time` crate:
 
 ```rust
-    pub id: i32,
-    pub created_at: TimeDateTimeWithTimeZone,
-    pub created_date: TimeDate,
-    pub created_time: TimeTime,
+pub id: i32,
+pub created_at: TimeDateTimeWithTimeZone,
+pub created_date: TimeDate,
+pub created_time: TimeTime,
 ```
 
 This information was gathered from the documentation for [column types](https://www.sea-ql.org/SeaORM/docs/generate-entity/entity-structure#column-type).
@@ -384,9 +384,9 @@ I talked with Billy about this and he pointed me to [his comment](https://github
 
 ```rust
 pub struct EntityWriterContext {
-		pub(crate) expanded_format: bool,
-		pub(crate) with_serde: WithSerde,
-		pub(crate) name_resolver: NameResolver,
+    pub(crate) expanded_format: bool,
+    pub(crate) with_serde: WithSerde,
+    pub(crate) name_resolver: NameResolver,
 }
 ```
 

@@ -7,9 +7,11 @@ in_search_index = false
 
 Howdy! Nahua here.
 
-I am a software engineer, writer, and open source enthusiast.
+I am a **purpose-driven** software engineer and writer with an [unconventional path to programming](https://www.nahua.dev/posts/my-path-to-programming/). I am passionate about open source software and have contributed to open source projects such as [Rust Clippy](https://github.com/rust-lang/rust-clippy) and [OpenMined](https://www.openmined.org/). Currently I am contributing to [SeaORM](https://github.com/SeaQL/sea-orm) and [shuttle](https://github.com/shuttle-hq/shuttle). I'm interested in and hope to contribute to [axum](https://github.com/tokio-rs/axum).
 
-I live in Berlin. You can find me on [Github](https://github.com/nahuakang), [Twitter](https://twitter.com/nahuakang), and [LinkedIn](https://www.linkedin.com/in/nahuakang/).
+Besides, I am a mentor and contributor to [Exercism](https://exercism.org/) for the [Rust](https://exercism.org/tracks/rust) and [Go](https://exercism.org/tracks/go) tracks. I help students improve their understandings of the languages as well as design and improve educational content and exercises.
+
+❤️ [Rust](https://www.rust-lang.org/) 🦀, [Python](https://www.python.org/) 🐍 and [Go](https://go.dev/) 🐭
 
 ## This blog
 
@@ -20,30 +22,24 @@ every day:
 >
 > - Richard P. Feynman, _"What Do You Care What Other People Think?"_
 
-## What I Value
-
-I strongly believe in the tremendous `growth potential` in each human.
-However, while programmers are gifted with the _magic_ to
-empower others to realize their potential, our industry has deviated from
-this noble cause and unleashed _dark magic_ that glued people's fingers
-and faces to screens while polarizing people's opinions of reality.
-
-This is why I am passionate about `privacy-preserving` AI, a cleaner `Internet`,
-and `software` applications that empower each and every individual to become a better version of themselves.
-
 ## Skills
 
-I am constantly aquiring new skills. Below are some of the languages, frameworks, and tools
-that I have used or tinkered with.
+Below are some of the languages, frameworks, and tools that I have used or tinkered with.
 
 **Programming Languages**:
-`Python`, `Rust`, `Go`, `Javascript`, `Swift`, and `SQL`.
+`Rust`, `Python`, `Go`, `Javascript`, `Ruby`, and `SQL`.
 
-**Libraries and Frameworks**:
-`Flask`, `Django`, `PostgreSQL`, `PyTorch`, `TensorFlow`, `gorilla/mux`, `pandas`, `NumPy`.
+**Web Frameworks**:
+`FastAPI`, `Django & DRF`, `gorilla/mux`, `chi`, `axum`
+
+**Deep Learning & Data Science**:
+`PyTorch`, `TensorFlow`, `Keras`, `NumPy`, `pandas`
+
+**Databases**:
+`PostgreSQL`, `MongoDB`, `Redis`, `SQLite`
 
 **Development Tools**:
-`Git`, `Bash/Zsh`, `Docker`, `Emacs`, `Vim`.
+`Git`, `Bash/Zsh/Fish`, `Docker`, `Kubernetes`, `Emacs`, `Vim`.
 
 ## Programming story
 
