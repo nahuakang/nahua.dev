@@ -347,16 +347,16 @@ By examining the file [`sea-orm/sea-orm-cli/src/cli.rs`](https://github.com/SeaQ
 // sea-orm-cli/src/cli.rs
 
 pub fn build_cli() -> App<'static, 'static> {
-                ...
-                ).arg(
-                    Arg::with_name("DATE_TIME_CRATE")
-                        .long("date-time-crate")
-                        .help("The datetime crate to use for generating entities.")
-                        .takes_value(true)
-                        .possible_values(&["chrono", "time"])
-                        .default_value("chrono")
-                ),
-        ...
+    ...
+    ).arg(
+        Arg::with_name("DATE_TIME_CRATE")
+            .long("date-time-crate")
+            .help("The datetime crate to use for generating entities.")
+            .takes_value(true)
+            .possible_values(&["chrono", "time"])
+            .default_value("chrono")
+    ),
+...
 }
 ```
 
@@ -368,10 +368,10 @@ I also traced the usage of `Column.get_rs_type` all the way back to [`sea-orm/se
 // sea-orm-cli/src/commands.rs
 
 pub async fn run_generate_command(matches: &ArgMatches<'_>) -> Result<(), Box<dyn Error>> {
-		...
-            let output = EntityTransformer::transform(table_stmts)?
-	               .generate(expanded_format, WithSerde::from_str(with_serde).unwrap());
-		...
+    ...
+    let output = EntityTransformer::transform(table_stmts)?
+        .generate(expanded_format, WithSerde::from_str(with_serde).unwrap());
+    ...
 }
 ```
 
@@ -457,15 +457,15 @@ With the `EntityWriterContext` struct and the `DateTimeCrate` enum ready, I coul
 // sea-orm-cli/src/commands.rs
 
 pub async fn run_generate_command(matches: &ArgMatches<'_>) -> Result<(), Box<dyn Error>> {
-        ...
-        let date_time_crate = args.value_of("DATE_TIME_CRATE").unwrap();
-        ...
-        let writer_context = EntityWriterContext::new(
-            expanded_format,
-            WithSerde::from_str(with_serde).unwrap(),
-            DateTimeCrate::from_str(date_time_crate).unwrap(),
-        );
-        let output = EntityTransformer::transform(table_stmts)?.generate(&writer_context);
+    ...
+    let date_time_crate = args.value_of("DATE_TIME_CRATE").unwrap();
+    ...
+    let writer_context = EntityWriterContext::new(
+        expanded_format,
+        WithSerde::from_str(with_serde).unwrap(),
+        DateTimeCrate::from_str(date_time_crate).unwrap(),
+    );
+    let output = EntityTransformer::transform(table_stmts)?.generate(&writer_context);
 }
 ```
 
@@ -482,18 +482,18 @@ Finally, we have arrived at the beginning of this story when Billy showed me the
 
 pub fn get_rs_type(&self) -> TokenStream {
     ...
-        #[allow(unreachable_patterns)]
-        let ident: TokenStream = match &self.col_type {
-            ColumnType::Char(_)
-            ...
-            ColumnType::Float(_) => "f32".to_owned(),
-            ColumnType::Double(_) => "f64".to_owned(),
-            ColumnType::Json | ColumnType::JsonBinary => "Json".to_owned(),
-            ColumnType::Date => "Date".to_owned(),
-            ColumnType::Time(_) => "Time".to_owned(),
-            ColumnType::DateTime(_) => "DateTime".to_owned(),
-            ColumnType::Timestamp(_) => "DateTimeUtc".to_owned(),
-            ColumnType::TimestampWithTimeZone(_) => "DateTimeWithTimeZone".to_owned(),
+    #[allow(unreachable_patterns)]
+    let ident: TokenStream = match &self.col_type {
+        ColumnType::Char(_)
+        ...
+        ColumnType::Float(_) => "f32".to_owned(),
+        ColumnType::Double(_) => "f64".to_owned(),
+        ColumnType::Json | ColumnType::JsonBinary => "Json".to_owned(),
+        ColumnType::Date => "Date".to_owned(),
+        ColumnType::Time(_) => "Time".to_owned(),
+        ColumnType::DateTime(_) => "DateTime".to_owned(),
+        ColumnType::Timestamp(_) => "DateTimeUtc".to_owned(),
+        ColumnType::TimestampWithTimeZone(_) => "DateTimeWithTimeZone".to_owned(),
     ...
 }
 ```
@@ -505,34 +505,34 @@ I decided to just do some nested match expressions to translate the types proper
 
 pub fn get_rs_type(&self, date_time_crate: &DateTimeCrate) -> TokenStream {
     ...
-        #[allow(unreachable_patterns)]
-        let ident: TokenStream = match &self.col_type {
-            ColumnType::Char(_)
-            ...
-            ColumnType::Float(_) => "f32".to_owned(),
-            ColumnType::Double(_) => "f64".to_owned(),
-            ColumnType::Json | ColumnType::JsonBinary => "Json".to_owned(),
-            ColumnType::Date => match date_time_crate {
-                DateTimeCrate::Chrono => "Date".to_owned(),
-                DateTimeCrate::Time => "TimeDate".to_owned(),
-            },
-            ColumnType::Time(_) => match date_time_crate {
-                DateTimeCrate::Chrono => "Time".to_owned(),
-                DateTimeCrate::Time => "TimeTime".to_owned(),
-            },
-            ColumnType::DateTime(_) => match date_time_crate {
-                DateTimeCrate::Chrono => "DateTime".to_owned(),
-                DateTimeCrate::Time => "TimeDateTime".to_owned(),
-            },
-            ColumnType::Timestamp(_) => match date_time_crate {
-                DateTimeCrate::Chrono => "DateTimeUtc".to_owned(),
-                // ColumnType::Timpestamp(_) => time::PrimitiveDateTime: https://docs.rs/sqlx/0.3.5/sqlx/postgres/types/index.html#time
-                DateTimeCrate::Time => "TimeDateTime".to_owned(),
-            },
-            ColumnType::TimestampWithTimeZone(_) => match date_time_crate {
-                DateTimeCrate::Chrono => "DateTimeWithTimeZone".to_owned(),
-                DateTimeCrate::Time => "TimeDateTimeWithTimeZone".to_owned(),
-            },
+    #[allow(unreachable_patterns)]
+    let ident: TokenStream = match &self.col_type {
+        ColumnType::Char(_)
+        ...
+        ColumnType::Float(_) => "f32".to_owned(),
+        ColumnType::Double(_) => "f64".to_owned(),
+        ColumnType::Json | ColumnType::JsonBinary => "Json".to_owned(),
+        ColumnType::Date => match date_time_crate {
+            DateTimeCrate::Chrono => "Date".to_owned(),
+            DateTimeCrate::Time => "TimeDate".to_owned(),
+        },
+        ColumnType::Time(_) => match date_time_crate {
+            DateTimeCrate::Chrono => "Time".to_owned(),
+            DateTimeCrate::Time => "TimeTime".to_owned(),
+        },
+        ColumnType::DateTime(_) => match date_time_crate {
+            DateTimeCrate::Chrono => "DateTime".to_owned(),
+            DateTimeCrate::Time => "TimeDateTime".to_owned(),
+        },
+        ColumnType::Timestamp(_) => match date_time_crate {
+            DateTimeCrate::Chrono => "DateTimeUtc".to_owned(),
+            // ColumnType::Timpestamp(_) => time::PrimitiveDateTime: https://docs.rs/sqlx/0.3.5/sqlx/postgres/types/index.html#time
+            DateTimeCrate::Time => "TimeDateTime".to_owned(),
+        },
+        ColumnType::TimestampWithTimeZone(_) => match date_time_crate {
+            DateTimeCrate::Chrono => "DateTimeWithTimeZone".to_owned(),
+            DateTimeCrate::Time => "TimeDateTimeWithTimeZone".to_owned(),
+        },
     ...
 }
 ```
