@@ -294,6 +294,11 @@ footer {
     border-left: 0.5rem solid $blockquote-border-color;
     border-radius: 0 1rem 1rem 0;
     background-color: $blockquote-background-color;
+    overflow: scroll;
+
+    code {
+      word-wrap: break-word;
+    }
   }
 
   .page-metadata {
@@ -351,7 +356,7 @@ pre {
   overflow: scroll;
 }
 
-/* Ensure code snippets have iosevka font */
+/* Ensure code snippets have Fira Code font */
 pre * {
   font-family: "Fira Code", serif;
   font-size: 90%;
@@ -410,6 +415,10 @@ pre * {
 
   .navbar {
     flex: 1;
+  }
+
+  pre * {
+    font-size: 70%;
   }
 }
 
