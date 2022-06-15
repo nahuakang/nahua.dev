@@ -33,6 +33,6 @@ nav_links = [
     { url = "$BASE_URL/", name = "Home" },
     { url = "$BASE_URL/posts/", name = "Blog" },
     { url = "$BASE_URL/series/", name = "Series" },
-    { url = "$BASE_URL/projects/", name = "Projects" },
+    # { url = "$BASE_URL/projects/", name = "Projects" },
     { url = "$BASE_URL/about/", name = "About" },
 ]
