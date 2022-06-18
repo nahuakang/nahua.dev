@@ -1,11 +1,23 @@
 +++
 title = "Open Source Walk-Through with Rust & SeaORM"
 date = 2022-05-28
-slug = "open-source-walk-through-with-rust-seaorm"
 draft = false
-in_search_index = true
+
+slug = "open-source-walk-through-with-rust-seaorm"
+
 [taxonomies]
+categories = ["Tech"]
 tags = ["programming", "opensource", "rust", "sql"]
+
+[extra]
+lang = "en"
+toc = true
+show_comment = true
+math = false
+mermaid = false
+cc_license = true
+outdate_warn = true
+outdate_warn_days = 365
 +++
 
 In this blog post, I'll walk you through an open source PR I submitted to SeaORM with Rust.

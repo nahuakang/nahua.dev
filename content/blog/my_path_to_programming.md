@@ -1,11 +1,21 @@
 +++
 title = "Remake Our Self: My Path to Programming"
 date = 2020-08-30
-slug = "my-path-to-programming"
 draft = false
-in_search_index = true
+
+slug = "my-path-to-programming"
+
 [taxonomies]
+categories = ["Tech"]
 tags = ["programming", "career"]
+
+[extra]
+lang = "en"
+toc = true
+show_comment = true
+math = false
+mermaid = false
+cc_license = true
 +++
 
 This is a long, detailed, and brutally honest post about how I became a software engineer.
@@ -38,7 +48,7 @@ In another word, embrace knowledge that you are curious about, whether you studi
 
 My story began in the fall of 2006 when I entered one of the most prestigious high schools in Fujian, China with flying marks. In my city's annual high school entrance exam, I ranked as the top student in my middle school and among the top 30 best students. My blood was pumped with confidence and I felt I was a smart cookie destined for greatness.
 
-{{ figure(src="/images/my_path_to_programming/hackers_and_painters.jpg", caption="Hackers & Painters", width="50%") }}
+<img src="/img/my_path_to_programming/hackers_and_painters.jpg" alt="Hackers & Painters" width="50%"/>
 
 Around this time, I developed an admiration for **hackers** after reading the Chinese translation of Eric S. Raymond's blog post, [How to Become a Hacker](http://www.catb.org/esr/faqs/hacker-howto.html) and a few poorly translated chapters of Paul Graham's [Hackers and Painters](http://www.paulgraham.com/hp.html). A hacker's personality and character, as revealed by Raymond and Graham's writings, as well as the meritocratic nature of hacker communities deeply resonated with the yet-to-be-developed values I had. (_Note: Steven Levy's Hackers: Heroes of the Computer Revolution is a great book that I only encountered over a decade later._).
 
@@ -46,7 +56,7 @@ With encouragement from my high school best friend who knew programming already,
 
 Having grown up in a family that did not allow much time to play on a computer, I could not even type properly with five fingers at that time, not to mention using a DOS and writing `if-else` statements or `for-loops` in a dreadful language called **Turbo Pascal**! What's worse was that _everyone except me_ seemed to be able to follow the pace of the crash course!
 
-{{ figure(src="/images/my_path_to_programming/turbo_pascal.png", caption="Turbo Pascal DOS Interface", width="60%") }}
+<img src="/img/my_path_to_programming/turbo_pascal.png" alt="Turbo Pascal DOS Interface" width="60%"/>
 
 For some reason, staring at that blue screen, I could not understand how a computer _thinks_. Nor could I write down any line of code to perform more than a standard:
 
@@ -81,8 +91,6 @@ He replied: "_You could consider learning_ **Python** _and_ **programming** _for
 
 I felt a knot in my stomach tying up instantly. Words could not describe my frustration and disappointment as I walked home. I called my girlfriend at the time with tears in my eyes, whining to her that the last thing in the world I would want to do is learning how to program again and this investor literally just told me I should learn _Python_ for programming. Beaten and defeated, I went to bed early that day but could not fall asleep.
 
-{{ figure(src="/images/my_path_to_programming/roggwiller.jpg", caption="In Cafe Roggwiller, I sat with a kind investor in the middle lounge in the back of this photo when he told me to learn programming. I remember vividly how fear arose in me as I heard his advice.", width="60%") }}
-
 The next morning, still with cloud in my mind, I bit my teeth and searched for online courses that would teach me `Python`. I found a few free resources, managed to install `Python` on my Windows laptop, and started programming.
 
 Immediately, I realized that something was different: I did not feel dumbfounded like I felt with `Pascal`, `C` or `C++`. There was no mysterious, magical, scret code flying around the text editor. It was simple. My hello world program (in `Python2` syntax) was 1 line:
@@ -109,8 +117,6 @@ By the fall of 2016, I made a calculated move of not completing my studies in St
 
 Being the only student in my program who could _script_ in a general-purpose programming language, I went deeper and deeper into it. While my classmates were studying consulting cases, I hacked in my text editor and terminal to render a Hangman Game while learning how to modularize my code. While my classmates were partying and socializing in the evenings, I sat in a basement and continued learning with online math and programming courses. It brought me pride to be the only person who knew something about the magic in a computer among a bunch of business students.
 
-{{ figure(src="/images/my_path_to_programming/malan.jpg", caption="David Malan teaches the world's best made online course, CS50, an introduction to computer science. (Photo credit: New Yorker).", width="50%") }}
-
 Around this time, I completed [MIT's 6.00.1x and 6.00.2x](https://courses.edx.org/courses/course-v1:MITx+6.00.1x+2T2017_2/course/) and started doing [Harvard's CS50 course](https://cs50.harvard.edu/web/2020/), of which I eventually completed 70% of the homework. I love CS50 and its people. To this day, it is still the single best online course of any kind and I recommended it to all my close friends who wished to learn programming.
 
 Soon after, I also discovered Udacity's new program on **Deep Learning**. Having no clue what deep learning is, I signed up for the course because it sounded cool (nowadays you can learn with free resources like [fast.ai](https://www.fast.ai/)). I learned about back propagation, convolutional neural networks, image classification, Long Short-Term Memory (LSTM), and Generative Adversarial Networks (GAN). None of that was easy and I definitely did not manage to do everything on my own. And wow! I could train a "neural network" to recognize digits in images!
@@ -129,7 +135,7 @@ I remember one startup that I applied to wrote back saying that they did not hav
 
 In my moments of frustration, Lady Fortuna befell on me. I reached out to Moritz, a complete stranger who at the time was the product owner of a deep learning startup, [TwentyBN](https://20bn.com/). By then, I had almost given up on finding an internship in Berlin and reached out only because Moritz's profile resembled mine and I thought I could seek some advice to my career path. I clicked the button on his LinkedIn profile and sent a short message.
 
-{{ figure(src="/images/my_path_to_programming/linkedin_message.png", caption="A simple LinkedIn message changed my life", width="50%") }}
+<img src="/img/my_path_to_programming/linkedin_message.png" alt="A simple LinkedIn message changed my life" width="50%"/>
 
 Little did I know that this message landed me an internship and a full-time job that eventually allowed and encouraged me to transit into software development. (_Note: In October 2017, before my internship with TwentyBN started, I briefly contributed to an open source project [OpenMined](https://www.openmined.org/) in an attempt to gain more experience in software. That experience also scared me because I did not understand Git, Github, unit testing, and CI/CD. I paused it in the excuse of work until April, 2020 when I became a software intern at TwentyBN._)
 
@@ -140,8 +146,6 @@ I worked for 2 years as a product marketer and not for even a day did I feel it 
 During this period of time, I went through an amicable breakup that nevertheless broke my heart. Moreover, I secretly felt my position was being marginalized in the company. My salary rose but deep in my mind, I was frustrated that I could not play a more meaningful role. That depressing feeling I experienced in Switzerland seemed to be rising again.
 
 While a part of me continued to indulge myself in some ocassional evening coding sessions and nerdy programming languages activities, I did not consider software a possibility for me. And I felt I was already too old to go back to a junior position and start over again.
-
-{{ figure(src="/images/my_path_to_programming/embodiedai.png", caption="I tried to change my career by being proactive with marketing ideas. This is a screenshot of the newsletter I led.", width="50%") }}
 
 At work, I started writing and editing our company newsletter [Embodied AI](http://www.embodiedai.co/). In private, I started turning my reading list into book reviews and analysis on leadership in a newsletter called [Plutarch](https://plutarch.substack.com/).
 
@@ -163,7 +167,7 @@ Already in 2018, I had wanted to ask TwentyBN for an internship as a deep learni
 
 During my Christmas vacation back in China, I spent all the 3 weeks learning web development with [Harvard's CS50W](https://cs50.harvard.edu/web/2020/), coding from 8AM in the morning until 1 or 2AM in the night. I wanted to test myself with this intensive experience to see if I had it in me to be a programmer or if it were just a phase. The learning curve was steep and the great firewall prevented me from easy access to Google and StackOverflow. But I managed 2 buggy projects and learned some `Flask`, `Django`, `Javascript` and `WebSocket`.
 
-{{ figure(src="/images/my_path_to_programming/programming_age.png", caption="This story persuaded me that I am not too old to make the career switch into software.", width="70%") }}
+<img src="/img/my_path_to_programming/programming_age.png" alt="We are not too old to make the career switch into software" width="70%"/>
 
 What was most transformational during these 3 weeks was that, for the first time in almost 14 years, I felt again I was **in the zone**. I was absorbed in programming. Throughout the day I was contemplating on solving the projects and problems. I even had 2-3 dreams during which I was finding solutions to my code.
 
@@ -184,8 +188,6 @@ Having a family and good friends that unconditionally supported me helped. Havin
 But equally important, I also must thank Lady Fortuna for making me into **a person who has the drive to learn new, seemingly daunting skills to re-make oneself with discipline and tenacity**. Without this habit of continuous learning, I could not have achieved what I want.
 
 As you might tell, my learning journey as a software Padawan has only just begun. Software engineering is a dynamic and energetic field with many talented people and brilliant ideas. I am still learning how to write good software and how to work across multiple teams.
-
-{{ figure(src="/images/my_path_to_programming/twentybn.jpg", caption="TwentyBN and its amazing people", width="60%") }}
 
 In April, I have reconnected with the founder of the open source project [OpenMined](https://www.openmined.org/). I began contributing in my limited capacity again so that to give myself more exposure to other programming languages to hone my overall skillset as a developer. It has not been easy but the OpenMined community is an amazing bunch.
 
