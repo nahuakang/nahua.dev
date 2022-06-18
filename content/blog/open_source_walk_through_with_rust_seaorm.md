@@ -125,7 +125,7 @@ Luckily, it was the weekend so it took Billy a few days [to respond](https://git
 
 Okay, so the flag for this option should be `--date-time-crate` and we should run the new feature like:
 
-```rust
+```shell
 # To use the time crate for the command
 $ sea-orm-cli generate entity --date-time-crate=time -u postgres://nahua:password@localhost:5432/timetest -o src/entity
 
