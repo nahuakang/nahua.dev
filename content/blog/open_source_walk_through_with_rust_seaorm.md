@@ -96,13 +96,12 @@ Billy, one of the maintainers, was quick to reply [an answer](https://github.com
 
 ```rust
 // sea-orm/sea-orm-codegen/src/entity/column.rs
-// https://github.com/SeaQL/sea-orm/blob/86e7e808b37179315a1cc5c6c852764830c04661/sea-orm-codegen/src/entity/column.rs#L47-L51
- 
- ColumnType::Date => "Date".to_owned(), 
- ColumnType::Time(_) => "Time".to_owned(), 
- ColumnType::DateTime(_) => "DateTime".to_owned(), 
- ColumnType::Timestamp(_) => "DateTimeUtc".to_owned(), 
- ColumnType::TimestampWithTimeZone(_) => "DateTimeWithTimeZone".to_owned(),
+// https://github.com/SeaQL/sea-orm/blob/86e7e808b37179315a1cc5c6c852764830c04661/sea-orm-codegen/src/entity/column.rs#L47-L51 
+ColumnType::Date => "Date".to_owned(), 
+ColumnType::Time(_) => "Time".to_owned(), 
+ColumnType::DateTime(_) => "DateTime".to_owned(), 
+ColumnType::Timestamp(_) => "DateTimeUtc".to_owned(), 
+ColumnType::TimestampWithTimeZone(_) => "DateTimeWithTimeZone".to_owned(),
 ```
 
 Okay, at least now I have some code that I can read. I felt some adrenaline kicking into my system now that I got the first thread of code to investigate. But my dearest enemy, ***imposter syndrome***, also kicked in.
@@ -125,7 +124,7 @@ Luckily, it was the weekend so it took Billy a few days [to respond](https://git
 
 Okay, so the flag for this option should be `--date-time-crate` and we should run the new feature like:
 
-```shell
+```sh
 # To use the time crate for the command
 $ sea-orm-cli generate entity --date-time-crate=time -u postgres://nahua:password@localhost:5432/timetest -o src/entity
 
