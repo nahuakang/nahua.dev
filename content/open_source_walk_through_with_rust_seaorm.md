@@ -4,9 +4,9 @@ date = 2022-05-28
 draft = false
 
 slug = "open-source-walk-through-with-rust-seaorm"
-# aliases = [
-#     "blog/open-source-walk-through-with-rust-seaorm/"
-# ]
+aliases = [
+    "blog/open-source-walk-through-with-rust-seaorm/"
+]
 
 [extra]
 lang = "en"

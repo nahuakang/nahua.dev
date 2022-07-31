@@ -4,6 +4,9 @@ date = 2020-08-30
 draft = false
 
 slug = "my-path-to-programming"
+aliases = [
+    "blog/my-path-to-programming/"
+]
 
 [extra]
 lang = "en"
