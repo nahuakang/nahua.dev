@@ -5,17 +5,9 @@ draft = false
 
 slug = "my-path-to-programming"
 
-[taxonomies]
-categories = ["Tech"]
-tags = ["programming", "career"]
-
 [extra]
 lang = "en"
 toc = true
-show_comment = true
-math = false
-mermaid = false
-cc_license = true
 +++
 
 This is a long, detailed, and brutally honest post about how I became a software engineer.
@@ -48,7 +40,7 @@ In another word, embrace knowledge that you are curious about, whether you studi
 
 My story began in the fall of 2006 when I entered one of the most prestigious high schools in Fujian, China with flying marks. In my city's annual high school entrance exam, I ranked as the top student in my middle school and among the top 30 best students. My blood was pumped with confidence and I felt I was a smart cookie destined for greatness.
 
-<img src="/img/my_path_to_programming/hackers_and_painters.jpg" alt="Hackers & Painters" width="50%"/>
+<img src="/img/my_path_to_programming/hackers_and_painters.jpg" alt="Hackers & Painters"/>
 
 Around this time, I developed an admiration for **hackers** after reading the Chinese translation of Eric S. Raymond's blog post, [How to Become a Hacker](http://www.catb.org/esr/faqs/hacker-howto.html) and a few poorly translated chapters of Paul Graham's [Hackers and Painters](http://www.paulgraham.com/hp.html). A hacker's personality and character, as revealed by Raymond and Graham's writings, as well as the meritocratic nature of hacker communities deeply resonated with the yet-to-be-developed values I had. (_Note: Steven Levy's Hackers: Heroes of the Computer Revolution is a great book that I only encountered over a decade later._).
 
@@ -56,7 +48,7 @@ With encouragement from my high school best friend who knew programming already,
 
 Having grown up in a family that did not allow much time to play on a computer, I could not even type properly with five fingers at that time, not to mention using a DOS and writing `if-else` statements or `for-loops` in a dreadful language called **Turbo Pascal**! What's worse was that _everyone except me_ seemed to be able to follow the pace of the crash course!
 
-<img src="/img/my_path_to_programming/turbo_pascal.png" alt="Turbo Pascal DOS Interface" width="60%"/>
+<img src="/img/my_path_to_programming/turbo_pascal.png" alt="Turbo Pascal DOS Interface"/>
 
 For some reason, staring at that blue screen, I could not understand how a computer _thinks_. Nor could I write down any line of code to perform more than a standard:
 
@@ -135,7 +127,7 @@ I remember one startup that I applied to wrote back saying that they did not hav
 
 In my moments of frustration, Lady Fortuna befell on me. I reached out to Moritz, a complete stranger who at the time was the product owner of a deep learning startup, [TwentyBN](https://20bn.com/). By then, I had almost given up on finding an internship in Berlin and reached out only because Moritz's profile resembled mine and I thought I could seek some advice to my career path. I clicked the button on his LinkedIn profile and sent a short message.
 
-<img src="/img/my_path_to_programming/linkedin_message.png" alt="A simple LinkedIn message changed my life" width="50%"/>
+<img src="/img/my_path_to_programming/linkedin_message.png" alt="A simple LinkedIn message changed my life"/>
 
 Little did I know that this message landed me an internship and a full-time job that eventually allowed and encouraged me to transit into software development. (_Note: In October 2017, before my internship with TwentyBN started, I briefly contributed to an open source project [OpenMined](https://www.openmined.org/) in an attempt to gain more experience in software. That experience also scared me because I did not understand Git, Github, unit testing, and CI/CD. I paused it in the excuse of work until April, 2020 when I became a software intern at TwentyBN._)
 
@@ -167,7 +159,7 @@ Already in 2018, I had wanted to ask TwentyBN for an internship as a deep learni
 
 During my Christmas vacation back in China, I spent all the 3 weeks learning web development with [Harvard's CS50W](https://cs50.harvard.edu/web/2020/), coding from 8AM in the morning until 1 or 2AM in the night. I wanted to test myself with this intensive experience to see if I had it in me to be a programmer or if it were just a phase. The learning curve was steep and the great firewall prevented me from easy access to Google and StackOverflow. But I managed 2 buggy projects and learned some `Flask`, `Django`, `Javascript` and `WebSocket`.
 
-<img src="/img/my_path_to_programming/programming_age.png" alt="We are not too old to make the career switch into software" width="70%"/>
+<img src="/img/my_path_to_programming/programming_age.png" alt="We are not too old to make the career switch into software"/>
 
 What was most transformational during these 3 weeks was that, for the first time in almost 14 years, I felt again I was **in the zone**. I was absorbed in programming. Throughout the day I was contemplating on solving the projects and problems. I even had 2-3 dreams during which I was finding solutions to my code.
 
