@@ -5,24 +5,16 @@ draft = false
 
 slug = "genghis-khan-book-review"
 
-[taxonomies]
-categories = ["Humanities"]
-tags = ["history", "review"]
-
 [extra]
 lang = "en"
 toc = true
-show_comment = true
-math = false
-mermaid = false
-cc_license = true
 +++
 
 This is a book review of Jack Weatherford's book _Genghis Khan_.
 
 <!-- more -->
 
-<img src="/img/genghis_khan_book/genghis-khan-book.jpeg" alt="Genghis Khan Book Cover" width="50%"/>
+<img src="/img/genghis_khan_book/genghis-khan-book.jpeg" alt="Genghis Khan Book Cover"/>
 
 It could be said that Jack Weatherford was born to write a biography on Genghis Khan and his legacies. Having studied and lived in Mongolia, he writes this book with immersive and vivid proses that a reader cannot help but feel as if they were in those scenes with the young, low-born Temüjin who turned into the mature and renowned Genghis Khan.
 

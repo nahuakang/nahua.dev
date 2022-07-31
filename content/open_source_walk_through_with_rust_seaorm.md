@@ -4,20 +4,13 @@ date = 2022-05-28
 draft = false
 
 slug = "open-source-walk-through-with-rust-seaorm"
-
-[taxonomies]
-categories = ["Tech"]
-tags = ["programming", "opensource", "rust", "sql"]
+# aliases = [
+#     "blog/open-source-walk-through-with-rust-seaorm/"
+# ]
 
 [extra]
 lang = "en"
 toc = true
-show_comment = true
-math = false
-mermaid = false
-cc_license = true
-outdate_warn = true
-outdate_warn_days = 365
 +++
 
 In this blog post, I'll walk you through an open source PR I submitted to SeaORM with Rust.
@@ -52,13 +45,13 @@ To make the post more readable and less fragmented, I presented the entire story
 
 ## Pick a beginner-friendly project
 
-I was trying out Rust Tokio’s [axum](https://github.com/tokio-rs/axum/) web framework for building APIs when I encountered a mild issue: ***I am not particularly good at raw SQL***.
+I was trying out Rust Tokio’s [axum](https://github.com/tokio-rs/axum/) web framework for building APIs when I encountered a mild issue: **_I am not particularly good at raw SQL_**.
 
 In my previous job, I worked mostly in [Django](https://www.djangoproject.com/) (with a little bit of Go), which has an amazing ORM that spoiled me. I am certainly happy and willing to hone my SQL skills, but I also wondered if there was a decent ORM framework in Rust.
 
 By chance, I landed on the homepage of [SeaQL](https://github.com/SeaQL), the project behind the Rust crate [SeaORM](https://github.com/SeaQL/sea-orm), an async, dynamic, and testable ORM that supports Postgres, MySQL, and SQLite at the time this blog post was written. It seems like a project with a lot of care from its creators, so I decided to see if there’s an opportunity for doing some open source contribution.
 
-It’s good to iterate on an important point in open source contribution: ***Choose a project that matters to us!*** Working on a codebase means that we must play with the code ourselves. If the project does not relate to our work or hobby, then we’d be reluctant to play with the code or to test the code we write for the project. I’m a backend engineer and I interact with databases all the time, so an ORM for Rust seems meaningful to me and I’d love to play with SeaORM.
+It’s good to iterate on an important point in open source contribution: **_Choose a project that matters to us!_** Working on a codebase means that we must play with the code ourselves. If the project does not relate to our work or hobby, then we’d be reluctant to play with the code or to test the code we write for the project. I’m a backend engineer and I interact with databases all the time, so an ORM for Rust seems meaningful to me and I’d love to play with SeaORM.
 
 ## Choose a beginner-friendly issue
 
@@ -72,7 +65,7 @@ I personally avoid those projects because I didn’t see myself as very good at 
 
 Back to the story. As the issuer suggested in [the link](https://github.com/SeaQL/sea-orm/issues/661): Since the `time` crate is supported as alternative to `chrono`, it should be possible to generate code for `time` crate.
 
-For those who don’t know enough about Rust, there are 2 crates in Rust that deal with time and date, [`time`](https://crates.io/crates/time) and [`chrono`](https://crates.io/crates/chrono) (*note that a `crate` is the equivalent of a `gem` in Ruby or `package` in Python and Javascript*).
+For those who don’t know enough about Rust, there are 2 crates in Rust that deal with time and date, [`time`](https://crates.io/crates/time) and [`chrono`](https://crates.io/crates/chrono) (_note that a `crate` is the equivalent of a `gem` in Ruby or `package` in Python and Javascript_).
 
 The problem at hand seems to be that `sea-orm-cli`, the command line tool for `SeaORM`, appeared to generate only code that corresponds to `chrono`'s `datetime` types and some users would like to have a feature in the command line tool to generate `time`'s `datetime` types without having to write custom code themselves.
 
@@ -96,25 +89,24 @@ Billy, one of the maintainers, was quick to reply [an answer](https://github.com
 
 ```rust
 // sea-orm/sea-orm-codegen/src/entity/column.rs
-// https://github.com/SeaQL/sea-orm/blob/86e7e808b37179315a1cc5c6c852764830c04661/sea-orm-codegen/src/entity/column.rs#L47-L51 
-ColumnType::Date => "Date".to_owned(), 
-ColumnType::Time(_) => "Time".to_owned(), 
-ColumnType::DateTime(_) => "DateTime".to_owned(), 
-ColumnType::Timestamp(_) => "DateTimeUtc".to_owned(), 
+// https://github.com/SeaQL/sea-orm/blob/86e7e808b37179315a1cc5c6c852764830c04661/sea-orm-codegen/src/entity/column.rs#L47-L51
+ColumnType::Date => "Date".to_owned(),
+ColumnType::Time(_) => "Time".to_owned(),
+ColumnType::DateTime(_) => "DateTime".to_owned(),
+ColumnType::Timestamp(_) => "DateTimeUtc".to_owned(),
 ColumnType::TimestampWithTimeZone(_) => "DateTimeWithTimeZone".to_owned(),
 ```
 
-Okay, at least now I have some code that I can read. I felt some adrenaline kicking into my system now that I got the first thread of code to investigate. But my dearest enemy, ***imposter syndrome***, also kicked in.
+Okay, at least now I have some code that I can read. I felt some adrenaline kicking into my system now that I got the first thread of code to investigate. But my dearest enemy, **_imposter syndrome_**, also kicked in.
 
-I started questioning myself and wondered if I’d be able to actually come up with a solution? After all, some `good first issue` issues aren’t that easy. What if I can’t solve it and embarrass myself? Because of this, I ***procrastinated***.
+I started questioning myself and wondered if I’d be able to actually come up with a solution? After all, some `good first issue` issues aren’t that easy. What if I can’t solve it and embarrass myself? Because of this, I **_procrastinated_**.
 
 ## Communicate with maintainers before coding
 
 As a seasoned procrastinator, I waited for a day before I posted [the next two questions](https://github.com/SeaQL/sea-orm/issues/661#issuecomment-1120210927):
 
 > **[@billy1624](https://github.com/billy1624)** Thanks! I'm reading the docs as well as trying to understand the workflow with `sea-orm` now. Are there any examples/tests that demonstrate how to use `sea-orm-cli` to generate code for entities involving `chrono`? I haven't seen a `chrono`
- flag in `sea-orm-cli` so I wonder if the solution here is to add a flag for `time` crate or something else (like handling `time` types)?
-> 
+>  flag in `sea-orm-cli` so I wonder if the solution here is to add a flag for `time` crate or something else (like handling `time` types)?
 
 Luckily, it was the weekend so it took Billy a few days [to respond](https://github.com/SeaQL/sea-orm/issues/661#issuecomment-1121839813), by which time I had calmed down from my imposter anxiety:
 
@@ -197,7 +189,7 @@ services:
       - POSTGRES_DB=timetest
     volumes:
       - timetest:/var/lib/postgres/data
-  
+
   adminer:
     image: adminer:latest
     restart: always
@@ -391,7 +383,6 @@ So I somehow needed to pass the user’s `date-time-crate` choice into `EntityWr
 I talked with Billy about this and he pointed me to [his comment](https://github.com/SeaQL/sea-orm/pull/680#discussion_r860780963) on another standing PR:
 
 > Hey **[@negezor](https://github.com/negezor)**, thanks for the updates! I think the semantic isn't seems right. The transformer, `EntityTransformer::transform(table_stmts, name_resolver)`, don't need name resolver. Instead, we could have introduce a new struct called `EntityWriterContext` which contains three things...
-> 
 
 ```rust
 pub struct EntityWriterContext {
@@ -402,7 +393,6 @@ pub struct EntityWriterContext {
 ```
 
 > Then, `EntityWriter::generate` method would take an `EntityWriterContext`. Thoughts?
-> 
 
 This was very helpful! So I wrote the following struct with a `new` method that specified the variables needed by `EntityWriter.generate` to generate the entities:
 
