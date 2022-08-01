@@ -29,5 +29,5 @@ maintained_with_love = true
 footer_tagline = "\"The first principle is that you must not fool yourself and you are the easiest person to fool.\" - Richard Feynman"
 footer_links = [
     { url = "$BASE_URL/about", name = "About" },
-    # { url = "$BASE_URL/blog", name = "Blog" },
+    { url = "$BASE_URL/commits", name = "Commits" },
 ]
