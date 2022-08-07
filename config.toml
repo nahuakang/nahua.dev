@@ -23,9 +23,9 @@ author = "Nahua"
 ogimage = "rusty.png"
 
 seo = true
-zola = true
-netlify = true
-maintained_with_love = true
+zola = false
+netlify = false
+maintained_with_love = false
 footer_tagline = "\"The first principle is that you must not fool yourself and you are the easiest person to fool.\" - Richard Feynman"
 footer_links = [
     { url = "$BASE_URL/about", name = "About" },
