@@ -10,13 +10,14 @@ Below are pull request (PR) links to my open source contributions.
 
 ## [Rust-Clippy](https://github.com/rust-lang/rust-clippy)
 
-| Date       | Title                                                    | Changes              |
-| ---------- | -------------------------------------------------------- | -------------------- |
-| 2020.10.10 | [#6107 - Ref style link false positive][clippy-6107]     | [Link][clippy-6107c] |
-| 2021.01.05 | [#6513 - Fix: Empty enum never type][clippy-6513]        | [Link][clippy-6513c] |
-| 2021.01.05 | [#6577 - New lint: `inspect_for_each`][clippy-6577]      | [Link][clippy-6577c] |
-| 2021.02.04 | [#6646 - New lint: `manual_flatten`][clippy-6646]        | [Link][clippy-6646c] |
-| 2021.03.02 | [#6824 - Refactor: organize `loops` module][clippy-6824] | [Link][clippy-6824c] |
+| Date       | Title                                                      | Changes              |
+| ---------- | ---------------------------------------------------------- | -------------------- |
+| 2020.10.10 | [#6107 - Ref style link false positive][clippy-6107]       | [Link][clippy-6107c] |
+| 2021.01.05 | [#6513 - Fix: Empty enum never type][clippy-6513]          | [Link][clippy-6513c] |
+| 2021.01.05 | [#6577 - New lint: `inspect_for_each`][clippy-6577]        | [Link][clippy-6577c] |
+| 2021.02.04 | [#6646 - New lint: `manual_flatten`][clippy-6646]          | [Link][clippy-6646c] |
+| 2021.03.02 | [#6824 - Refactor: organize `loops` module][clippy-6824]   | [Link][clippy-6824c] |
+| 2022.08.01 | [#9269 - New lint: `collapsible_str_replace`][clippy-9269] | [Link][clippy-9269c] |
 
 [clippy-6107]: https://github.com/rust-lang/rust-clippy/pull/6107
 [clippy-6107c]: https://github.com/rust-lang/rust-clippy/pull/6107/files
@@ -28,6 +29,8 @@ Below are pull request (PR) links to my open source contributions.
 [clippy-6646c]: https://github.com/rust-lang/rust-clippy/pull/6646/files
 [clippy-6824]: https://github.com/rust-lang/rust-clippy/pull/6824
 [clippy-6824c]: https://github.com/rust-lang/rust-clippy/pull/6824/files
+[clippy-9269]: https://github.com/rust-lang/rust-clippy/pull/9269
+[clippy-9269c]: https://github.com/rust-lang/rust-clippy/pull/9269/files
 
 ## [Shuttle](https://github.com/shuttle-hq/shuttle)
 
