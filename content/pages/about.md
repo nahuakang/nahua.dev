@@ -8,9 +8,9 @@ lang = 'en'
 
 ## Howdy! This is Nahua
 
-I am a **purpose-driven** software engineer and writer with an [unconventional path to programming](https://www.nahua.dev/posts/my-path-to-programming/). I am passionate about open source software and have contributed to open source projects such as [Rust Clippy](https://github.com/rust-lang/rust-clippy) and [OpenMined](https://www.openmined.org/).
+I am a **purpose-driven** software engineer and writer with an [unconventional path to programming](https://www.nahua.dev/posts/my-path-to-programming/). I am passionate about open source software and have previously contributed to open source projects such as [OpenMined](https://www.openmined.org/) and [Exercism](https://exercism.org/).
 
-Currently I am contributing to [SeaORM](https://github.com/SeaQL/sea-orm), [shuttle](https://github.com/shuttle-hq/shuttle) and [Exercism](https://exercism.org/). I'm interested in and hope to contribute to [axum](https://github.com/tokio-rs/axum).
+Currently I am contributing to [Rust Clippy](https://github.com/rust-lang/rust-clippy), [SeaORM](https://github.com/SeaQL/sea-orm), and [shuttle](https://github.com/shuttle-hq/shuttle). I'm interested in and hope to contribute to [axum](https://github.com/tokio-rs/axum).
 
 ## Programming story
 

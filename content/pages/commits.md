@@ -32,6 +32,29 @@ Below are pull request (PR) links to my open source contributions.
 [clippy-9269]: https://github.com/rust-lang/rust-clippy/pull/9269
 [clippy-9269c]: https://github.com/rust-lang/rust-clippy/pull/9269/files
 
+## [SeaQL](https://github.com/SeaQL)
+
+### [SeaORM](https://github.com/SeaQL/sea-orm)
+
+| Date       | Title                                                       | Changes              |
+| ---------- | ----------------------------------------------------------- | -------------------- |
+| 2022.05.13 | [#724 - Add `date-time` flag to `sea-orm-cli`][sea-orm-724] | [Link][sea-orm-724c] |
+
+[sea-orm-724]: https://github.com/SeaQL/sea-orm/pull/724
+[sea-orm-724c]: https://github.com/SeaQL/sea-orm/pull/724/files
+
+### [SeaQuery](https://github.com/SeaQL/sea-query)
+
+| Date       | Title                                                                  | Changes                |
+| ---------- | ---------------------------------------------------------------------- | ---------------------- |
+| 2022.07.16 | [#385 - Qualify schema name for Postgres statements][sea-query-385]    | [Link][sea-query-385c] |
+| 2022.08.08 | [#411 - Fix table index prep spacing for SqliteBuilder][sea-query-411] | [Link][sea-query-411c] |
+
+[sea-query-385]: https://github.com/SeaQL/sea-query/pull/385
+[sea-query-385c]: https://github.com/SeaQL/sea-query/pull/385/files
+[sea-query-411]: https://github.com/SeaQL/sea-query/pull/411
+[sea-query-411c]: https://github.com/SeaQL/sea-query/pull/411/files
+
 ## [Shuttle](https://github.com/shuttle-hq/shuttle)
 
 | Date       | Title                                                               | Changes              |
@@ -49,23 +72,3 @@ Below are pull request (PR) links to my open source contributions.
 [shuttle-264c]: https://github.com/shuttle-hq/shuttle/pull/264/files
 [shuttle-284]: https://github.com/shuttle-hq/shuttle/pull/284
 [shuttle-284c]: https://github.com/shuttle-hq/shuttle/pull/284/files
-
-## [SeaQL](https://github.com/SeaQL)
-
-### [SeaORM](https://github.com/SeaQL/sea-orm)
-
-| Date       | Title                                                       | Changes              |
-| ---------- | ----------------------------------------------------------- | -------------------- |
-| 2022.05.13 | [#724 - Add `date-time` flag to `sea-orm-cli`][sea-orm-724] | [Link][sea-orm-724c] |
-
-[sea-orm-724]: https://github.com/SeaQL/sea-orm/pull/724
-[sea-orm-724c]: https://github.com/SeaQL/sea-orm/pull/724/files
-
-### [SeaQuery](https://github.com/SeaQL/sea-query)
-
-| Date       | Title                                                               | Changes                |
-| ---------- | ------------------------------------------------------------------- | ---------------------- |
-| 2022.07.16 | [#385 - Qualify schema name for Postgres statements][sea-query-385] | [Link][sea-query-385c] |
-
-[sea-query-385]: https://github.com/SeaQL/sea-query/pull/385
-[sea-query-385c]: https://github.com/SeaQL/sea-query/pull/385/files
