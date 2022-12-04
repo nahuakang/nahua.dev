@@ -1,5 +1,5 @@
 +++
-title = "Open Source Walk-Through with Rust & SeaORM"
+title = "[Open Source] PR Walk-Through: Make a Rust SeaORM Contribution"
 date = 2022-05-28
 draft = false
 

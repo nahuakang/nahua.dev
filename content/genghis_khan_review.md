@@ -1,5 +1,5 @@
 +++
-title = "Genghis Khan: A Book Review"
+title = "[Book Review] Genghis Khan"
 date = 2022-06-18
 draft = false
 

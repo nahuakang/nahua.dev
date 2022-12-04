@@ -1,5 +1,5 @@
 +++
-title = "Remake Our Self: My Path to Programming"
+title = "[Personal] Remake Our Self: My Path to Programming"
 date = 2020-08-30
 draft = false
 
