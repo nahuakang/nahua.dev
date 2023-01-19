@@ -14,11 +14,11 @@ Below are pull request (PR) links to my open source contributions.
 | ---------- | ---------------------------------------------------------- |
 | 2020.10.10 | [#6107 - Ref style link false positive][clippy-6107]       |
 | 2021.01.05 | [#6513 - Fix: Empty enum never type][clippy-6513]          |
-| 2021.01.05 | [#6577 - New lint: `inspect_for_each`][clippy-6577]        |
-| 2021.02.04 | [#6646 - New lint: `manual_flatten`][clippy-6646]          |
-| 2021.03.02 | [#6824 - Refactor: organize `loops` module][clippy-6824]   |
-| 2022.08.01 | [#9269 - New lint: `collapsible_str_replace`][clippy-9269] |
-| 2022.08.23 | [#9368 - Improvement: `equatable_if_let`][clippy-9368]     |
+| 2021.01.05 | [#6577 - New lint: inspect_for_each][clippy-6577]          |
+| 2021.02.04 | [#6646 - New lint: manual_flatten][clippy-6646]            |
+| 2021.03.02 | [#6824 - Refactor: organize loops module][clippy-6824]     |
+| 2022.08.01 | [#9269 - New lint: collapsible_str_replace][clippy-9269]   |
+| 2022.08.23 | [#9368 - Improvement: equatable_if_let][clippy-9368]       |
 | 2022.09.04 | [#9426 - (Draft) Update Clippy Documentation][clippy-9426] |
 
 [clippy-6107]: https://github.com/rust-lang/rust-clippy/pull/6107
@@ -34,9 +34,9 @@ Below are pull request (PR) links to my open source contributions.
 
 ### [SeaORM](https://github.com/SeaQL/sea-orm)
 
-| Date       | Title                                                                        |
-| ---------- | ---------------------------------------------------------------------------- |
-| 2022.05.13 | [#724 - Add `date-time` flag to `sea-orm-cli`][sea-orm-724]                  |
+| Date       | Title                                                                    |
+| ---------- | ------------------------------------------------------------------------ |
+| 2022.05.13 | [#724 - Add date-time flag to sea-orm-cli][sea-orm-724]                  |
 
 [sea-orm-724]: https://github.com/SeaQL/sea-orm/pull/724
 
@@ -52,17 +52,32 @@ Below are pull request (PR) links to my open source contributions.
 
 ## [Shuttle](https://github.com/shuttle-hq/shuttle)
 
-| Date       | Title                                                               |
-| ---------- | ------------------------------------------------------------------- |
-| 2022.06.08 | [#192 - `cargo shuttle init` (without bonus)][shuttle-192]          |
-| 2022.07.16 | [#238 - `cargo shuttle init --axum rocket tide tower`][shuttle-238] |
-| 2022.07.18 | [#264 - Update `README` with `cargo shuttle init`][shuttle-264]     |
-| 2022.07.26 | [#284 - Create `cargo-shuttle README`][shuttle-284]                 |
+| Date       | Title                                                             |
+| ---------- | ----------------------------------------------------------------- |
+| 2022.06.08 | [#192 - cargo shuttle init (without bonus)][shuttle-192]          |
+| 2022.07.16 | [#238 - cargo shuttle init --axum rocket tide tower][shuttle-238] |
+| 2022.07.18 | [#264 - Update README with cargo shuttle init][shuttle-264]       |
+| 2022.07.26 | [#284 - Create cargo-shuttle README][shuttle-284]                 |
 
 [shuttle-192]: https://github.com/shuttle-hq/shuttle/pull/192
 [shuttle-238]: https://github.com/shuttle-hq/shuttle/pull/238
 [shuttle-264]: https://github.com/shuttle-hq/shuttle/pull/264
 [shuttle-284]: https://github.com/shuttle-hq/shuttle/pull/284
+
+## [V](https://github.com/vlang/v)
+
+| Date       | Title                                                             |
+| ---------- | ----------------------------------------------------------------- |
+| 2023.01.15 | [#16987 - hash: add missing documentation][v-16987]               |
+| 2023.01.17 | [#16998 - encoding: add missing documentation][v-16998]           |
+| 2023.01.18 | [#17033 - term/colors: add missing documentation][v-17033]        |
+| 2022.01.19 | [#17044 - term: add missing documentation][v-17044]               |
+
+[v-16987]: https://github.com/vlang/v/pull/16987
+[v-16998]: https://github.com/vlang/v/pull/16998
+[v-17033]: https://github.com/vlang/v/pull/17033
+[v-17044]: https://github.com/vlang/v/pull/17044
+
 ## [PySyft](https://github.com/OpenMined/PySyft)
 
 | Date       | Title                                                                          |

@@ -1,12 +1,16 @@
 +++
-title = "[Open Source] PR Walk-Through: Make a Rust SeaORM Contribution"
+title = "PR Walk-Through: Make a Rust SeaORM Contribution"
 date = 2022-05-28
 draft = false
-
 slug = "open-source-walk-through-with-rust-seaorm"
 aliases = [
     "blog/open-source-walk-through-with-rust-seaorm/"
 ]
+
+[taxonomies]
+tags = ["open source"]
+categories = []
+contexts = []
 
 [extra]
 lang = "en"

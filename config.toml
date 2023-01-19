@@ -3,32 +3,29 @@ title = "Nahua"
 description = "Intersection of tech and humanities"
 
 default_language = "en"
-theme = "lightspeed"
+theme = "no-style-please"
 compile_sass = true
 generate_feed = true
 
+# categories and contexts are mandatory for definition
+taxonomies = [
+    { name = "tags" },
+    { name = "categories" },
+    { name = "contexts" },
+]
+
 [markdown]
 highlight_code = true
-highlight_theme = "gruvbox-dark"
 render_emoji = true
-external_links_target_blank = false
-external_links_no_follow = true
-external_links_no_referrer = true
 smart_punctuation = false
 
 [extra]
-
 author = "Nahua"
-
-ogimage = "rusty.png"
-
-seo = true
-zola = false
-netlify = false
-maintained_with_love = false
-footer_tagline = "\"The first principle is that you must not fool yourself and you are the easiest person to fool.\" - Richard Feynman"
-footer_links = [
-    { url = "$BASE_URL/about", name = "About" },
-    { url = "$BASE_URL", name = "Blog" },
-    { url = "$BASE_URL/commits", name = "Commits" },
+logo = "logo.png"
+header_nav = [
+    { name = "~home", url = "/" },
+    { name = "blog", url = "/blog" },
+    { name = "reviews", url = "/book_reviews" },
+    { name = "commits", url = "/commits" },
+    { name = "#tags", url = "/tags" },
 ]

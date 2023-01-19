@@ -1,0 +1,556 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+        <meta content="text/html; charset=UTF-8" http-equiv="content-type"/>
+        <meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+
+        
+
+        
+        
+        
+
+        <title>[Open Source] PR Walk-Through: Make a Rust SeaORM Contribution</title>
+        
+        <meta name="title" content="[Open Source] PR Walk-Through: Make a Rust SeaORM Contribution">
+        <meta name="author" content="Nahua">
+        <meta name="description" content="Intersection of tech and humanities">
+        <meta name="generator" content="Zola v0.16.1">
+
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://nahua.dev/blog/open-source-walk-through-with-rust-seaorm/">
+        <meta property="og:site_name" content="Nahua">
+        <meta property="og:title" content="[Open Source] PR Walk-Through: Make a Rust SeaORM Contribution">
+        <meta property="og:description" content="Intersection of tech and humanities">
+        
+
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="https://nahua.dev/blog/open-source-walk-through-with-rust-seaorm/">
+        <meta property="twitter:title" content="[Open Source] PR Walk-Through: Make a Rust SeaORM Contribution">
+        <meta property="twitter:description" content="Intersection of tech and humanities">
+        
+        
+        <link rel="canonical" href="https://nahua.dev/blog/open-source-walk-through-with-rust-seaorm/">
+        
+        <script type="application/ld+json">
+            {
+                "description":"Intersection of tech and humanities",
+                "url":"https://nahua.dev/blog/open-source-walk-through-with-rust-seaorm/",
+                "@type":"WebSite",
+                "headline":"[Open Source] PR Walk-Through: Make a Rust SeaORM Contribution",
+                "name":"[Open Source] PR Walk-Through: Make a Rust SeaORM Contribution",
+                "author":{
+                    "@type":"Person",
+                    "name":"Nahua"
+                },
+                "@context":"https://schema.org"
+            }
+        </script>
+        
+        
+        
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="https://nahua.dev/atom.xml">
+        
+        
+        
+        <link rel="stylesheet" href="https://nahua.dev/style.css"/>
+        
+    </head>
+    <body theme="auto">
+        <div class="w">
+            <header>
+                
+                
+<p><a href="..">..</a>/open-source-walk-through-with-rust-seaorm</p>
+<p class="post-meta"><time datetime="2022-05-28">2022-05-28</time></p>
+<h1>[Open Source] PR Walk-Through: Make a Rust SeaORM Contribution</h1>
+
+            </header>
+            <main class="page-content" aria-label="Content">
+                
+
+
+
+<p>In this blog post, I'll walk you through an open source PR I submitted to SeaORM with Rust.</p>
+<span id="continue-reading"></span>
+<p>This is a transparent and honest story that serves as a walk-through of my first open source issue after a long break from the open source world. The aim of this blog post is to demystify the process of contributing to open source projects and help the readers realize that open source contribution is (often) challenging but rewarding and fun.</p>
+<p>While I use a contribution to Rust’s <a href="https://github.com/SeaQL/sea-orm"><code>SeaORM</code></a> as an example, you do not need any knowledge in Rust to follow this post’s thought process and procedure to take away lessons that might help you start your open source journey in any language or ecosystem.</p>
+<p>If you like this post or have questions, feel free to share the post and interact with <a href="https://twitter.com/nahuakang">my Twitter handle</a>.</p>
+<p>Alrighty, hop on the wagon and let us begin this story!</p>
+<h2 id="tl-dr">Tl;dr</h2>
+<p>I know many of you won’t have the time or patience to read my blah blah, so here’s the main take-aways for contributing to open source projects:</p>
+<ol>
+<li>Pick a project that not only relates to your work or hobby but is also beginner-friendly with maintainers who are willing to offer mentorship and guidance.</li>
+<li>Pick an issue that’s beginner-friendly, well-scoped (size small to medium) to make sure you can understand the issue at hand without being overwhelmed.</li>
+<li>Communicate with the maintainers actively about the issue and possible solutions so that they are onboard with your ideas, vice versa. This way, you save both the maintainers’s and your time when it comes to code review.</li>
+<li>If you ran into a wall, never hesitate to ask the maintainers for help with detailed, well-formulated questions. If one doesn’t answer, ask another. Maintainers are usually helpful and friendly humans.</li>
+<li>Don’t forget to be polite, communicative, and helpful to others in the open source community 🫶</li>
+</ol>
+<h2 id="motivation-to-write-about-open-source-contribution">Motivation to write about open source contribution</h2>
+<p>As software engineers, we are often advised to contribute to open source projects as a way to hone our reading and writing skills as well as to give back to the community. However, many new programmers, including myself, tend to feel very intimidated by open source codebases that might appear foreign, abstract, or overwhelming.</p>
+<p>Because of this, I decided to create this blog post (and maybe more future posts) to show other open source enthusiasts my process as well as my inner dialogue when working on open source contributions.</p>
+<p>To make the post more readable and less fragmented, I presented the entire story in more or less a linear storyline. Please keep in mind that the reality is much more complex, complicated, and iterative. There is usually a lot more struggles going into a first contribution to an unfamiliar project, but it is all worth the effort.</p>
+<h2 id="pick-a-beginner-friendly-project">Pick a beginner-friendly project</h2>
+<p>I was trying out Rust Tokio’s <a href="https://github.com/tokio-rs/axum/">axum</a> web framework for building APIs when I encountered a mild issue: <strong><em>I am not particularly good at raw SQL</em></strong>.</p>
+<p>In my previous job, I worked mostly in <a href="https://www.djangoproject.com/">Django</a> (with a little bit of Go), which has an amazing ORM that spoiled me. I am certainly happy and willing to hone my SQL skills, but I also wondered if there was a decent ORM framework in Rust.</p>
+<p>By chance, I landed on the homepage of <a href="https://github.com/SeaQL">SeaQL</a>, the project behind the Rust crate <a href="https://github.com/SeaQL/sea-orm">SeaORM</a>, an async, dynamic, and testable ORM that supports Postgres, MySQL, and SQLite at the time this blog post was written. It seems like a project with a lot of care from its creators, so I decided to see if there’s an opportunity for doing some open source contribution.</p>
+<p>It’s good to iterate on an important point in open source contribution: <strong><em>Choose a project that matters to us!</em></strong> Working on a codebase means that we must play with the code ourselves. If the project does not relate to our work or hobby, then we’d be reluctant to play with the code or to test the code we write for the project. I’m a backend engineer and I interact with databases all the time, so an ORM for Rust seems meaningful to me and I’d love to play with SeaORM.</p>
+<h2 id="choose-a-beginner-friendly-issue">Choose a beginner-friendly issue</h2>
+<p>The first thing I did was skimming through the <a href="https://github.com/SeaQL/sea-orm/issues">open issues</a> of SeaORM. Luckily, SeaORM’s maintainers are very active and it was easy for me to spot a <a href="https://github.com/SeaQL/sea-orm/issues/661"><code>good first issue</code></a>: <strong>Add flag to <code>sea-orm-cli</code> to generate code for <code>time</code> crate #661.</strong></p>
+<p>Keep in mind that some projects aren’t actively labelling <code>good first issue</code> issues and some maintainers don’t have the time or capacity to mentor or guide new contributors.</p>
+<p>I personally avoid those projects because I didn’t see myself as very good at navigating on foreign terrain in a codebase due to having programmed professionally for only 2 years. With more years of experience, we’d become better at this.</p>
+<h2 id="understand-the-issue">Understand the issue</h2>
+<p>Back to the story. As the issuer suggested in <a href="https://github.com/SeaQL/sea-orm/issues/661">the link</a>: Since the <code>time</code> crate is supported as alternative to <code>chrono</code>, it should be possible to generate code for <code>time</code> crate.</p>
+<p>For those who don’t know enough about Rust, there are 2 crates in Rust that deal with time and date, <a href="https://crates.io/crates/time"><code>time</code></a> and <a href="https://crates.io/crates/chrono"><code>chrono</code></a> (<em>note that a <code>crate</code> is the equivalent of a <code>gem</code> in Ruby or <code>package</code> in Python and Javascript</em>).</p>
+<p>The problem at hand seems to be that <code>sea-orm-cli</code>, the command line tool for <code>SeaORM</code>, appeared to generate only code that corresponds to <code>chrono</code>'s <code>datetime</code> types and some users would like to have a feature in the command line tool to generate <code>time</code>'s <code>datetime</code> types without having to write custom code themselves.</p>
+<h2 id="define-questions-for-solving-the-issue">Define questions for solving the issue</h2>
+<p>Having had very little experience writing <code>CLI</code> tools in Rust (or any language for that matter), I laid down some bullet points that I needed clarification in order to work on this issue:</p>
+<ol>
+<li>Where in the codebase is the <code>chrono</code>'s <code>datetime</code> types being generated?</li>
+<li>How do I use <code>sea-orm-cli</code> to reproduce the reported issue so that I can progressively iterate towards a solution?</li>
+<li>What kind of a flag would the maintainers be happy to accept for the finished feature?</li>
+</ol>
+<h2 id="find-the-relevant-code-for-the-issue-at-hand">Find the relevant code for the issue at hand</h2>
+<p>I posted <a href="https://github.com/SeaQL/sea-orm/issues/661#issuecomment-1118845064">the first question</a> to the issue’s thread:</p>
+<blockquote>
+<p>I'm looking for a <code>good first issue</code> :) Just wondering how one is generating code for <code>chrono</code> right now?</p>
+</blockquote>
+<p>Billy, one of the maintainers, was quick to reply <a href="https://github.com/SeaQL/sea-orm/issues/661#issuecomment-1119393055">an answer</a>:</p>
+<blockquote>
+<p>Hey <strong><a href="https://github.com/nahuakang">@nahuakang</a></strong>, welcome! You can take a look at:</p>
+</blockquote>
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#65737e;">// sea-orm/sea-orm-codegen/src/entity/column.rs
+</span><span style="color:#65737e;">// https://github.com/SeaQL/sea-orm/blob/86e7e808b37179315a1cc5c6c852764830c04661/sea-orm-codegen/src/entity/column.rs#L47-L51
+</span><span>ColumnType::Date =&gt; &quot;</span><span style="color:#a3be8c;">Date</span><span>&quot;.</span><span style="color:#96b5b4;">to_owned</span><span>(),
+</span><span>ColumnType::Time(_) =&gt; &quot;</span><span style="color:#a3be8c;">Time</span><span>&quot;.</span><span style="color:#96b5b4;">to_owned</span><span>(),
+</span><span>ColumnType::DateTime(_) =&gt; &quot;</span><span style="color:#a3be8c;">DateTime</span><span>&quot;.</span><span style="color:#96b5b4;">to_owned</span><span>(),
+</span><span>ColumnType::Timestamp(_) =&gt; &quot;</span><span style="color:#a3be8c;">DateTimeUtc</span><span>&quot;.</span><span style="color:#96b5b4;">to_owned</span><span>(),
+</span><span>ColumnType::TimestampWithTimeZone(_) =&gt; &quot;</span><span style="color:#a3be8c;">DateTimeWithTimeZone</span><span>&quot;.</span><span style="color:#96b5b4;">to_owned</span><span>(),
+</span></code></pre>
+<p>Okay, at least now I have some code that I can read. I felt some adrenaline kicking into my system now that I got the first thread of code to investigate. But my dearest enemy, <strong><em>imposter syndrome</em></strong>, also kicked in.</p>
+<p>I started questioning myself and wondered if I’d be able to actually come up with a solution? After all, some <code>good first issue</code> issues aren’t that easy. What if I can’t solve it and embarrass myself? Because of this, I <strong><em>procrastinated</em></strong>.</p>
+<h2 id="communicate-with-maintainers-before-coding">Communicate with maintainers before coding</h2>
+<p>As a seasoned procrastinator, I waited for a day before I posted <a href="https://github.com/SeaQL/sea-orm/issues/661#issuecomment-1120210927">the next two questions</a>:</p>
+<blockquote>
+<p><strong><a href="https://github.com/billy1624">@billy1624</a></strong> Thanks! I'm reading the docs as well as trying to understand the workflow with <code>sea-orm</code> now. Are there any examples/tests that demonstrate how to use <code>sea-orm-cli</code> to generate code for entities involving <code>chrono</code>? I haven't seen a <code>chrono</code>
+ flag in <code>sea-orm-cli</code> so I wonder if the solution here is to add a flag for <code>time</code> crate or something else (like handling <code>time</code> types)?</p>
+</blockquote>
+<p>Luckily, it was the weekend so it took Billy a few days <a href="https://github.com/SeaQL/sea-orm/issues/661#issuecomment-1121839813">to respond</a>, by which time I had calmed down from my imposter anxiety:</p>
+<blockquote>
+<p>Hey <strong><a href="https://github.com/nahuakang">@nahuakang</a></strong>, you can simply create a database table with timestamp / datetime columns. Then, follow the steps on <a href="https://www.sea-ql.org/SeaORM/docs/generate-entity/sea-orm-cli">https://www.sea-ql.org/SeaORM/docs/generate-entity/sea-orm-cli</a>, to generate entity files with <code>sea-orm-cli</code>.
+We don't have a <code>chrono</code> flag for <code>sea-orm-cli</code>, since it's the default crate to represent datetime crate as of now. I think we can add an option, <code>--date-time-crate</code>, to <code>sea-orm-cli generate entity</code>. It will take values such as <code>chrono</code> / <code>time</code> with <code>chrono</code> being the default. This way it's backward compatible and users can opt-in to it.
+Thoughts?</p>
+</blockquote>
+<p>Okay, so the flag for this option should be <code>--date-time-crate</code> and we should run the new feature like:</p>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#65737e;"># To use the time crate for the command
+</span><span style="color:#bf616a;">$</span><span> sea-orm-cli generate entity</span><span style="color:#bf616a;"> --date-time-crate</span><span>=time</span><span style="color:#bf616a;"> -u</span><span> postgres://nahua:password@localhost:5432/timetest</span><span style="color:#bf616a;"> -o</span><span> src/entity
+</span><span>
+</span><span style="color:#65737e;"># To use the chrono crate for the command
+</span><span style="color:#bf616a;">$</span><span> sea-orm-cli generate entity</span><span style="color:#bf616a;"> --date-time-crate</span><span>=chrono</span><span style="color:#bf616a;"> -u</span><span> postgres://nahua:password@localhost:5432/timetest</span><span style="color:#bf616a;"> -o</span><span> src/entity
+</span></code></pre>
+<p>This is good. So I claimed this issue and began working towards a solution in a format that I knew the maintainers would be willing to accept.</p>
+<h2 id="familiarize-ourselves-with-the-documentation">Familiarize ourselves with the documentation</h2>
+<p>Quick pause to clarify some important details before jumping into the solution section.</p>
+<p>During this entire time as I communicated with Billy, I was actively reading <a href="https://www.sea-ql.org/SeaORM/docs">SeaORM’s documentation</a>. It’s a new ORM and it does things differently from what I did in the Python world.</p>
+<p>The most important bits I learned from the documentation that helped me solve the issue were:</p>
+<ol>
+<li><a href="https://www.sea-ql.org/SeaORM/docs/generate-entity/entity-structure"><code>Entity</code></a>: The representation of a table in SeaORM. In the <a href="https://www.sea-ql.org/SeaORM/docs/generate-entity/entity-structure#column-type">column types section</a>, I found out about how the <code>time</code> and <code>chrono</code> Rust <code>datetime</code> types correspond to SeaORM’s types.</li>
+<li><a href="https://www.sea-ql.org/SeaORM/docs/generate-entity/sea-orm-cli"><code>sea-orm-cli</code></a>: I learned how to use the <code>CLI</code> tool that I was now supposed to fix.</li>
+</ol>
+<h2 id="reproduce-the-issue">Reproduce the issue</h2>
+<p>To reproduce the existing issue, I needed to do a few things:</p>
+<ol>
+<li>A minimal Rust cargo project to generate the <code>entities</code> in</li>
+<li>A running database of my choice that <code>SeaORM</code> can connect to (Postgres)</li>
+<li>Generate a table full of date &amp; time types</li>
+<li>Run the command to confirm the issue</li>
+<li>Investigate the code more to understand where I could add the feature to solve the issue</li>
+</ol>
+<h3 id="1-create-a-minimal-cargo-project">1. Create a minimal cargo project</h3>
+<p>This is really easy in Rust. I simply ran the following command:</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">$</span><span> cargo new playground
+</span><span style="color:#bf616a;">$</span><span> cd playground
+</span><span style="color:#bf616a;">$</span><span> tree
+</span><span style="color:#96b5b4;">.
+</span><span style="color:#bf616a;">├──</span><span> Cargo.toml
+</span><span style="color:#bf616a;">├──</span><span> README.md
+</span><span style="color:#bf616a;">└──</span><span> src
+</span><span>    </span><span style="color:#bf616a;">└──</span><span> main.rs
+</span></code></pre>
+<p>Since I know I’ll be only generating entity files (in any directory of my choice) to observe whether <code>sea-orm-cli</code> could generate code that has the correct types for <code>chrono</code> or <code>time</code> given the user’s choice, this barebone project would suffice without any extra boilerplate code.</p>
+<p>I installed the latest distribution of <code>sea-orm-cli</code> with the following command:</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">$</span><span> cargo install sea-orm-cli
+</span></code></pre>
+<h3 id="2-spin-up-a-postgres-db">2. Spin up a Postgres DB</h3>
+<p>I have Postgres installed on my Macbook, but I really like using Docker for spinning up a garbage DB that I can test in, so I copy-pasted a very simple <code>docker-compose</code> file that I use a lot for job interviews:</p>
+<pre data-lang="Dockerfile" style="background-color:#2b303b;color:#c0c5ce;" class="language-Dockerfile "><code class="language-Dockerfile" data-lang="Dockerfile"><span>version: &quot;3.3&quot;
+</span><span>services:
+</span><span>  db:
+</span><span>    image: postgres:latest
+</span><span>    container_name: postgres
+</span><span>    restart: always
+</span><span>    ports:
+</span><span>      - 5432:5432
+</span><span>    environment:
+</span><span>      - POSTGRES_USER=nahua
+</span><span>      - POSTGRES_PASSWORD=password
+</span><span>      - POSTGRES_DB=timetest
+</span><span>    volumes:
+</span><span>      - timetest:/var/lib/postgres/data
+</span><span>
+</span><span>  adminer:
+</span><span>    image: adminer:latest
+</span><span>    restart: always
+</span><span>    ports:
+</span><span>      - 8080:8080
+</span><span>
+</span><span>volumes:
+</span><span>  timetest:
+</span></code></pre>
+<p>This is not a tutorial on Docker so the gist is that with this <code>docker-compose</code> file, I can spin up a <code>postgres</code> database by simply running the following command:</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#65737e;"># Using -d flag for detach mode
+</span><span style="color:#bf616a;">$</span><span> docker compose up</span><span style="color:#bf616a;"> -d
+</span></code></pre>
+<p>The database would have a user <code>nahua</code> with a password <code>password</code> as well as a DB named <code>timetest</code> that’s listening on the port 5432. To examine the database easily, I could login onto <code>adminer</code> on <a href="http://localhost:8080"><code>localhost:8080</code></a>.</p>
+<h3 id="3-create-a-test-db-table">3. Create a test DB table</h3>
+<p>With the DB spinning, I procrastinated again because I dreaded writing raw SQL commands, not knowing exactly which types I should write.</p>
+<p>About a day later, I overcame my inertia and logged in to the database to create the following test table that was filled with some relevant date &amp; time types:</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#65737e;"># Access the running database as the user &quot;nahua&quot; for the DB &quot;timetest&quot;
+</span><span style="color:#65737e;"># Then run SQL command to create a table called &quot;time_tests&quot;
+</span><span style="color:#bf616a;">$</span><span> docker exec</span><span style="color:#bf616a;"> -it</span><span> postgres /usr/bin/psql</span><span style="color:#bf616a;"> -U</span><span> nahua</span><span style="color:#bf616a;"> -d</span><span> timetest
+</span><span style="color:#bf616a;">psql</span><span> (14.2 (Debian 14.2-1.pgdg110+1))
+</span><span style="color:#bf616a;">Type </span><span>&quot;</span><span style="color:#a3be8c;">help</span><span>&quot; for help.
+</span><span>
+</span><span style="color:#bf616a;">timetest</span><span>=</span><span style="color:#a3be8c;"># </span><span style="color:#bf616a;">CREATE</span><span> TABLE time_tests (
+</span><span>  </span><span style="color:#bf616a;">id</span><span> SERIAL NOT NULL PRIMARY KEY,
+</span><span>  </span><span style="color:#bf616a;">created_at</span><span> TIMESTAMPTZ NOT NULL DEFAULT NOW()</span><span style="color:#bf616a;">,
+</span><span>  </span><span style="color:#bf616a;">created_date</span><span> DATE NOT NULL DEFAULT NOW()</span><span style="color:#bf616a;">,
+</span><span>  </span><span style="color:#bf616a;">created_time</span><span> TIME NOT NULL DEFAULT NOW()
+</span><span>);
+</span><span style="color:#bf616a;">timetest</span><span>=</span><span style="color:#a3be8c;"># </span><span style="color:#96b5b4;">\q
+</span></code></pre>
+<h3 id="4-reproduce-the-issue-for-sanity-check">4. Reproduce the issue for sanity check</h3>
+<p>I ran the following commands per specification of the documentation and confirmed that I had everything set up properly for testing my code later on:</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">$</span><span> sea-orm-cli generate entity</span><span style="color:#bf616a;"> -u</span><span> postgres://nahua:password@localhost:5432/timetest</span><span style="color:#bf616a;"> -o</span><span> .
+</span></code></pre>
+<p>In essence, <code>sea-orm-cli</code> would connect to the DB table I spun up and fetch the schema of the <code>time_tests</code> table and translate it into Rust code, i.e. <code>entities</code> files in my barebone project’s <code>src/</code> directory.</p>
+<p>This would generate the following files:</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">$</span><span> tree
+</span><span style="color:#96b5b4;">.
+</span><span style="color:#bf616a;">├──</span><span> Cargo.toml
+</span><span style="color:#bf616a;">├──</span><span> mod.rs
+</span><span style="color:#bf616a;">├──</span><span> prelude.rs
+</span><span style="color:#bf616a;">├──</span><span> seaql_migrations.rs
+</span><span style="color:#bf616a;">├──</span><span> src
+</span><span style="color:#bf616a;">│</span><span>   └── main.rs
+</span><span style="color:#bf616a;">└──</span><span> time_tests.rs
+</span></code></pre>
+<p>And <code>time_tests.rs</code> is the file of interest here:</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">$</span><span> cat time_tests.rs
+</span><span style="color:#bf616a;">//!</span><span> SeaORM Entity. Generated by sea-orm-codegen 0.8.0
+</span><span>
+</span><span style="color:#bf616a;">use</span><span> sea_orm::entity::prelude::*;
+</span><span>
+</span><span style="color:#65737e;">#[derive(Clone, Debug, PartialEq, DeriveEntityModel)]
+</span><span style="color:#65737e;">#[sea_orm(table_name = &quot;time_tests&quot;)]
+</span><span style="color:#bf616a;">pub</span><span> struct Model {
+</span><span>    </span><span style="color:#65737e;">#[sea_orm(primary_key)]
+</span><span>    pub id: i32,
+</span><span>    pub created_at: DateTimeWithTimeZone,
+</span><span>    pub created_date: Date,
+</span><span>    pub created_time: Time,
+</span><span>}
+</span><span>
+</span><span style="color:#65737e;">#[derive(Copy, Clone, Debug, EnumIter)]
+</span><span style="color:#bf616a;">pub</span><span> enum Relation {}
+</span><span>
+</span><span style="color:#bf616a;">impl</span><span> RelationTrait for Relation {
+</span><span>    fn def(&amp;self) -&gt; RelationDef {
+</span><span>        panic!(&quot;</span><span style="color:#a3be8c;">No RelationDef</span><span>&quot;)
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#bf616a;">impl</span><span> ActiveModelBehavior for ActiveModel {}
+</span></code></pre>
+<p>When I’m done with my feature, I’d be able to specify a <code>--date-time-crate</code> flag with a value so that the values in the <code>time_tests</code> model would be the following for <code>chrono</code> crate:</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">pub</span><span> id: </span><span style="color:#b48ead;">i32</span><span>,
+</span><span style="color:#b48ead;">pub</span><span> created_at: DateTimeWithTimeZone,
+</span><span style="color:#b48ead;">pub</span><span> created_date: Date,
+</span><span style="color:#b48ead;">pub</span><span> created_time: Time,
+</span></code></pre>
+<p>and the following for <code>time</code> crate:</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">pub</span><span> id: </span><span style="color:#b48ead;">i32</span><span>,
+</span><span style="color:#b48ead;">pub</span><span> created_at: TimeDateTimeWithTimeZone,
+</span><span style="color:#b48ead;">pub</span><span> created_date: TimeDate,
+</span><span style="color:#b48ead;">pub</span><span> created_time: TimeTime,
+</span></code></pre>
+<p>This information was gathered from the documentation for <a href="https://www.sea-ql.org/SeaORM/docs/generate-entity/entity-structure#column-type">column types</a>.</p>
+<h2 id="work-towards-a-feature">Work towards a feature</h2>
+<p>Now I started investigating the code snippet Billy gave me more carefully. A few things I kept in mind were:</p>
+<ol>
+<li>How the <code>sea-orm-cli</code> code works and how I could insert a new flag <code>--date-time-crate</code>?</li>
+<li>Once the user could specify <code>--date-time-crate</code> value, how do I pass this information down to the part of <a href="https://github.com/SeaQL/sea-orm/blob/86e7e808b37179315a1cc5c6c852764830c04661/sea-orm-codegen/src/entity/column.rs#L47-L51">the code that Billy shared</a>, i.e. into the <code>Column.get_rs_type</code> method that was in charge of converting <code>chrono</code> types or <code>time</code> types and translate it into Rust types for the output files we had above?</li>
+<li>Which other functions or objects are using <code>Column.get_rs_type</code> because I must adjust these functions as part of the clean-up after implementing the new feature?</li>
+</ol>
+<h3 id="1-the-structure-of-seaorm-project">1. The Structure of SeaORM project</h3>
+<p>As the <a href="https://github.com/SeaQL/sea-orm/blob/master/Cargo.toml"><code>Cargo.toml</code></a> suggests, <code>sea-orm</code> has the following workspaces:</p>
+<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span>[workspace]
+</span><span style="color:#bf616a;">members </span><span>= [&quot;</span><span style="color:#a3be8c;">.</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">sea-orm-macros</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">sea-orm-codegen</span><span>&quot;]
+</span></code></pre>
+<p>Examining the structure, we can see that <code>sea-orm-cli</code> is sort of a stand-alone project living inside <code>sea-orm</code> and <code>sea-orm-codegen</code> is the workspace that contains the <a href="https://github.com/SeaQL/sea-orm/blob/86e7e808b37179315a1cc5c6c852764830c04661/sea-orm-codegen/src/entity/column.rs#L47-L51"><code>Column.get_rs_type</code></a> method that Billy originated pointed me to.</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">$</span><span> pwd
+</span><span style="color:#bf616a;">/path/to/our/seaql/sea-orm
+</span><span>
+</span><span style="color:#bf616a;">$</span><span> tree</span><span style="color:#bf616a;"> -L</span><span> 1
+</span><span style="color:#bf616a;">...
+</span><span style="color:#bf616a;">├──</span><span> Cargo.toml
+</span><span style="color:#bf616a;">...
+</span><span style="color:#bf616a;">├──</span><span> sea-orm-cli
+</span><span style="color:#bf616a;">├──</span><span> sea-orm-codegen
+</span><span style="color:#bf616a;">...
+</span><span style="color:#bf616a;">├──</span><span> src
+</span><span style="color:#bf616a;">...
+</span><span style="color:#bf616a;">└──</span><span> tests
+</span></code></pre>
+<p>This means that my feature would almost exclusively reside in <code>sea-orm-cli/</code> and <code>sea-orm-codegen/</code> directories.</p>
+<h3 id="2-adding-a-new-cli-flag">2. Adding a new CLI flag</h3>
+<p>By examining the file <a href="https://github.com/SeaQL/sea-orm/blob/6f4f3a76effc4633cfe5aeb91d164bae819da9b6/sea-orm-cli/src/cli.rs"><code>sea-orm/sea-orm-cli/src/cli.rs</code></a>, I quickly familiarized myself with how the project uses <code>clap</code> to generate CLI commands and flags and wrote a new flag for <code>--date-time-crate</code> (click for <a href="https://github.com/SeaQL/sea-orm/pull/724/files#diff-a07d755f2f721c1b06b1c33b45a507b6c55cc99746e69b036ac7b08788aaac98">a Github view</a>):</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#65737e;">// sea-orm-cli/src/cli.rs
+</span><span>
+</span><span style="color:#b48ead;">pub fn </span><span style="color:#8fa1b3;">build_cli</span><span>() -&gt; App&lt;</span><span style="color:#b48ead;">&#39;static</span><span>, </span><span style="color:#b48ead;">&#39;static</span><span>&gt; {
+</span><span>    ...
+</span><span>    ).</span><span style="color:#96b5b4;">arg</span><span>(
+</span><span>        Arg::with_name(&quot;</span><span style="color:#a3be8c;">DATE_TIME_CRATE</span><span>&quot;)
+</span><span>            .</span><span style="color:#96b5b4;">long</span><span>(&quot;</span><span style="color:#a3be8c;">date-time-crate</span><span>&quot;)
+</span><span>            .</span><span style="color:#96b5b4;">help</span><span>(&quot;</span><span style="color:#a3be8c;">The datetime crate to use for generating entities.</span><span>&quot;)
+</span><span>            .</span><span style="color:#96b5b4;">takes_value</span><span>(</span><span style="color:#d08770;">true</span><span>)
+</span><span>            .</span><span style="color:#96b5b4;">possible_values</span><span>(&amp;[&quot;</span><span style="color:#a3be8c;">chrono</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">time</span><span>&quot;])
+</span><span>            .</span><span style="color:#96b5b4;">default_value</span><span>(&quot;</span><span style="color:#a3be8c;">chrono</span><span>&quot;)
+</span><span>    ),
+</span><span>...
+</span><span>}
+</span></code></pre>
+<h3 id="3-refactor-add-a-context-struct-and-date-time-crate-enum">3. Refactor; add a context struct and date time crate enum</h3>
+<p>I also traced the usage of <code>Column.get_rs_type</code> all the way back to <a href="https://github.com/SeaQL/sea-orm/blob/9d2cae44b3612b6fdc3dee7d030ae43916150e6d/sea-orm-cli/src/commands.rs#L155-L156"><code>sea-orm/sea-orm-cli/src/commands.rs</code></a> where the following lines would generate the entities:</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#65737e;">// sea-orm-cli/src/commands.rs
+</span><span>
+</span><span style="color:#b48ead;">pub</span><span> async </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">run_generate_command</span><span>(</span><span style="color:#bf616a;">matches</span><span>: &amp;ArgMatches&lt;&#39;_&gt;) -&gt; Result&lt;(), Box&lt;dyn Error&gt;&gt; {
+</span><span>    ...
+</span><span>    </span><span style="color:#b48ead;">let</span><span> output = EntityTransformer::transform(table_stmts)?
+</span><span>        .</span><span style="color:#96b5b4;">generate</span><span>(expanded_format, WithSerde::from_str(with_serde).</span><span style="color:#96b5b4;">unwrap</span><span>());
+</span><span>    ...
+</span><span>}
+</span></code></pre>
+<p>So I somehow needed to pass the user’s <code>date-time-crate</code> choice into <code>EntityWriter.generate</code> method so that <code>Column.get_rs_type</code> would eventually pick up this data and act accordingly. Essentially, I needed some sort of a context struct for this job.</p>
+<p>I talked with Billy about this and he pointed me to <a href="https://github.com/SeaQL/sea-orm/pull/680#discussion_r860780963">his comment</a> on another standing PR:</p>
+<blockquote>
+<p>Hey <strong><a href="https://github.com/negezor">@negezor</a></strong>, thanks for the updates! I think the semantic isn't seems right. The transformer, <code>EntityTransformer::transform(table_stmts, name_resolver)</code>, don't need name resolver. Instead, we could have introduce a new struct called <code>EntityWriterContext</code> which contains three things...</p>
+</blockquote>
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">pub struct </span><span>EntityWriterContext {
+</span><span>    </span><span style="color:#b48ead;">pub</span><span>(</span><span style="color:#b48ead;">crate</span><span>) </span><span style="color:#bf616a;">expanded_format</span><span>: </span><span style="color:#b48ead;">bool</span><span>,
+</span><span>    </span><span style="color:#b48ead;">pub</span><span>(</span><span style="color:#b48ead;">crate</span><span>) </span><span style="color:#bf616a;">with_serde</span><span>: WithSerde,
+</span><span>    </span><span style="color:#b48ead;">pub</span><span>(</span><span style="color:#b48ead;">crate</span><span>) </span><span style="color:#bf616a;">name_resolver</span><span>: NameResolver,
+</span><span>}
+</span></code></pre>
+<blockquote>
+<p>Then, <code>EntityWriter::generate</code> method would take an <code>EntityWriterContext</code>. Thoughts?</p>
+</blockquote>
+<p>This was very helpful! So I wrote the following struct with a <code>new</code> method that specified the variables needed by <code>EntityWriter.generate</code> to generate the entities:</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#65737e;">// sea-orm-codegen/src/entity/writer.rs
+</span><span>
+</span><span>#[</span><span style="color:#bf616a;">derive</span><span>(Debug)]
+</span><span style="color:#b48ead;">pub struct </span><span>EntityWriterContext {
+</span><span>    </span><span style="color:#b48ead;">pub</span><span>(</span><span style="color:#b48ead;">crate</span><span>) </span><span style="color:#bf616a;">expanded_format</span><span>: </span><span style="color:#b48ead;">bool</span><span>,
+</span><span>    </span><span style="color:#b48ead;">pub</span><span>(</span><span style="color:#b48ead;">crate</span><span>) </span><span style="color:#bf616a;">with_serde</span><span>: WithSerde,
+</span><span>    </span><span style="color:#b48ead;">pub</span><span>(</span><span style="color:#b48ead;">crate</span><span>) </span><span style="color:#bf616a;">date_time_crate</span><span>: DateTimeCrate,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>EntityWriterContext {
+</span><span>    </span><span style="color:#b48ead;">pub fn </span><span style="color:#8fa1b3;">new</span><span>(
+</span><span>        </span><span style="color:#bf616a;">expanded_format</span><span>: </span><span style="color:#b48ead;">bool</span><span>,
+</span><span>        </span><span style="color:#bf616a;">with_serde</span><span>: WithSerde,
+</span><span>        </span><span style="color:#bf616a;">date_time_crate</span><span>: DateTimeCrate,
+</span><span>    ) -&gt; </span><span style="color:#b48ead;">Self </span><span>{
+</span><span>        </span><span style="color:#b48ead;">Self </span><span>{
+</span><span>            expanded_format,
+</span><span>            with_serde,
+</span><span>            date_time_crate,
+</span><span>        }
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<p>Meanwhile, let’s also work out a <code>DateTimeCrate</code> enum so that we could store information about which crate the user chooses:</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#65737e;">// sea-orm-codegen/src/entity/writer.rs
+</span><span>
+</span><span>#[</span><span style="color:#bf616a;">derive</span><span>(Debug)]
+</span><span style="color:#b48ead;">pub enum </span><span>DateTimeCrate {
+</span><span>    Chrono,
+</span><span>    Time,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>FromStr </span><span style="color:#b48ead;">for </span><span>DateTimeCrate {
+</span><span>    </span><span style="color:#b48ead;">type </span><span>Err = </span><span style="color:#b48ead;">crate</span><span>::Error;
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">from_str</span><span>(</span><span style="color:#bf616a;">s</span><span>: &amp;</span><span style="color:#b48ead;">str</span><span>) -&gt; Result&lt;</span><span style="color:#b48ead;">Self</span><span>, </span><span style="color:#b48ead;">Self::</span><span>Err&gt; {
+</span><span>        Ok(</span><span style="color:#b48ead;">match</span><span> s {
+</span><span>            &quot;</span><span style="color:#a3be8c;">chrono</span><span>&quot; =&gt; </span><span style="color:#b48ead;">Self</span><span>::Chrono,
+</span><span>            &quot;</span><span style="color:#a3be8c;">time</span><span>&quot; =&gt; </span><span style="color:#b48ead;">Self</span><span>::Time,
+</span><span>            v =&gt; {
+</span><span>                </span><span style="color:#b48ead;">return </span><span>Err(</span><span style="color:#b48ead;">crate</span><span>::Error::TransformError(format!(
+</span><span>                    &quot;</span><span style="color:#a3be8c;">Unsupported enum variant &#39;</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">&#39;</span><span>&quot;,
+</span><span>                    v
+</span><span>                )))
+</span><span>            }
+</span><span>        })
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<p>These changes are all <a href="https://github.com/SeaQL/sea-orm/pull/724/files#diff-d81f32c93a7a9410aefd84070a18ef2ebfd49391151444fad1a752158b6384c7">available here</a> on Github.</p>
+<p>With the <code>EntityWriterContext</code> struct and the <code>DateTimeCrate</code> enum ready, I could basically write the following in <code>sea-orm-cli</code> to let the command pass the <code>--date-time-crate</code> information to the code that generates the entities files:</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#65737e;">// sea-orm-cli/src/commands.rs
+</span><span>
+</span><span style="color:#b48ead;">pub</span><span> async </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">run_generate_command</span><span>(</span><span style="color:#bf616a;">matches</span><span>: &amp;ArgMatches&lt;&#39;_&gt;) -&gt; Result&lt;(), Box&lt;dyn Error&gt;&gt; {
+</span><span>    ...
+</span><span>    </span><span style="color:#b48ead;">let</span><span> date_time_crate = args.</span><span style="color:#96b5b4;">value_of</span><span>(&quot;</span><span style="color:#a3be8c;">DATE_TIME_CRATE</span><span>&quot;).</span><span style="color:#96b5b4;">unwrap</span><span>();
+</span><span>    ...
+</span><span>    </span><span style="color:#b48ead;">let</span><span> writer_context = EntityWriterContext::new(
+</span><span>        expanded_format,
+</span><span>        WithSerde::from_str(with_serde).</span><span style="color:#96b5b4;">unwrap</span><span>(),
+</span><span>        DateTimeCrate::from_str(date_time_crate).</span><span style="color:#96b5b4;">unwrap</span><span>(),
+</span><span>    );
+</span><span>    </span><span style="color:#b48ead;">let</span><span> output = EntityTransformer::transform(table_stmts)?.</span><span style="color:#96b5b4;">generate</span><span>(&amp;writer_context);
+</span><span>}
+</span></code></pre>
+<h3 id="4-sew-the-thread">4. Sew the thread</h3>
+<p>Now that we’ve introduced an <code>EntityWriterContext</code>, we must update all the methods that would be affected by it until we’ve reached <code>Column.get_rs_type</code> method. This part was quite mechanical and rather easy and the changes can be found <a href="https://github.com/SeaQL/sea-orm/pull/724/files#diff-cf7963a581865b246e6f94d87d21770aeb273df05aa79d1c060decd82b15c3fc">here</a> and <a href="https://github.com/SeaQL/sea-orm/pull/724/files#diff-d81f32c93a7a9410aefd84070a18ef2ebfd49391151444fad1a752158b6384c7">here</a>, mostly in the <code>sea-orm-codegen/src/entity/base_entity.rs</code> file and <code>sea-orm-codegen/src/entity/writer.rs</code> file.</p>
+<h3 id="5-translate-different-crate-types-into-correct-column-types">5. Translate different crate types into correct column types</h3>
+<p>Finally, we have arrived at the beginning of this story when Billy showed me the original code that should be impacted by this feature change:</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#65737e;">// sea-orm-codegen/src/entity/column.rs
+</span><span>
+</span><span style="color:#b48ead;">pub fn </span><span style="color:#8fa1b3;">get_rs_type</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>) -&gt; TokenStream {
+</span><span>    ...
+</span><span>    #[</span><span style="color:#bf616a;">allow</span><span>(unreachable_patterns)]
+</span><span>    </span><span style="color:#b48ead;">let</span><span> ident: TokenStream = </span><span style="color:#b48ead;">match </span><span>&amp;</span><span style="color:#bf616a;">self</span><span>.col_type {
+</span><span>        ColumnType::Char(_)
+</span><span>        ...
+</span><span>        ColumnType::Float(_) =&gt; &quot;</span><span style="color:#a3be8c;">f32</span><span>&quot;.</span><span style="color:#96b5b4;">to_owned</span><span>(),
+</span><span>        ColumnType::Double(_) =&gt; &quot;</span><span style="color:#a3be8c;">f64</span><span>&quot;.</span><span style="color:#96b5b4;">to_owned</span><span>(),
+</span><span>        ColumnType::Json | ColumnType::JsonBinary =&gt; &quot;</span><span style="color:#a3be8c;">Json</span><span>&quot;.</span><span style="color:#96b5b4;">to_owned</span><span>(),
+</span><span>        ColumnType::Date =&gt; &quot;</span><span style="color:#a3be8c;">Date</span><span>&quot;.</span><span style="color:#96b5b4;">to_owned</span><span>(),
+</span><span>        ColumnType::Time(_) =&gt; &quot;</span><span style="color:#a3be8c;">Time</span><span>&quot;.</span><span style="color:#96b5b4;">to_owned</span><span>(),
+</span><span>        ColumnType::DateTime(_) =&gt; &quot;</span><span style="color:#a3be8c;">DateTime</span><span>&quot;.</span><span style="color:#96b5b4;">to_owned</span><span>(),
+</span><span>        ColumnType::Timestamp(_) =&gt; &quot;</span><span style="color:#a3be8c;">DateTimeUtc</span><span>&quot;.</span><span style="color:#96b5b4;">to_owned</span><span>(),
+</span><span>        ColumnType::TimestampWithTimeZone(_) =&gt; &quot;</span><span style="color:#a3be8c;">DateTimeWithTimeZone</span><span>&quot;.</span><span style="color:#96b5b4;">to_owned</span><span>(),
+</span><span>    ...
+</span><span>}
+</span></code></pre>
+<p>I decided to just do some nested match expressions to translate the types properly given the variable <code>date_time_crate</code> that we’ve passed down from the command line via the <code>EntityWriterContext</code> struct:</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#65737e;">// sea-orm-codegen/src/entity/column.rs
+</span><span>
+</span><span style="color:#b48ead;">pub fn </span><span style="color:#8fa1b3;">get_rs_type</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">date_time_crate</span><span>: &amp;DateTimeCrate) -&gt; TokenStream {
+</span><span>    ...
+</span><span>    #[</span><span style="color:#bf616a;">allow</span><span>(unreachable_patterns)]
+</span><span>    </span><span style="color:#b48ead;">let</span><span> ident: TokenStream = </span><span style="color:#b48ead;">match </span><span>&amp;</span><span style="color:#bf616a;">self</span><span>.col_type {
+</span><span>        ColumnType::Char(_)
+</span><span>        ...
+</span><span>        ColumnType::Float(_) =&gt; &quot;</span><span style="color:#a3be8c;">f32</span><span>&quot;.</span><span style="color:#96b5b4;">to_owned</span><span>(),
+</span><span>        ColumnType::Double(_) =&gt; &quot;</span><span style="color:#a3be8c;">f64</span><span>&quot;.</span><span style="color:#96b5b4;">to_owned</span><span>(),
+</span><span>        ColumnType::Json | ColumnType::JsonBinary =&gt; &quot;</span><span style="color:#a3be8c;">Json</span><span>&quot;.</span><span style="color:#96b5b4;">to_owned</span><span>(),
+</span><span>        ColumnType::Date =&gt; </span><span style="color:#b48ead;">match</span><span> date_time_crate {
+</span><span>            DateTimeCrate::Chrono =&gt; &quot;</span><span style="color:#a3be8c;">Date</span><span>&quot;.</span><span style="color:#96b5b4;">to_owned</span><span>(),
+</span><span>            DateTimeCrate::Time =&gt; &quot;</span><span style="color:#a3be8c;">TimeDate</span><span>&quot;.</span><span style="color:#96b5b4;">to_owned</span><span>(),
+</span><span>        },
+</span><span>        ColumnType::Time(_) =&gt; </span><span style="color:#b48ead;">match</span><span> date_time_crate {
+</span><span>            DateTimeCrate::Chrono =&gt; &quot;</span><span style="color:#a3be8c;">Time</span><span>&quot;.</span><span style="color:#96b5b4;">to_owned</span><span>(),
+</span><span>            DateTimeCrate::Time =&gt; &quot;</span><span style="color:#a3be8c;">TimeTime</span><span>&quot;.</span><span style="color:#96b5b4;">to_owned</span><span>(),
+</span><span>        },
+</span><span>        ColumnType::DateTime(_) =&gt; </span><span style="color:#b48ead;">match</span><span> date_time_crate {
+</span><span>            DateTimeCrate::Chrono =&gt; &quot;</span><span style="color:#a3be8c;">DateTime</span><span>&quot;.</span><span style="color:#96b5b4;">to_owned</span><span>(),
+</span><span>            DateTimeCrate::Time =&gt; &quot;</span><span style="color:#a3be8c;">TimeDateTime</span><span>&quot;.</span><span style="color:#96b5b4;">to_owned</span><span>(),
+</span><span>        },
+</span><span>        ColumnType::Timestamp(_) =&gt; </span><span style="color:#b48ead;">match</span><span> date_time_crate {
+</span><span>            DateTimeCrate::Chrono =&gt; &quot;</span><span style="color:#a3be8c;">DateTimeUtc</span><span>&quot;.</span><span style="color:#96b5b4;">to_owned</span><span>(),
+</span><span>            </span><span style="color:#65737e;">// ColumnType::Timpestamp(_) =&gt; time::PrimitiveDateTime: https://docs.rs/sqlx/0.3.5/sqlx/postgres/types/index.html#time
+</span><span>            DateTimeCrate::Time =&gt; &quot;</span><span style="color:#a3be8c;">TimeDateTime</span><span>&quot;.</span><span style="color:#96b5b4;">to_owned</span><span>(),
+</span><span>        },
+</span><span>        ColumnType::TimestampWithTimeZone(_) =&gt; </span><span style="color:#b48ead;">match</span><span> date_time_crate {
+</span><span>            DateTimeCrate::Chrono =&gt; &quot;</span><span style="color:#a3be8c;">DateTimeWithTimeZone</span><span>&quot;.</span><span style="color:#96b5b4;">to_owned</span><span>(),
+</span><span>            DateTimeCrate::Time =&gt; &quot;</span><span style="color:#a3be8c;">TimeDateTimeWithTimeZone</span><span>&quot;.</span><span style="color:#96b5b4;">to_owned</span><span>(),
+</span><span>        },
+</span><span>    ...
+</span><span>}
+</span></code></pre>
+<p>Changes can be viewed on Github <a href="https://github.com/SeaQL/sea-orm/pull/724/files#diff-63bc9c1369063e383c3fd1ab5fa18f670946c43dccf172c8919c01028b340993">here</a>.</p>
+<h3 id="6-test-the-code-and-try-it-out">6. Test the code and try it out</h3>
+<p>Before finishing up, I wrote <a href="https://github.com/SeaQL/sea-orm/blob/6f4f3a76effc4633cfe5aeb91d164bae819da9b6/sea-orm-codegen/src/entity/column.rs#L344-L384">some unit tests</a> for distinguishing <code>time</code> from <code>chrono</code> types in the <code>Column.get_rs_type</code> method.</p>
+<p>Now, since everything is ready, we should test the end product. Let’s install <code>sea-orm-cli</code> from our updated local source code by running:</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">$</span><span> pwd
+</span><span style="color:#bf616a;">/path/to/our/seaql/sea-orm/sea-orm-cli
+</span><span>
+</span><span style="color:#65737e;"># This installs `sea-orm-cli` from our local source code
+</span><span style="color:#bf616a;">$</span><span> cargo install</span><span style="color:#bf616a;"> --path</span><span> .
+</span></code></pre>
+<p>Finally, I ran the <code>sea-orm-cli</code> command in my barebone project to see if I could generate the correct entity files with the correct types given <code>chrono</code> or <code>time</code> crate specification:</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">$</span><span> sea-orm-cli generate entity</span><span style="color:#bf616a;"> --date-time-crate</span><span> time</span><span style="color:#bf616a;"> -u</span><span> postgres://nahua:password@localhost:5432/timetest</span><span style="color:#bf616a;"> -o</span><span> .
+</span><span>
+</span><span style="color:#bf616a;">$</span><span> cat time_tests.rs
+</span><span style="color:#bf616a;">//!</span><span> SeaORM Entity. Generated by sea-orm-codegen 0.8.0
+</span><span>
+</span><span style="color:#bf616a;">use</span><span> sea_orm::entity::prelude::*;
+</span><span>
+</span><span style="color:#65737e;">#[derive(Clone, Debug, PartialEq, DeriveEntityModel)]
+</span><span style="color:#65737e;">#[sea_orm(table_name = &quot;time_tests&quot;)]
+</span><span style="color:#bf616a;">pub</span><span> struct Model {
+</span><span>    </span><span style="color:#65737e;">#[sea_orm(primary_key)]
+</span><span>    pub id: i32,
+</span><span>    pub created_at: TimeDateTimeWithTimeZone,
+</span><span>    pub created_date: TimeDate,
+</span><span>    pub created_time: TimeTime,
+</span><span>}
+</span><span>
+</span><span style="color:#65737e;">#[derive(Copy, Clone, Debug, EnumIter)]
+</span><span style="color:#bf616a;">pub</span><span> enum Relation {}
+</span><span>
+</span><span style="color:#bf616a;">impl</span><span> RelationTrait for Relation {
+</span><span>    fn def(&amp;self) -&gt; RelationDef {
+</span><span>        panic!(&quot;</span><span style="color:#a3be8c;">No RelationDef</span><span>&quot;)
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#bf616a;">impl</span><span> ActiveModelBehavior for ActiveModel {}
+</span></code></pre>
+<p>Awesome. So I wrote up <a href="https://github.com/SeaQL/sea-orm/pull/724">a PR</a> for this issue. Let’s wait and see what the code reviewers say 😉</p>
+<h2 id="final-words">Final words</h2>
+<p>Congratulations! You’ve gone through my long and winding blah blah. I hope you’ve learned something from my walk-through and, perhaps, you’ve realized that open source contribution does not need to be that intimidating!</p>
+<p>I want to give the good people at <a href="https://github.com/SeaQL">SeaQL</a> a quick shout-out and tell the world that they’re awesome for doing open source works! If you can, please sponsor them so that they can continue doing open source works and mentor new contributors.</p>
+<p>In the near future, I hope to write a few more walk-throughs for different projects so as to provide you with a wide range of examples on open source contribution.</p>
+<p>Remember, you are well-equipped both mentally and skill-wise to contribute to open source. Take your time, don’t get anxious, and enjoy the process!</p>
+
+
+            </main>
+            <footer>
+                
+<p class="taxonomies">
+
+</p>
+
+                
+            </footer>
+        </div>
+    </body>
+</html>
+        
