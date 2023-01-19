@@ -1,9 +1,14 @@
 +++
-title = "[Book Review] Genghis Khan"
+title = "Review: Thoughts on Jack Weatherford's Genghis Khan"
 date = 2022-06-18
 draft = false
 
-slug = "genghis-khan-book-review"
+slug = "genghis-khan"
+
+[taxonomies]
+tags = ["book review"]
+categories = []
+contexts = []
 
 [extra]
 lang = "en"

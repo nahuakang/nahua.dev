@@ -1,5 +1,5 @@
 +++
-title = "[Personal] Remake Our Self: My Path to Programming"
+title = "Remake Our Self: My Path to Programming"
 date = 2020-08-30
 draft = false
 
@@ -7,6 +7,12 @@ slug = "my-path-to-programming"
 aliases = [
     "blog/my-path-to-programming/"
 ]
+
+[taxonomies]
+tags = ["open source"]
+categories = []
+contexts = []
+
 
 [extra]
 lang = "en"
