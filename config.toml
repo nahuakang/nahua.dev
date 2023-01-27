@@ -21,7 +21,7 @@ smart_punctuation = false
 
 [extra]
 author = "Nahua"
-logo = "logo.jpg"
+logo = "logo.png"
 header_nav = [
     { name = "~home", url = "/" },
     { name = "blog", url = "/blog" },

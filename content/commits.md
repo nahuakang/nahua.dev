@@ -8,6 +8,10 @@ lang = 'en'
 
 Below are pull request (PR) links to my open source contributions.
 
+## [OpenTalk](https://opentalk.eu/en)
+
+My commits to OpenTalk can be found in this [OpenCode mirror](https://gitlab.opencode.de/opentalk/controller/-/commits/main)
+
 ## [Rust-Clippy](https://github.com/rust-lang/rust-clippy)
 
 | Date       | Title                                                      |
