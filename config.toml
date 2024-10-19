@@ -5,7 +5,6 @@ description = "Intersection of tech and humanities"
 default_language = "en"
 theme = "no-style-please"
 compile_sass = true
-generate_feed = true
 
 # categories and contexts are mandatory for definition
 taxonomies = [
