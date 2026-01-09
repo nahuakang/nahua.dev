@@ -1,5 +1,4 @@
 # New Blog
 
-This is my blog, built with [Zola](https://www.getzola.org/) and [lightspeed](https://github.com/carpetscheme/lightspeed).
+This is my blog, built with [Zola](https://www.getzola.org/).
 
-Lightspeed: `git submodule update --init --recursive`
